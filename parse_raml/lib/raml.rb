@@ -7,9 +7,8 @@ module Raml
 
 	def self.load_file filename
 		file = File.new(filename)
-    	Raml::Parser.new(file.read)
+    	self.load(file.read)
     end
-
 
 	class Parser
 		attr_accessor :data
@@ -39,7 +38,7 @@ module Raml
 			root_data.each do |key, value|
 				if key.start_with? "/"
 					@children << Resource.new(key, value)
-				else key.start_with? "/"
+				else
 					self.send("#{key}=", value)
 				end
 			end
@@ -63,7 +62,37 @@ module Raml
 		def initialize name, data
 			super()
 			data.each do |key, value|
-				@children << value
+				case key
+				when 'responses'
+					value.each do |name, response_data|
+						@children << Response.new(name, response_data)
+					end
+				end
+			end
+		end
+	end
+
+	class Response < Property
+		def initialize name, data
+			super()
+			data.each do |key, value|
+				case key
+				when 'body'
+					value.each do |name, body_data|
+						@children << Body.new(name, body_data)
+					end
+				end
+			end
+		end
+	end
+
+	class Body < Property
+		attr_accessor :media_type, :schema
+
+		def initialize media_type, body_data
+			@media_type = media_type
+			body_data.each do |key, value|
+				send("#{key}=", value)
 			end
 		end
 	end
