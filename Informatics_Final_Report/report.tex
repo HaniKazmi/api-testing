@@ -5,6 +5,7 @@
 \documentclass[11pt]{informatics-report}
 \usepackage{color}
 \usepackage[square,sort,comma,numbers]{natbib} %References
+\usepackage{url}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Front Matter - project title, name, supervisor name and date
@@ -17,9 +18,10 @@
 \date{\today}
 
 \abstractFile{FrontMatter/abstract.tex}
-\ackFile{FrontMatter/acknowledgements.tex} %Remove line if you do not want acknowledgements
+%\ackFile{FrontMatter/acknowledgements.tex} %Remove line if you do not want acknowledgements
 
 \begin{document}
+\doublespacing
 \createFrontMatter
 \onehalfspacing
 \tableofcontents
@@ -29,12 +31,7 @@
 % Report Content
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % You can write each chapter directly here or in a separate .tex file and use the include command.
-
-\chapter{Introduction}
-This is one of the most important components of the report. It should begin with a clear statement of what the project is about so that the nature and scope of the project can be understood by a lay reader. It should summarise everything that you set out to achieve, provide a clear summary of the project's background and relevance to other work, and give pointers to the remaining sections of the report, which will contain the bulk of the technical material.
-
-\section{Report Structure}
-
+\include{Chapters/Introduction}
 \include{Chapters/Background}
 \include{Chapters/Body}
 \include{Chapters/DesignSpecification}

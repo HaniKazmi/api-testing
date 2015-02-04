@@ -1,0 +1,21 @@
+\chapter{Introduction}
+
+\section{Motivations}
+The Internet has long been an important means of communication. Historically, this has been dominated by websites hosted on the World Wide Web: static, unchanging pages which display information and are navigated using URLs.\footnote{Uniform Resource Locater: a reference to a resource on the Internet.} As these sites were simple, ensuring that they were reliable was a simple task. With the advent of fast broadband and increased processing power, websites have slowly been evolving into more self contained entities, colloquially known as 'web apps'. 
+
+Generally powered by HTML5\footnote{A revision of the HTML standard which added many elements needed for dynamic websites.}\cite{html5website} and JavaScript\footnote{A scripting language implemented by virtually all web browsers, updated as part of the HTML5 specification}, web apps are far more dynamic. Due to the many moving pieces now involved on a website along with the increasing file sizes\footnote{Website trends, 2010-2015, \url{http://httparchive.org/trends.php?s=All&minlabel=Nov+15+2010&maxlabel=Jan+15+2015}}, testing has become unwieldy. This is currently overcome by writing 'Unit Tests'\cite{ieeetesting} which alert the programmer when a future change breaks existing functionality. This is tedious work, and covering all possible cases is difficult.
+
+A common way of creating web apps is by having a client side application written in JavaScript, which communicates with a backend that can be written in a wider variety of languages. These two components may be designed and implemented by different people, and indeed different companies altogether. Therefore, there is generally a well defined API\footnote{Application Programming Interface.} used to communicate between them using HTTP\footnote{Hypertext Transfer Protocol.}. If this API can be strictly defined, there is scope to automate part of the testing process using it.
+
+\section{Aims}
+The aim of this paper is to automate Web API testing as much as possible. A three-fold approach will be taken to this problem:
+\begin{enumerate}
+  \item A language to formally define APIs. This will allow the API to be computationally modified and reasoned about.
+  \item A framework which automatically generates a battery of tests to check that an API implementations matches its specification. This will act as a basic sanity check for the implementation, as well as allow the implementation to be monitored for changes.
+  \item A framework which automatically generates Unit Tests for a given API specification. While all manual tests cannot be eliminated, a large subset can be inferred and constructed from the API definition. This will be accomplished by extending the definition language to allow example requests, and inferring any additional required information form the context. 
+\end{enumerate}
+
+\section{Scope}
+Due to the time constrains of this project, the framework will be limited to dealing with APIs following a RESTful\footnote{Representational State Transfer: An architectural style for creating scalable web services} architectural style. Specifically, the web API 'Onyx' used by the company Livedrive\footnote{\url{http://www.livedrive.com}} for communication between their C\#\footnote{A programming languages developed by Microsoft, regularly used for writing large scale web backends.} backend and web frontend will be used as a case study and focal point for the paper.
+
+While the project will be tested against the full Onyx API, its contents are a trade secret for Livedrive. Therefore, a small restful API modeling any needed functionality of Onyx will be created and used for the purposes of the report.
