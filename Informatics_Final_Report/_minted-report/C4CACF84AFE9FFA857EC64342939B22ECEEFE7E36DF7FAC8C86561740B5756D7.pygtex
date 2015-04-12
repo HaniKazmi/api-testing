@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+POST /InStock HTTP/1.1
+Host: www.example.org
+Content\PYGdefaultZhy{}Type: application/soap+xml; charset=utf\PYGdefaultZhy{}8
+Content\PYGdefaultZhy{}Length: 299
+SOAPAction: \PYGdefaultZdq{}http://www.w3.org/2003/05/soap\PYGdefaultZhy{}envelope\PYGdefaultZdq{}
+
+\PYGdefault{c+cp}{\PYGdefaultZlt{}?xml version=\PYGdefaultZdq{}1.0\PYGdefaultZdq{}?\PYGdefaultZgt{}}
+\PYGdefault{n+nt}{\PYGdefaultZlt{}soap:Envelope} \PYGdefault{n+na}{xmlns:soap=}\PYGdefault{l+s}{\PYGdefaultZdq{}http://www.w3.org/2003/05/soap\PYGdefaultZhy{}envelope\PYGdefaultZdq{}}\PYGdefault{n+nt}{\PYGdefaultZgt{}}
+  \PYGdefault{n+nt}{\PYGdefaultZlt{}soap:Header\PYGdefaultZgt{}}
+  \PYGdefault{n+nt}{\PYGdefaultZlt{}/soap:Header\PYGdefaultZgt{}}
+  \PYGdefault{n+nt}{\PYGdefaultZlt{}soap:Body\PYGdefaultZgt{}}
+    \PYGdefault{n+nt}{\PYGdefaultZlt{}m:GetStockPrice} \PYGdefault{n+na}{xmlns:m=}\PYGdefault{l+s}{\PYGdefaultZdq{}http://www.example.org/stock\PYGdefaultZdq{}}\PYGdefault{n+nt}{\PYGdefaultZgt{}}
+      \PYGdefault{n+nt}{\PYGdefaultZlt{}m:StockName\PYGdefaultZgt{}}IBM\PYGdefault{n+nt}{\PYGdefaultZlt{}/m:StockName\PYGdefaultZgt{}}
+    \PYGdefault{n+nt}{\PYGdefaultZlt{}/m:GetStockPrice\PYGdefaultZgt{}}
+  \PYGdefault{n+nt}{\PYGdefaultZlt{}/soap:Body\PYGdefaultZgt{}}
+\PYGdefault{n+nt}{\PYGdefaultZlt{}/soap:Envelope\PYGdefaultZgt{}}
+\end{Verbatim}

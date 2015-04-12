@@ -1,0 +1,41 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c+c1}{\PYGdefaultZsh{}\PYGdefaultZpc{}RAML 0.8}
+
+\PYGdefault{l+lScalar+lScalarPlain}{title}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{World Music API}
+\PYGdefault{l+lScalar+lScalarPlain}{baseUri}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{http://example.api.com/\PYGdefaultZob{}version\PYGdefaultZcb{}}
+\PYGdefault{l+lScalar+lScalarPlain}{version}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{v1}
+\PYGdefault{l+lScalar+lScalarPlain}{traits}\PYGdefault{p+pIndicator}{:}
+  \PYGdefault{p+pIndicator}{\PYGdefaultZhy{}} \PYGdefault{l+lScalar+lScalarPlain}{paged}\PYGdefault{p+pIndicator}{:}
+      \PYGdefault{l+lScalar+lScalarPlain}{queryParameters}\PYGdefault{p+pIndicator}{:}
+        \PYGdefault{l+lScalar+lScalarPlain}{pages}\PYGdefault{p+pIndicator}{:}
+          \PYGdefault{l+lScalar+lScalarPlain}{description}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{The number of pages to return}
+          \PYGdefault{l+lScalar+lScalarPlain}{type}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{number}
+  \PYGdefault{p+pIndicator}{\PYGdefaultZhy{}} \PYGdefault{l+lScalar+lScalarPlain}{secured}\PYGdefault{p+pIndicator}{:} \PYGdefault{k+kt}{!include} \PYGdefault{l+lScalar+lScalarPlain}{http://raml\PYGdefaultZhy{}example.com/secured.yml}
+\PYGdefault{l+lScalar+lScalarPlain}{/songs}\PYGdefault{p+pIndicator}{:}
+  \PYGdefault{l+lScalar+lScalarPlain}{is}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{[} \PYGdefault{n+nv}{paged}\PYGdefault{p+pIndicator}{,} \PYGdefault{n+nv}{secured} \PYGdefault{p+pIndicator}{]}
+  \PYGdefault{l+lScalar+lScalarPlain}{get}\PYGdefault{p+pIndicator}{:}
+    \PYGdefault{l+lScalar+lScalarPlain}{queryParameters}\PYGdefault{p+pIndicator}{:}
+      \PYGdefault{l+lScalar+lScalarPlain}{genre}\PYGdefault{p+pIndicator}{:}
+        \PYGdefault{l+lScalar+lScalarPlain}{description}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{filter the songs by genre}
+  \PYGdefault{l+lScalar+lScalarPlain}{post}\PYGdefault{p+pIndicator}{:}
+  \PYGdefault{l+lScalar+lScalarPlain}{/\PYGdefaultZob{}songId\PYGdefaultZcb{}}\PYGdefault{p+pIndicator}{:}
+    \PYGdefault{l+lScalar+lScalarPlain}{get}\PYGdefault{p+pIndicator}{:}
+      \PYGdefault{l+lScalar+lScalarPlain}{responses}\PYGdefault{p+pIndicator}{:}
+        \PYGdefault{l+lScalar+lScalarPlain}{200}\PYGdefault{p+pIndicator}{:}
+          \PYGdefault{l+lScalar+lScalarPlain}{body}\PYGdefault{p+pIndicator}{:}
+            \PYGdefault{l+lScalar+lScalarPlain}{application/json}\PYGdefault{p+pIndicator}{:}
+              \PYGdefault{l+lScalar+lScalarPlain}{schema}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+                \PYGdefault{n+no}{\PYGdefaultZob{} \PYGdefaultZdq{}\PYGdefaultZdl{}schema\PYGdefaultZdq{}: \PYGdefaultZdq{}http://json\PYGdefaultZhy{}schema.org/schema\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}object\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}description\PYGdefaultZdq{}: \PYGdefaultZdq{}A canonical song\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}properties\PYGdefaultZdq{}: \PYGdefaultZob{}}
+                    \PYGdefault{n+no}{\PYGdefaultZdq{}title\PYGdefaultZdq{}:  \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}string\PYGdefaultZdq{} \PYGdefaultZcb{},}
+                    \PYGdefault{n+no}{\PYGdefaultZdq{}artist\PYGdefaultZdq{}: \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}string\PYGdefaultZdq{} \PYGdefaultZcb{}}
+                  \PYGdefault{n+no}{\PYGdefaultZcb{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}required\PYGdefaultZdq{}: [ \PYGdefaultZdq{}title\PYGdefaultZdq{}, \PYGdefaultZdq{}artist\PYGdefaultZdq{} ]}
+                \PYGdefault{n+no}{\PYGdefaultZcb{}}
+            \PYGdefault{l+lScalar+lScalarPlain}{application/xml}\PYGdefault{p+pIndicator}{:}
+    \PYGdefault{l+lScalar+lScalarPlain}{delete}\PYGdefault{p+pIndicator}{:}
+      \PYGdefault{l+lScalar+lScalarPlain}{description}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+        \PYGdefault{n+no}{This method will *delete* an **individual so}
+\end{Verbatim}

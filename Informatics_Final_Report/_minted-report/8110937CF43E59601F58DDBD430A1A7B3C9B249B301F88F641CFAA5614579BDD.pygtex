@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{l+s+s2}{\PYGdefaultZdq{}ok\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{k+kc}{true}\PYGdefault{p}{,}
+    \PYGdefault{l+s+s2}{\PYGdefaultZdq{}args\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{p}{\PYGdefaultZob{}}
+        \PYGdefault{l+s+s2}{\PYGdefaultZdq{}foo\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}bar\PYGdefaultZdq{}}
+    \PYGdefault{p}{\PYGdefaultZcb{}}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\end{Verbatim}

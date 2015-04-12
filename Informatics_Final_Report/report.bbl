@@ -1,0 +1,63 @@
+\begin{thebibliography}{10}
+
+\bibitem{blueprintsite}
+Api blueprint specification.
+\newblock
+  \url{https://github.com/apiaryio/api-blueprint/blob/master/API%20Blueprint%20Specification.md}.
+\newblock [Onlune; accessed 12-February-2015.
+
+\bibitem{ramlwebsite}
+Restful api modeling language.
+\newblock \url{http://raml.org}.
+\newblock [Online; accessed 4-February-2015].
+
+\bibitem{swaggersite}
+The swagger specification.
+\newblock \url{https://github.com/swagger-api/swagger-spec}.
+\newblock [Onlune; accessed 12-February-2015.
+
+\bibitem{internetmedia}
+Internet media type registration, consistency of use.
+\newblock W3C 0129, 2002.
+
+\bibitem{yamlspec}
+O.~Ben-Kiki, C.~Evans, and I.~Net.
+\newblock Yaml ain’t markup language (yaml™) version 1.2.
+\newblock \url{http://www.yaml.org/spec/1.2/spec.html}, 2009.
+\newblock [Online; accessed 4-February-2015].
+
+\bibitem{wwwproposol}
+T.~Berners-Lee and R.~Cailliau.
+\newblock Worldwideweb: Proposal for a hypertext project.
+\newblock \url{http://www.w3.org/Proposal.html}, 1990.
+\newblock [Online; accessed 4-February-2015].
+
+\bibitem{informationproposal}
+Tim Berners-Lee.
+\newblock Information management: A proposal.
+\newblock \url{http://www.w3.org/History/1989/proposal.html}, 1989.
+\newblock [Online; accessed 4-February-2015].
+
+\bibitem{rfc2616}
+R.~Fielding, J.~Gettys, J.~Mogul, H.~Frystyk, L.~Masinter, P.~Leach, and
+  T.~Berners-Lee.
+\newblock Hypertext transfer protocol -- http/1.1.
+\newblock RFC 2616, 1999.
+\newblock Obsoleted by RFCs 7230, 7231, 7232, 7233, 7234, 7235, updated by RFCs
+  2817, 5785, 6266, 6585.
+
+\bibitem{rest}
+Roy~Thomas Fielding.
+\newblock Architectural styles and the design of network-based software
+  architectures.
+\newblock \url{http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm},
+  2000.
+\newblock [Online; accessed 4-February-2015].
+
+\bibitem{soap12}
+M.~Gudgin, M.~Hadley, N.~Mendelsohn, J.~Moreau, H.~Nielsen, A.~Karmarkar, and
+  Y.~Lafon.
+\newblock Soap version 1.2 part 1: Messaging framework (second edition).
+\newblock W3C 20070427, 2007.
+
+\end{thebibliography}

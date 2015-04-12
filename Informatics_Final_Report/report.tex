@@ -5,12 +5,28 @@
 \documentclass[11pt]{informatics-report}
 \usepackage{color}
 \usepackage[square,sort,comma,numbers]{natbib} %References
-\usepackage{url}
+\usepackage{enumerate}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{minted}
+\usepackage{caption}
+\usepackage{tikz}
+
+\usetikzlibrary{shapes.geometric, arrows, calc, backgrounds}
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\let\lstlisting\minted
+\let\endlstlisting\endminted
+
+\newenvironment{code}{\captionsetup{type=listing}}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Front Matter - project title, name, supervisor name and date
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{6CCS3PRJ Final Year\\\vspace{0.2cm}Automatic Test Generation from a Specification}
+\title{6CCS3PRJ\\\vspace{0.2cm}Automatic Test Generation from a Specification}
 \author{Hani Kazmi}
 \studentID{1201492}
 \supervisor{Dr Christian Urban}
@@ -22,23 +38,24 @@
 
 \begin{document}
 \doublespacing
-\createFrontMatter
+% \createFrontMatter
 \onehalfspacing
-\tableofcontents
+% \tableofcontents
 \doublespacing
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Report Content
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % You can write each chapter directly here or in a separate .tex file and use the include command.
-\include{Chapters/Introduction}
+% \include{Chapters/Introduction}
 \include{Chapters/Background}
-\include{Chapters/Body}
-\include{Chapters/DesignSpecification}
-\include{Chapters/Implementation}
-\include{Chapters/ProfessionalIssues}
-\include{Chapters/Evaluation}
-\include{Chapters/Conclusion}
+% \include{Chapters/Body}
+\include{Chapters/Requirements}
+% \include{Chapters/DesignSpecification}
+% \include{Chapters/Implementation}
+% \include{Chapters/ProfessionalIssues}
+% \include{Chapters/Evaluation}
+% \include{Chapters/Conclusion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % References

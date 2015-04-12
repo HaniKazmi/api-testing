@@ -1,0 +1,50 @@
+\chapter{Requirements}
+
+Below are a set of functional and non-functional requirements based upon which the system should be developed. Successful completion of this project should lead to a well defined way of specifing restful web apis, and using this specifcation to automatically test the implementation for bugs.
+
+\section{User Requirements}
+
+This section defines all the actions a user must be able to perform:
+
+\begin{itemize}
+\item Fully specify a restful web api, so that it can be clearly understood by developers and software architects.
+\item Be able to define what 'correct' operation of the api results in.
+\item Automatically run tests against an implementation of the web api based upon the specification.
+\item Be able to define sample inputs for the restul web api.
+\item Be able to define sample outputs for a given input.
+\item Be able to check in the api returns the correct output for any given input.
+\end{itemize}
+
+\section{Functional Requirements}
+
+This section defines the functionality the system must be able to accomplish.
+
+\begin{itemize}
+\item Parse the specification into a machine readable format.
+\item Provide the user with a method to execute tests against a web api.
+\item Report to the user how many tests failed.
+\item Be able to send sample inputs to the restful api and ensure they are valid.
+\item Be able to detect if an api implementation does not follow the specification.
+\end{itemize}
+
+\section{Non-Functional Requirements}
+
+This section defines more subjective requirements which will help provide a high quality project. It is split into two parts: Specification and Automated testing.
+
+\subsection{Specification}
+\begin{itemize}
+\item The specification language must be easily human readable.
+\item The language must be able to suiccintly and unambiuously define a restful web api.
+\item The language must be easily convertable to a format machines can process.
+\item The language most be agnostic to any implementation details. It should not matter how the api is going to work, or which programming language it will be written in.
+\end{itemize}
+
+\subsection{Automated testing}
+\begin{itemize}
+\item The system should be reliable: it should return the same result if run with the same specification on the same implementatiom.
+\item The system should be implementation agnostic: It should be able to run the tests no matter what language the api is written in.
+\item The system should be able to run on as many common operating systems as feasibly possible.
+\item The system should be performant, scaling linearly with the number of tests being run.
+\item The system shpuld be easy to maintain, following development best practices and making good use of architecturel design patterns.
+\item The system should be fully unit tested to provide assurences that the code is as correct as possible.
+\end{itemize}
