@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.4)  12 APR 2015 15:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.4)  24 APR 2015 23:44
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -695,6 +695,132 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 raries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
 )))
+(/usr/local/texlive/2014basic/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/pgfplots.revision
+.tex)
+Package: pgfplots 2015/01/31 v1.12 Data Visualization (1.12)
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/pgfplotscore.code
+.tex
+\t@pgfplots@toka=\toks38
+\t@pgfplots@tokb=\toks39
+\t@pgfplots@tokc=\toks40
+\pgfplots@tmpa=\dimen189
+\c@pgfplots@coordindex=\count174
+\c@pgfplots@scanlineindex=\count175
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysge
+neric.code.tex))
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibr
+ary.code.tex)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pg
+fplotsoldpgfsupp_loader.code.tex
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgf/libraries/pgflibraryfp
+u.code.tex)
+Package pgfplots: loading complementary arithmetics for your pgf version...
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pg
+fplotsoldpgfsupp_pgflibraryfpu.code.tex)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pg
+fplotsoldpgfsupp_pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count176
+)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pg
+fplotsoldpgfsupp_trig_format.code.tex))
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil
+.code.tex
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/liststructure/pgf
+plotsliststructure.code.tex)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/liststructure/pgf
+plotsliststructureext.code.tex)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/liststructure/pgf
+plotsarray.code.tex
+\c@pgfplotsarray@tmp=\count177
+)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/liststructure/pgf
+plotsmatrix.code.tex)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/numtable/pgfplots
+tableshared.code.tex
+\c@pgfplotstable@counta=\count178
+\t@pgfplotstable@a=\toks41
+)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/liststructure/pgf
+plotsdeque.code.tex)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/util/pgfplotsbina
+ry.code.tex
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/util/pgfplotsbina
+ry.data.code.tex))
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil
+.verb.code.tex)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypg
+fplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count179
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgf
+plots.surfshading.pgfsys-pdftex.def)))
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/util/pgfplotscolo
+rmap.code.tex
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/util/pgfplotscolo
+r.code.tex))
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/pgfplotsstackedpl
+ots.code.tex)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/pgfplotsplothandl
+ers.code.tex
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/pgfplotsmeshploth
+andler.code.tex))
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.
+code.tex)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/pgfplotscoordproc
+essing.code.tex)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/pgfplots.errorbar
+s.code.tex)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/pgfplots.markers.
+code.tex)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/pgfplotsticks.cod
+e.tex)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgfplots/pgfplots.paths.co
+de.tex)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgf/frontendlayer/tikz/lib
+raries/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgf/modules/pgfmoduledecor
+ations.code.tex
+\pgfdecoratedcompleteddistance=\dimen190
+\pgfdecoratedremainingdistance=\dimen191
+\pgfdecoratedinputsegmentcompleteddistance=\dimen192
+\pgfdecoratedinputsegmentremainingdistance=\dimen193
+\pgf@decorate@distancetomove=\dimen194
+\pgf@decorate@repeatstate=\count180
+\pgfdecorationsegmentamplitude=\dimen195
+\pgfdecorationsegmentlength=\dimen196
+)
+\tikz@lib@dec@box=\box46
+)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgf/frontendlayer/tikz/lib
+raries/tikzlibrarydecorations.pathmorphing.code.tex
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgf/libraries/decorations/
+pgflibrarydecorations.pathmorphing.code.tex))
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgf/frontendlayer/tikz/lib
+raries/tikzlibrarydecorations.pathreplacing.code.tex
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgf/libraries/decorations/
+pgflibrarydecorations.pathreplacing.code.tex))
+\pgfplots@numplots=\count181
+\pgfplots@xmin@reg=\dimen197
+\pgfplots@xmax@reg=\dimen198
+\pgfplots@ymin@reg=\dimen199
+\pgfplots@ymax@reg=\dimen200
+\pgfplots@zmin@reg=\dimen201
+\pgfplots@zmax@reg=\dimen202
+)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgf/frontendlayer/tikz/lib
+raries/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgf/libraries/pgflibrarypl
+otmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2013/07/20 v3.0.0 (rcs-revision 1.13)
+)))
 (/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgf/frontendlayer/tikz/lib
 raries/tikzlibraryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
@@ -711,7 +837,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
 (/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgf/libraries/pgflibraryar
 rows.code.tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
-\arrowsize=\dimen189
+\arrowsize=\dimen203
 ))
 (/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgf/frontendlayer/tikz/lib
 raries/tikzlibrarycalc.code.tex
@@ -720,44 +846,50 @@ File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.9)
 (/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgf/frontendlayer/tikz/lib
 raries/tikzlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2013/07/18 v3.0.0 (rcs-revision 1.3)
-\pgf@layerbox@background=\box46
-\pgf@layerboxsaved@background=\box47
-) (./report.aux
-(./Chapters/Background.aux) (./Chapters/Body.aux) (./Chapters/Requirements.aux)
-(./Appendices/appendix.aux) (./Appendices/UserGuide.aux)
-(./Appendices/SourceCode.aux))
+\pgf@layerbox@background=\box47
+\pgf@layerboxsaved@background=\box48
+)
+(/usr/local/texlive/2014basic/texmf-dist/tex/generic/pgf/frontendlayer/tikz/lib
+raries/tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2013/07/12 v3.0.0 (rcs-revision 1.5)
+) (./report.aux (./Chapters/Introduction.aux)
+(./Chapters/Background.aux) (./Chapters/DesignSpecification.aux)
+(./Chapters/SpecificationLanguage.aux) (./Chapters/TestFramework.aux)
+(./Chapters/TestCases.aux) (./Chapters/Evaluation.aux)
+(./Chapters/Conclusion.aux) (./Appendices/RatmlSpec.aux)
+(./Appendices/OnyxSpec.aux))
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 48.
 
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/local/texlive/2014basic/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count174
-\scratchdimen=\dimen190
-\scratchbox=\box48
-\nofMPsegments=\count175
-\nofMParguments=\count176
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count177
-\MPscratchDim=\dimen191
-\MPnumerator=\count178
-\makeMPintoPDFobject=\count179
-\everyMPtoPDFconversion=\toks39
+\scratchcounter=\count182
+\scratchdimen=\dimen204
+\scratchbox=\box49
+\nofMPsegments=\count183
+\nofMParguments=\count184
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count185
+\MPscratchDim=\dimen205
+\MPnumerator=\count186
+\makeMPintoPDFobject=\count187
+\everyMPtoPDFconversion=\toks43
 ) (/usr/local/texlive/2014basic/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -809,38 +941,113 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count180
+\c@lstlisting=\count188
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 ABD: EveryShipout initializing macros
-\openout2 = `Chapters/Background.aux'.
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.12}).
 
- (./Chapters/Background.tex
-Chapter 1.
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 4.
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
+* v-part:(T,H,B)=(57.81621pt, 641.75641pt, 95.39737pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=430.00462pt
+* \textheight=641.75641pt
+* \oddsidemargin=19.8752pt
+* \evensidemargin=19.8752pt
+* \topmargin=-51.45378pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<FrontMatter/logo.png, id=4, 234.8775pt x 214.8025pt>
+File: FrontMatter/logo.png Graphic file (type png)
+
+<use FrontMatter/logo.png>
+Package pdftex.def Info: FrontMatter/logo.png used on input line 50.
+(pdftex.def)             Requested size: 93.94933pt x 85.91946pt.
+ [1
+
+
+{/usr/local/texlive/2014basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./
+FrontMatter/logo.png (PNG copy)>]
+(./FrontMatter/abstract.tex) [1
+
+] [1] (./FrontMatter/acknowledgements.tex)
+[0
+
+] (./report.toc
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 2.
+
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 4.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 2.
 
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 4.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 2.
 
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 4.
+(Font)              <10> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 4.
+(Font)              <7> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 4.
+(Font)              <5> on input line 2.
+ [1
+
+])
+\tf@toc=\write7
+\openout7 = `report.toc'.
+
+ [2]
+\openout2 = `Chapters/Introduction.aux'.
+
+
+(./Chapters/Introduction.tex
+Chapter 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--6
+[][]\OT1/lmr/m/n/8 Website trends, 2010-2015, $\OT1/lmtt/m/n/8 http : / / httpa
+rchive . org / trends . php ? s = All & minlabel = Nov + 15 + 2010 &
+ []
+
+[3
+
+
+]) [4]
+\openout2 = `Chapters/Background.aux'.
+
+ (./Chapters/Background.tex
+Chapter 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--6
 [][]\OT1/lmr/m/n/8 Browser JavaScript Per-for-mance in 2008: $\OT1/lmtt/m/n/8 h
@@ -859,12 +1066,11 @@ Overfull \hbox (41.8101pt too wide) in paragraph at lines 6--6
 Firefox-[]Opera-[]Safari-[]and-[]Chrome-[]Update-[]Firefox-[]35-[]Final /
  []
 
-[1
+[5
 
 
 
-{/usr/local/texlive/2014basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2]
+] [6]
 \openout3 = `report.pyg'.
 
 
@@ -872,7 +1078,7 @@ Firefox-[]Opera-[]Safari-[]and-[]Chrome-[]Update-[]Firefox-[]35-[]Final /
 6D7.pygtex
 LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 9.
- [3]) [4]
+) [7] [8]
 Underfull \hbox (badness 10000) in paragraph at lines 115--115
 []|\OT1/lmr/m/n/10 Collection
  []
@@ -892,7 +1098,6 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 115--116
 [][] 
  []
 
-[5]
 \openout3 = `report.pyg'.
 
 
@@ -902,108 +1107,291 @@ BDD.pygtex)
 
 
 (./_minted-report/95576FE12BA2438E7B9BBFF3548B3E0B3C9B249B301F88F641CFAA5614579
-BDD.pygtex) [6]
+BDD.pygtex) [9] [10]
 \openout3 = `report.pyg'.
 
 
-(./_minted-report/72B80CEAB010B746EA6BD836B5D6673412A836BE8B584F5AB57871B8C5495
-B6C.pygtex [7]) [8] [9] [10]
+(./_minted-report/93D9215F43E6E761B477C5E19984E5DD12A836BE8B584F5AB57871B8C5495
+B6C.pygtex) [11] [12] [13]
 Overfull \hbox (17.29736pt too wide) in paragraph at lines 292--301
 [][] 
  []
 
-[11]) [12]
-\openout2 = `Chapters/Body.aux'.
+[14]) [15]
+\openout2 = `Chapters/DesignSpecification.aux'.
 
- (./Chapters/Body.tex
-Chapter 2.
-) [13
-
-
-
-]
-\openout2 = `Chapters/Requirements.aux'.
-
- (./Chapters/Requirements.tex
+ (./Chapters/DesignSpecification.tex
 Chapter 3.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 10.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 14.
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 10.
- [14
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 14.
+ [16
 
 
 
-]) [15]
-[16] (./report.bbl
-Underfull \hbox (badness 1616) in paragraph at lines 4--8
-[]\OT1/lmr/m/n/10 Api blueprint spec-i-fi-ca-tion.  $\OT1/lmtt/m/n/10 https : /
- / github . com / apiaryio / api-[]blueprint / blob /
+] [17]
+Overfull \hbox (73.29259pt too wide) in paragraph at lines 115--116
+[][] 
  []
 
-) [17
+[18] [19]) [20]
+\openout2 = `Chapters/SpecificationLanguage.aux'.
+
+ (./Chapters/SpecificationLanguage.tex
+Chapter 4.
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/54B10388B1E7225775F979C2D82839C33C9B249B301F88F641CFAA5614579
+BDD.pygtex [21
+
+
+
+])
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/0AA5BA2E273155C76E38F28284728E103C9B249B301F88F641CFAA5614579
+BDD.pygtex)
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/DAF4E1E1D28F1D8C1D02E17C624E98113C9B249B301F88F641CFAA5614579
+BDD.pygtex [22])
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/A86E0BB5CBA3A46B9E7B1F695DF8421A3C9B249B301F88F641CFAA5614579
+BDD.pygtex) [23] [24]
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/A49FF9110CD1E281AC9E4B4E4EC44ABC3C9B249B301F88F641CFAA5614579
+BDD.pygtex) [25] [26] <rail.png, id=114, 700.6175pt x 528.97626pt>
+File: rail.png Graphic file (type png)
+
+<use rail.png>
+Package pdftex.def Info: rail.png used on input line 208.
+(pdftex.def)             Requested size: 411.9399pt x 311.02785pt.
+) [27 <./rail.png>] [28]
+\openout2 = `Chapters/TestFramework.aux'.
+
+ (./Chapters/TestFramework.tex
+Chapter 5.
+[29
+
+
+
+] [30]
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/E94C81A4D8398EE011D5A3BCCB609A1851E5E70CAFA487BBE37A93D413654
+EC0.pygtex)) [31]
+\openout2 = `Chapters/TestCases.aux'.
+
+ (./Chapters/TestCases.tex
+Chapter 6.
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/BA1CDFFCF8154C05A540C57BF5546DCCFB3294667D36836BD4866AEE36DFC
+32A.pygtex [32
+
+
+
+])
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/FCD21B086A933F4D5A2C15A20F2AC8EFFB3294667D36836BD4866AEE36DFC
+32A.pygtex) [33]
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/18C280D15CF79BD9595BB069EB9085F07054176D1D568F4E3C0F998F820CF
+FA1.pygtex) [34]
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/02A0607741C892B198C325D57105F116FB3294667D36836BD4866AEE36DFC
+32A.pygtex [35])) [36] [37]
+\openout2 = `Chapters/Evaluation.aux'.
+
+ (./Chapters/Evaluation.tex
+Chapter 7.
+[38
+
+
+
+] [39] [40] [41] [42]) [43]
+\openout2 = `Chapters/Conclusion.aux'.
+
+ (./Chapters/Conclusion.tex
+Chapter 8.
+[44
+
+
+
+]) [45] (./report.bbl
+Underfull \hbox (badness 1616) in paragraph at lines 4--8
+[]\OT1/lmr/m/n/10 Api blueprint spec-i-fi-ca-tion.  $\OT1/lmtt/m/n/10 https : /
+ / github . com / APIaryio / API-[]blueprint / blob /
+ []
+
+[46
 
 
 ]
-\openout2 = `Appendices/appendix.aux'.
+Underfull \hbox (badness 1888) in paragraph at lines 85--89
+[]\OT1/lmr/m/n/10 Peter Komisar.  Ruby on rails i.  $\OT1/lmtt/m/n/10 http : / 
+/ www . sentex . net / []pkomisar / Ruby / 9 _
+ []
 
- (./Appendices/appendix.tex
+) [47]
+\openout2 = `Appendices/RatmlSpec.aux'.
+
+ (./Appendices/RatmlSpec.tex
 Appendix A.
-) [18
+
+Overfull \hbox (9.08669pt too wide) in paragraph at lines 16--17
+\OT1/lmr/m/n/10 The key words "MUST", "MUST NOT", "RE-QUIRED", "SHALL", "SHALL 
+NOT", "SHOULD",
+ []
+
+[48
 
 
 ]
-\openout2 = `Appendices/UserGuide.aux'.
+\openout3 = `report.pyg'.
 
- (./Appendices/UserGuide.tex
+
+(./_minted-report/746368B89E4D13CE6CA965F3AE8C5993FB3294667D36836BD4866AEE36DFC
+32A.pygtex) [49]
+Overfull \hbox (15.0pt too wide) in paragraph at lines 71--72
+[][] 
+ []
+
+[50] [51]
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/9D57784BCC24727DA8E6FF4FC9F884CFFB3294667D36836BD4866AEE36DFC
+32A.pygtex) [52]
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/BB2F0ACA905291EC719181265858CFFBFB3294667D36836BD4866AEE36DFC
+32A.pygtex) [53]
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/59750AC29D0D5A4149D49D1782A7D9ADFB3294667D36836BD4866AEE36DFC
+32A.pygtex)
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/28ED581BDEAC3E03CC16E81DE3F772E2FB3294667D36836BD4866AEE36DFC
+32A.pygtex [54])
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/8E18A03C8168A54B6284F4DB50D86759FB3294667D36836BD4866AEE36DFC
+32A.pygtex)
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/08A4B70B85EF231F35AE1A89DCB40576FB3294667D36836BD4866AEE36DFC
+32A.pygtex [55])
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/B93BC0582E1592662A725DEEDA704050FB3294667D36836BD4866AEE36DFC
+32A.pygtex)
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/A1DBE0D621606649C5C61AA3522A1B85FB3294667D36836BD4866AEE36DFC
+32A.pygtex)
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/7BCBFCAC914709E8700AC2F43CC6DEE4FB3294667D36836BD4866AEE36DFC
+32A.pygtex [56])
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/FBEF8FED028F5B54478B195223FD1638FB3294667D36836BD4866AEE36DFC
+32A.pygtex)
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/27779E9290A80B8B78592585032E2133FB3294667D36836BD4866AEE36DFC
+32A.pygtex [57])
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/A3FA8B2B0B36635087E3A0D454F3D655FB3294667D36836BD4866AEE36DFC
+32A.pygtex)
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/C0CC4E25758F344A283C4BE45B3166CAFB3294667D36836BD4866AEE36DFC
+32A.pygtex [58])) [59]
+\openout2 = `Appendices/OnyxSpec.aux'.
+
+ (./Appendices/OnyxSpec.tex
 Appendix B.
-) [19
+\openout3 = `report.pyg'.
+
+
+(./_minted-report/3E7EF2E9600690D52649C3CFE3294A3DFB3294667D36836BD4866AEE36DFC
+32A.pygtex [60
 
 
 
-]
-\openout2 = `Appendices/SourceCode.aux'.
-
- (./Appendices/SourceCode.tex
-Appendix C.
-) [20
-
-
-
-]
+] [61])) [62]
 runsystem(rm "report.pyg")...executed.
 
- (./report.aux (./Chapters/Background.aux) (./Chapters/Body.aux)
-(./Chapters/Requirements.aux) (./Appendices/appendix.aux)
-(./Appendices/UserGuide.aux) (./Appendices/SourceCode.aux)) ) 
+ (./report.aux (./Chapters/Introduction.aux)
+(./Chapters/Background.aux) (./Chapters/DesignSpecification.aux)
+(./Chapters/SpecificationLanguage.aux) (./Chapters/TestFramework.aux)
+(./Chapters/TestCases.aux) (./Chapters/Evaluation.aux)
+(./Chapters/Conclusion.aux) (./Appendices/RatmlSpec.aux)
+(./Appendices/OnyxSpec.aux)) ) 
 Here is how much of TeX's memory you used:
- 18414 strings out of 494522
- 364969 string characters out of 6167206
- 441874 words of memory out of 5000000
- 21250 multiletter control sequences out of 15000+600000
- 49639 words of font info for 43 fonts, out of 8000000 for 9000
+ 28219 strings out of 494522
+ 692848 string characters out of 6167206
+ 842025 words of memory out of 5000000
+ 30799 multiletter control sequences out of 15000+600000
+ 53857 words of font info for 44 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 55i,10n,56p,1593b,741s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texliv
-e/2014basic/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/201
-4basic/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/local/texlive/2014basic/
-texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2014basic/texmf-dis
-t/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2014basic/texmf-dist/fon
-ts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/ty
-pe1/public/lm/lmr10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/pu
-blic/lm/lmr6.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm
-/lmr7.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmr8.p
-fb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></
-usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/l
-ocal/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/
-texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmtt8.pfb></usr/local/texliv
-e/2014basic/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on report.pdf (20 pages, 305042 bytes).
+ 55i,18n,83p,1593b,2080s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014basic/texmf-dist/fonts/en
+c/dvips/lm/lm-rm.enc}{/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/l
+m/lm-mathex.enc}{/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/lm/lm-
+mathsy.enc}{/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.
+enc}</usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><
+/usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/
+local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local
+/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texli
+ve/2014basic/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/201
+4basic/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2014basic/
+texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2014basic/texmf-d
+ist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2014basic/texmf-dist/fon
+ts/type1/public/lm/lmri10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/ty
+pe1/public/lm/lmsy10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/p
+ublic/lm/lmtk10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public
+/lm/lmtt10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/l
+mtt8.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmtti10
+.pfb>
+Output written on report.pdf (66 pages, 526940 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 284 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

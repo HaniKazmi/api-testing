@@ -10,19 +10,28 @@
 \usepackage{graphicx}
 \usepackage{minted}
 \usepackage{caption}
-\usepackage{tikz}
+\usepackage{tikz, pgfplots}
 
-\usetikzlibrary{shapes.geometric, arrows, calc, backgrounds}
+\usetikzlibrary{shapes.geometric, arrows, calc, backgrounds, fit}
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
 \tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black]
 \tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
+\tikzset
+{
+    treenode/.style = {circle, draw=black, align=center, minimum size=2cm},
+    subtree/.style  = {isosceles triangle, draw=black, align=center, minimum height=0.5cm, minimum width=1cm, shape border rotate=90, anchor=north}
+}
+
+\pgfplotsset{compat=1.12}
+
 \let\lstlisting\minted
 \let\endlstlisting\endminted
 
 \newenvironment{code}{\captionsetup{type=listing}}{}
-
+\usepackage{etoolbox}
+\AtBeginEnvironment{lstlisting}{\singlespacing}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Front Matter - project title, name, supervisor name and date
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -34,41 +43,43 @@
 \date{\today}
 
 \abstractFile{FrontMatter/abstract.tex}
-%\ackFile{FrontMatter/acknowledgements.tex} %Remove line if you do not want acknowledgements
+\ackFile{FrontMatter/acknowledgements.tex} %Remove line if you do not want acknowledgements
 
 \begin{document}
 \doublespacing
-% \createFrontMatter
+\createFrontMatter
 \onehalfspacing
-% \tableofcontents
+\tableofcontents
 \doublespacing
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Report Content
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % You can write each chapter directly here or in a separate .tex file and use the include command.
-% \include{Chapters/Introduction}
+\include{Chapters/Introduction}
 \include{Chapters/Background}
-% \include{Chapters/Body}
-\include{Chapters/Requirements}
-% \include{Chapters/DesignSpecification}
-% \include{Chapters/Implementation}
+\include{Chapters/DesignSpecification}
+\include{Chapters/SpecificationLanguage}
+\include{Chapters/TestFramework}
+\include{Chapters/TestCases}
 % \include{Chapters/ProfessionalIssues}
-% \include{Chapters/Evaluation}
-% \include{Chapters/Conclusion}
+\include{Chapters/Evaluation}
+\include{Chapters/Conclusion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % References
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{plain}
 \bibliography{references}
-\addcontentsline{toc}{section}{Bibliography}
+\addcontentsline{toc}{chapter}{Bibliography}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Appendices
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
-\include{Appendices/appendix}
-\include{Appendices/UserGuide}
-\include{Appendices/SourceCode}
+% \include{Appendices/appendix}
+% \include{Appendices/UserGuide}
+% \include{Appendices/SourceCode}
+\include{Appendices/RatmlSpec}
+\include{Appendices/OnyxSpec}
 \end{document}

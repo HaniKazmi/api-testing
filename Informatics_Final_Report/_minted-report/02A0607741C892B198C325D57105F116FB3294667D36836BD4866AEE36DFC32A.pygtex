@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{l+lScalar+lScalarPlain}{\PYGdefaultZbs{}\PYGdefaultZob{}userId\PYGdefaultZcb{}}\PYGdefault{p+pIndicator}{:}
+    \PYGdefault{l+lScalar+lScalarPlain}{get}\PYGdefault{p+pIndicator}{:}
+      \PYGdefault{l+lScalar+lScalarPlain}{testcases}\PYGdefault{p+pIndicator}{:}
+        \PYGdefault{l+lScalar+lScalarPlain}{exampleuser}\PYGdefault{p+pIndicator}{:}
+          \PYGdefault{l+lScalar+lScalarPlain}{resource}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{1}
+          \PYGdefault{l+lScalar+lScalarPlain}{response}\PYGdefault{p+pIndicator}{:}
+            \PYGdefault{l+lScalar+lScalarPlain}{status}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{200}
+            \PYGdefault{l+lScalar+lScalarPlain}{body}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+              \PYGdefault{n+no}{...}
+        \PYGdefault{l+lScalar+lScalarPlain}{examplemissinguser}\PYGdefault{p+pIndicator}{:}
+          \PYGdefault{l+lScalar+lScalarPlain}{dependent}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{missinguser}
+          \PYGdefault{l+lScalar+lScalarPlain}{resource}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{1}
+          \PYGdefault{l+lScalar+lScalarPlain}{response}\PYGdefault{p+pIndicator}{:}
+            \PYGdefault{l+lScalar+lScalarPlain}{status}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{404}
+            \PYGdefault{l+lScalar+lScalarPlain}{body}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+              \PYGdefault{n+no}{...}
+    \PYGdefault{l+lScalar+lScalarPlain}{delete}\PYGdefault{p+pIndicator}{:}
+        \PYGdefault{l+lScalar+lScalarPlain}{deleteuser}\PYGdefault{p+pIndicator}{:}
+          \PYGdefault{l+lScalar+lScalarPlain}{dependent}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{exampleuser}
+          \PYGdefault{l+lScalar+lScalarPlain}{resource}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{1}
+          \PYGdefault{l+lScalar+lScalarPlain}{response}\PYGdefault{p+pIndicator}{:}
+            \PYGdefault{l+lScalar+lScalarPlain}{status}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{200}
+            \PYGdefault{l+lScalar+lScalarPlain}{body}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+               \PYGdefault{n+no}{...}
+\end{Verbatim}

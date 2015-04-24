@@ -1,0 +1,212 @@
+\chapter{Specification Language}
+
+\section{Existing Languages}
+
+As discussed in the Background chapter, there are ample languages on the market for specifying an API. However, as discovered most of them have limitation; either being hard to parse or limited in tooling. As this project requires a language that can be easily created and written by humans and processed by machines, a new language will be created. Furthermore, due to the existing languages being mainly closed source and under existing licenses, the required changes to add sample input and output can not be made.
+
+The language defined below will be heavily inspired by RAML. This is due to RAML already having many of the needed properties: It is based upon YAML, which is a widely understood format, and therefore there are already editors and syntax highlighters for it. Furthermore, there are many mature YAML parsers, allowing the language to be easily machine processed.
+
+\section{The Anatomy of a Restful Web API}
+\label{sec:anatomy}
+A restful API has an entrypoint, generally of the form \url{http://example.com/ap1/v1/}. Sending a GET request to this collection returns a list of top level resources. In the case of Livedrive, this will be the Users resource and the Files resource\footnote{Onyx contains more resources than this, but this simplification is sufficient for this report.}. There will also be an authentication path to protect the API from malicious users.
+
+\begin{code}
+\begin{lstlisting}[frame=lines]{js}
+ {
+   "name": "Livedrive Onyx API"
+   "implementation_version": "1",
+   "uri": "http://example.com/",
+   "users": [
+     {
+       "name": "User Profiles",
+       "uri": "/users"
+     }
+    ],
+   "files": [
+     {
+       "name": "File storage",
+       "uri": "/files"
+     }
+    ].
+   "authenticate": [
+     {
+       "name": "Authentication",
+       "uri": "/authenticate"
+     }
+   ],
+ }
+\end{lstlisting}
+\end{code}
+
+URIs are given relative to the root URL, so the Users collection could be queried from \url{http://example.cpm/API/v1/users}. This collection is likely to be secured due to sensitive nature of the data contained within it, so the user would need to authenticate first and include a authentication token with each request.
+
+\begin{code}
+\begin{lstlisting}[frame=lines]{js}
+[
+  {
+  	"name": "Hani Kazmi",
+  	"uri": "/users/1",
+  	"role": "admin",
+  	...
+  },
+  {
+  	"name": "John Doe",
+  	"uri": "/users/1",
+  	"role": "user",
+  	...
+  },
+  ...
+]
+\end{lstlisting}
+\end{code}
+
+The base level collections will contain links to the individual elements, along with basic data. Some of this data may be links to elements in other collections. Querying one of the elements returns full information about the element.
+
+\begin{code}
+\begin{lstlisting}[frame=lines]{js}
+{
+	"name": "Hani Kazmi",
+	"uri": "/users/1",
+	"photo": "/photos/121",
+	"files": [
+	    {
+	    	"filename": "flower.jpg",
+	    	"uri": "/files/210312",
+	    	...
+	    },
+	    {
+	    	"filename": "report.pdf",
+	    	"uri": "/files/203840237",
+	    	...
+	    },
+	    ...
+	],
+	...
+}
+\end{lstlisting}
+\end{code}
+
+At any of these stages, a different HTTP verb can be used to modify the data\footnote{Assuming the user has the necessary permissions.}. For PUT or POST, this requires knowing the right format to send new data in, which is generally documented externelly.
+
+\begin{code}
+\begin{lstlisting}[frame=lines]{js}
+ POST /users
+ Host: example.com
+ Authorization: Basic xxxxxxxxxxxxxxxxxxxxxxxx
+ Accept: application/json
+ Content-Length: nnn
+ Content-Type: application/json
+ X-Compute-Client-Specification: 0.1
+ 
+ {
+   "name": "Richard Stallman",
+   "photo": "/photos/123213",
+   ...
+ }
+\end{lstlisting}
+\end{code}
+
+Adding an element to a collection assigns it an automatic number, and the collection list is updated to reflect this.
+
+\section{Designing a Specification}
+
+Restful APIs consist of collections and elements (collectively known as endpoints), either of which can link to each other. Therefore, most specifications end up being very recursive. For a GET request, they generally define the endpoint, the data contained withint the element, and the name of any elements/collections it may link to. For each element, they also define the format requests from other verbs must be made in. Any verbs not defined in the specification are assumed to not apply to the endpoint.
+
+The specification language designed in this project will be called RATMAL (RESTful API Testing Modeling Language). It will consist of of a hierarchy of collections and elements. At each level, the verb and their responses will be defined, using a colon as a separator. A 'description' tag will allow human readable comments to be included to clarify any complexities.
+
+Collections are declared as /[collection\_name]: to reflect the form they appear as in the implementation. Elements are declared as /{[element\_name]} to signify that element\_name is simply a label and will be replaced by a number. Other key words include 'queryParameters' to define any parameters which may be included with GET requests, and 'responses' to indicate the response schema.
+
+The full specification is given in the Appendix.
+
+\section{Implementing the RATML Parser}
+
+While RAML is easily parseable, it is a new language and therefore does not have a reference parser for ruby. The only existing implementation\footnote{\url{https://github.com/coub/raml_ruby}} is abandoned and incomplete. Therefore, I will create a new parser to  fit the requirements of RATML Ruby has a mature open-source library for parsing YAML documents called Psych\footnote{\url{https://github.com/tenderlove/psych}}. Psych  convert YAML files into an abstract syntax tree, and therefore it will be forked and used as the starting point for my RATML parser. The abstract syntax tree consists of in memory nodes, which can intercepted and converted into purpose-built data structures for RATML. There are four types of nodes relevant to RATML:
+
+\begin{description}
+\item[node] The base class from which all the other nodes inherit. It contains references to child nodes, and utility methods to allow iteration and searches.
+\item[document] The root node. It contains data about the YAML file, along with a single child which points hierarchically to the rest of the nodes.
+\item[scalar] Terminal nodes, representing YAML scalars. Their primary purpose is to store the values from the YAML document.
+\item[mapping] Intermediary nodes. They represent YAML mappings between scalars.
+\end{description}
+
+RATML consists of values, which are basic data types, and properties, each of which may have one or more values and properties as children. This lends itself to a 'Property' parent class, which can be sub classed and specialized to accommodate the variety of values stored in different properties. The properties can be broken down into:
+
+\begin{description}
+\item[Root] The initial property constructed when visiting the entry point. It contains references to all the other properties.
+\item[Resource] The top level endpoint property. Contains values for both Collections and Elements.
+\item[Method] For each HTTP verb in a resource, there will be a separate Method property, allowing different verbs to be dealt with separately.
+\item[Response] Each valid HTTP code in method corresponds to a separate response. Each response is in the form of a JSON schema, as defined in the specification.
+\item[Body] Body objects store each individual schema.
+\end{description}
+
+\subsection{Dealing with JSON}
+
+Most values are singular objects: either a number or a string consisting of a few words. The JSON schema are more complex. While they could be stored as strings, this will stop them being easily parsed when using them for comparison against reponses. As an example, in the schema:
+
+\begin{lstlisting}[frame=lines]{js}
+{ "$schema": "http://json-schema.org/schema",
+  "type": "object",
+  "description": "A canonical user",
+  "properties": {
+    "name":  { "type": "string" },
+    "uri": { "type": "uri" },
+    "photo": { "type": "uri" },
+    "files": [{
+      "filename": { "type": "string"},
+      "uri": { "uri": "uri"},
+      }]
+  },
+  "required": [ "name", "uri" ]
+}
+\end{lstlisting}
+
+the property "title" has type string, and is defined as required. Therefore, schema will be stored as Ruby meta-programmed objects, which can run comparison on themselves to evaluate if a response matches. This is further complicated by the fact that determining whether a given string is an 'artist' or not is difficult computationally.
+
+\subsection{Converting the syntax tree to properties}
+
+The algorithm to convert from nodes to properties starts at the document node. It recursively parses the tree in a depth-first order, using a simple heuristic to decide which property the node corresponds with. Schema get further processing: they are wrapped in a functional Block which can evaluate equality checks. Due to the uncertain nature of how precise the schema is compared to the implementation response, this is done by assigning each value in the schema a point score depending on the closeness of the match. The point score to assign is calculated using the average of previous scores in successful responses.  This can then be used to determine equivalence using:
+
+\[
+\textrm{Equality} \iff \frac{\sum{\textrm{property\_points}}}{\textrm{Number of properties}} \geq \textrm{Number of properties} + \textrm{required properties}
+\]
+
+While not perfect, this formula improves as more successful tests are made, and therefore point score assignments improve.
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[%
+xlabel={Number of successful responses},
+ylabel={Percentage of successful equality checks.}
+]
+\addplot[color=blue, mark=square, only marks]%
+table{
+x y label
+1 50 a
+5 60 a
+10 80 a
+20 90 a
+50 95 a
+100 97 a
+};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\section{The Onyx Specification}
+
+The Onyx API has several hundred endpoints, and is too large to fully replicate for this project. Instead, I will create a subset of it to cover all the major types of endpoints, while still keeping it manageable for the scope of this report. As introduced in \ref{sec:anatomy}, the entry point will have Files and Users collections. Both collections will be amenable to GET requests to display a list of elements, and POST requests to add an element. Elements of the aforementioned collections will respond to GET, PATCH, and DELETE requests to modify them accordingly.
+
+Users will contain a subset of the values which can be accessed using Onyx. This includes the values required for the API functionality, such as name and list of files, along with optional values to cover the range the tests should cover. Files will store file meta data like filename and size.
+
+The full specification is included in the Appendix. 
+
+\subsection{Implementing the Specification}
+
+As discussed before, the test Onyx API will be implemented in Ruby on Rails. Rails applications follow the Model-View Controller(MVC)\cite{mvsspec} design pattern, where logic(the model) and responses(View) are split to allow for greater modularity. Rails applications consist of a web server which receives incoming requests. These are sent to a router which determines a controller to direct the request to. The controller uses any stored data and the logic from the model to construct a response, and return it to the client.
+
+\begin{figure}[ht]
+\includegraphics[width=\textwidth]{rail}
+\caption{Ruby on Rails Application Architecture\cite{ror}}
+\end{figure}
+
+The Onyx implementation will begin with seeded data in the database to imitate the existing users at Livedrive. Requests received by the application will modify the database as needed and return the constructed response, with the exception of file uploads and downloads. For the sake of limited storage, file transfers will be replaced and the responses doctored to match a fully working implementation.

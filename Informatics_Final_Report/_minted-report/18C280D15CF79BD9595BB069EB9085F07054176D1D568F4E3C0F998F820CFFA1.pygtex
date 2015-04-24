@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{k}{def} \PYGdefault{n+nf}{thread\PYGdefaultZus{}pool}\PYGdefault{p}{(}\PYGdefault{n}{hashmap}\PYGdefault{p}{,} \PYGdefault{n}{max\PYGdefaultZus{}threads}\PYGdefault{p}{):}
+  \PYGdefault{n}{current\PYGdefaultZus{}threads} \PYGdefault{o}{=} \PYGdefault{l+m+mi}{0}
+  \PYGdefault{n}{current\PYGdefaultZus{}index} \PYGdefault{o}{=} \PYGdefault{l+m+mi}{0}
+  \PYGdefault{n}{testcases} \PYGdefault{o}{=} \PYGdefault{n+no}{ParallelArray}\PYGdefault{o}{.}\PYGdefault{n}{new} 	\PYGdefault{c+c1}{\PYGdefaultZsh{} A custom semaphore based array}
+  \PYGdefault{k}{while} \PYGdefault{n}{current\PYGdefaultZus{}index} \PYGdefault{o}{\PYGdefaultZlt{}} \PYGdefault{n}{hashmap}\PYGdefault{o}{.}\PYGdefault{n}{count}\PYGdefault{p}{:}
+    \PYGdefault{k}{if} \PYGdefault{n}{current\PYGdefaultZus{}threads} \PYGdefault{o}{\PYGdefaultZlt{}=} \PYGdefault{l+s+ss}{max\PYGdefaultZus{}threads}\PYGdefault{p}{:}
+      \PYGdefault{n}{current\PYGdefaultZus{}threads} \PYGdefault{o}{=} \PYGdefault{n}{current\PYGdefaultZus{}threads} \PYGdefault{o}{+} \PYGdefault{l+m+mi}{1}
+      \PYGdefault{n}{testcases}\PYGdefault{o}{.}\PYGdefault{n}{add} \PYGdefault{n+no}{Thread}\PYGdefault{o}{.}\PYGdefault{n}{new}\PYGdefault{p}{(\PYGdefaultZob{}} 	\PYGdefault{c+c1}{\PYGdefaultZsh{} A closure executed in a new thread}
+      	\PYGdefault{c+c1}{\PYGdefaultZsh{} Parse the tree from the specified node, and return the created test case}
+      	\PYGdefault{n}{testcase} \PYGdefault{o}{=} \PYGdefault{n}{parse}\PYGdefault{p}{(}\PYGdefault{n}{array}\PYGdefault{p}{(}\PYGdefault{n}{current\PYGdefaultZus{}index}\PYGdefault{p}{))}
+      	\PYGdefault{n}{current\PYGdefaultZus{}threads} \PYGdefault{o}{=} \PYGdefault{n}{current\PYGdefaultZus{}threads} \PYGdefault{o}{\PYGdefaultZhy{}} \PYGdefault{l+m+mi}{1}
+      	\PYGdefault{n}{current\PYGdefaultZus{}index} \PYGdefault{o}{=} \PYGdefault{n}{current\PYGdefaultZus{}index} \PYGdefault{o}{+} \PYGdefault{l+m+mi}{1}
+      	\PYGdefault{k}{return} \PYGdefault{n}{testcase}
+      	\PYGdefault{p}{\PYGdefaultZcb{})}
+    \PYGdefault{k}{end}
+  \PYGdefault{k}{end}
+  \PYGdefault{k}{return} \PYGdefault{n}{testcases}
+\PYGdefault{k}{end}
+\end{Verbatim}

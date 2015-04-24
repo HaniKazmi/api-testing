@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{l+lScalar+lScalarPlain}{https://API.github.com/user}
+\PYGdefault{l+lScalar+lScalarPlain}{https://API.github.com/users}
+\PYGdefault{l+lScalar+lScalarPlain}{https://API.github.com/users/\PYGdefaultZob{}userId\PYGdefaultZcb{}}
+\PYGdefault{l+lScalar+lScalarPlain}{https://API.github.com/users/\PYGdefaultZob{}userId\PYGdefaultZcb{}/followers}
+\PYGdefault{l+lScalar+lScalarPlain}{https://API.github.com/users/\PYGdefaultZob{}userId\PYGdefaultZcb{}/following}
+\PYGdefault{l+lScalar+lScalarPlain}{https://API.github.com/users/\PYGdefaultZob{}userId\PYGdefaultZcb{}/keys}
+\PYGdefault{l+lScalar+lScalarPlain}{https://API.github.com/users/\PYGdefaultZob{}userId\PYGdefaultZcb{}/keys/\PYGdefaultZob{}keyId\PYGdefaultZcb{}}
+\end{Verbatim}

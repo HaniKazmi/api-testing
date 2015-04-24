@@ -1,3 +1,129 @@
-\chapter{Design \& Specification}
+\chapter{Design Considerations}
 
-\section{Section Heading}
+This chapter discusses the overall system design of the project, and details what each module of the system will accomplish. The chapter will give a high level overview, with more in depth implementation details further on. Each choice is based upon achieving one of the requirement of the project
+
+\section{Requirements}
+
+Below are a set of functional and non-functional requirements based upon which the system should be developed. Successful completion of this project should lead to a well defined way of specifying restful web APIs, and using this specification to automatically test the implementation for bugs.
+
+\subsection{User Requirements}
+
+This section defines all the actions a user must be able to perform:
+
+\begin{itemize}
+\item Fully specify a restful web API, so that it can be clearly understood by developers and software architects.
+\item Be able to define what 'correct' operation of the API results in.
+\item Automatically run tests against an implementation of the web API based upon the specification.
+\item Be able to define sample inputs for the restful web API.
+\item Be able to define sample outputs for a given input.
+\item Be able to check in the API returns the correct output for any given input.
+\end{itemize}
+
+\subsection{Functional Requirements}
+
+This section defines the functionality the system must be able to accomplish.
+
+\begin{itemize}
+\item Parse the specification into a machine readable format.
+\item Provide the user with a method to execute tests against a web API.
+\item Report to the user how many tests failed.
+\item Be able to send sample inputs to the restful API and ensure they are valid.
+\item Be able to detect if an API implementation does not follow the specification.
+\end{itemize}
+
+\subsection{Non-Functional Requirements}
+
+This section defines more subjective requirements which will help provide a high quality project. It is split into two parts: Specification and Automated testing.
+
+\subsubsection{Specification}
+\begin{itemize}
+\item The specification language must be easily human readable.
+\item The language must be able to succinctly and unambiguously define a restful web API.
+\item The language must be easily convertible to a format machines can process.
+\item The language most be agnostic to any implementation details. It should not matter how the API is going to work, or which programming language it will be written in.
+\end{itemize}
+
+\subsubsection{Automated testing}
+\begin{itemize}
+\item The system should be reliable: it should return the same result if run with the same specification on the same implementation.
+\item The system should be implementation agnostic: It should be able to run the tests no matter what language the API is written in.
+\item The system should be able to run on as many common operating systems as feasibly possible.
+\item The system should be performant, scaling linearly with the number of tests being run.
+\item The system should be easy to maintain, following development best practices and making good use of architectural design patterns.
+\item The system should be fully unit tested to provide assurances that the code is as correct as possible.
+\end{itemize}
+
+\section{System Components}
+
+The project consists of three overall systems, which can be broken down into smaller modules.
+
+\textbf{The RATML specification:} A high level specification language based upon RAML, allowing restful web APIs to be fully specified. The language can be split into two parts:
+\begin{itemize}
+\item A language to define the endpoints of the API, along with all of its collections and resources. An API should be able to be implemented using just this as an reference.
+\item A language to define test input and output data.
+\end{itemize}
+
+\textbf{RATML parser:} As RATML is a new specification language, a custom parser will need to be built.
+\begin{itemize}
+\item A YAML parser will be used to convert the text based specification file into a human processable format.
+\item A RATML parser will then take as input the objects from the YAML parser, and convert them into a data structure that can be used by the rest of the system.
+\item A facade will allow the system to quickly query and manipulate the aforementioned data structure.
+\end{itemize}
+
+\textbf{RATML Framework}: The framework will use the parsed data to create and execute tests.
+\begin{itemize}
+\item A system to iterate through the endpoints and generate the best possible test for it.
+\item A system to use the sample input data to interpolate more possible values for the endpoint, and use it to send test requests.
+\item A system to report the discovered results in a human readable manner.
+\end{itemize}
+
+The big advantage of this approach is the separation of concerns: each of the three components is loosely linked and therefore can be worked on and tested in isolation.
+
+\begin{figure}[ht]
+\begin{tikzpicture}[node distance=3.5cm, framed]
+\node (spec) [process] {Specification};
+\node (API) [process, below left of=spec] {Web API};
+\node (parser) [process, below right of = spec] {Parser};
+\node (test) [process, below right of = API] {Test Framework};
+
+\node (ratml) [process, right of = parser, xshift = 0.5cm] {RATML Parser};
+\node (yaml) [process, above of = ratml, yshift = -1.75cm] {YAML Parser};
+\node (facade) [process, below of = ratml, yshift = 1.75cm] {Facade};
+\node (model) [process, right of = ratml] {Model};
+\node [draw=black, fit= (ratml) (yaml) (facade) (model), dashed] {};
+
+\node (exec) [process, below of = test, yshift = 1.25cm] {Execute Tests};
+\node (gen) [process, left of = exec] {Generate Tests};
+\node (dis) [process, right of = exec] {Report Results};
+\node [draw=black, fit= (gen) (exec) (dis), dashed] {};
+
+\draw [arrow] (spec) -- node[anchor=west, align=center] {Definition} (parser);
+\draw [arrow] (parser) -- (test);
+\draw [arrow] (test) -- (API);
+\draw [arrow] (spec) -- node[anchor=east] {Implementation}(API);
+
+\draw [arrow] (parser) -- (yaml);
+\draw [arrow] (yaml) -- (ratml);
+\draw [arrow] (ratml) -- (model);
+\draw [arrow] (model) -- (facade);
+\draw [arrow] (facade) -- (parser);
+
+\draw [arrow] (test) -- (gen);
+\draw [arrow] (gen) -- (exec);
+\draw [arrow] (exec) -- (dis);
+\draw [arrow] (dis) -- (test);
+\end{tikzpicture}
+\caption{System Architecture Diagram}
+\end{figure}
+
+\section{Software Packages}
+
+The system will mainly be written in Ruby\footnote{\url{https://www.ruby-lang.org}}. This is due to the language's prominence in the Test Driven Development committee, along with being multi-platform. The language comes pre-installed on OS X and most distributions of Linux, as well as being easily installable on Windows, thereby covering the three biggest browsers. Furthermore, the language is completely portable, and the same code base works on any supported platform. Of particular note are the languages meta-programming capabilities, which allow parsers to be written very efficiently.
+
+In particular, Ruby's Blocks are an implementation of higher level functions which allow arbitrary code to be stored as variables and passed around the system. This allows for code to be very highly encapsulated,  such as letting the test framework generate and execute tests on the fly. I will use the Sublime Text editor to write the code, which is freely available\footnote{\url{https://www.sublimetext.com}}.
+
+\section{Testing}
+
+As the main code-base will be written in Ruby, the Onyx imitation will also be written in the same language for consistency. Therefore, I will use the Ruby on Rails\footnote{\url{http://rubyonrails.org}} library. This library is specifically designed for creating web services, and provides many features to aid in this. Some of these includes a routing table to direct API requests and tight integration with a SQL database to store collections, along with support for all HTTP Verbs/
+
+Rails applications come bundled with a server to quickly set up and host the web service, thereby allowing very fast iterations on the API implementation.

@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{p}{\PYGdefaultZob{}}
+	\PYGdefault{l+s+s2}{\PYGdefaultZdq{}name\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}Hani Kazmi\PYGdefaultZdq{}}\PYGdefault{p}{,}
+	\PYGdefault{l+s+s2}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}/users/1\PYGdefaultZdq{}}\PYGdefault{p}{,}
+	\PYGdefault{l+s+s2}{\PYGdefaultZdq{}photo\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}/photos/121\PYGdefaultZdq{}}\PYGdefault{p}{,}
+	\PYGdefault{l+s+s2}{\PYGdefaultZdq{}files\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{p}{[}
+	    \PYGdefault{p}{\PYGdefaultZob{}}
+	    	\PYGdefault{l+s+s2}{\PYGdefaultZdq{}filename\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}flower.jpg\PYGdefaultZdq{}}\PYGdefault{p}{,}
+	    	\PYGdefault{l+s+s2}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}/files/210312\PYGdefaultZdq{}}\PYGdefault{p}{,}
+	    	\PYGdefault{p}{...}
+	    \PYGdefault{p}{\PYGdefaultZcb{},}
+	    \PYGdefault{p}{\PYGdefaultZob{}}
+	    	\PYGdefault{l+s+s2}{\PYGdefaultZdq{}filename\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}report.pdf\PYGdefaultZdq{}}\PYGdefault{p}{,}
+	    	\PYGdefault{l+s+s2}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}/files/203840237\PYGdefaultZdq{}}\PYGdefault{p}{,}
+	    	\PYGdefault{p}{...}
+	    \PYGdefault{p}{\PYGdefaultZcb{},}
+	    \PYGdefault{p}{...}
+	\PYGdefault{p}{],}
+	\PYGdefault{p}{...}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\end{Verbatim}

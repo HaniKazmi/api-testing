@@ -1,0 +1,133 @@
+\chapter{Test Framework}
+
+The Test Framework consists of three components, all written in Ruby:
+
+\section{Test Generation}
+
+The root property of the specification can be imported from the parser. Transforming this into a test suite consists of the following steps:
+
+\begin{enumerate}
+\item Traversing the tree of properties in a depth first order, and creating a list of endpoints.
+\item For each endpoint, discovering which HTTP verbs are accepted and associating it with the property.
+\item Constructing HTTP requests using the parameter data for each endpoint.
+\end{enumerate}
+
+These tests can be saved as an array of custom 'Test' objects, which will be iterated when executing the tests.
+
+\begin{figure}[ht]
+   \begin{tikzpicture}[->,>=stealth', level/.style={level distance = 2.5cm}, level 1/.style={sibling distance = 12cm}, scale=0.6,transform shape, level 2/.style={sibling distance = 5cm}, level 3/.style={sibling distance = 4cm}. level 3/.style={sibling distance = 2cm}]
+    \node [treenode] {\textbf{Root}}
+    child
+    {
+        node [treenode] {\textbf{Resource} \\ Users} 
+        child
+        {
+        	node [treenode] {\textbf{Resource} \\ \textrm{[User]}}
+            child
+            {
+                node [treenode] {\textbf{Method} \\ GET}
+                child 
+                {
+                    node [treenode] {\textbf{Response} \\ 200}
+                    child
+                    {
+                        node [treenode] {\textbf{Schema}}
+                    }
+                }
+                child
+                {
+                    node [treenode] {\textbf{Response} \\ 404}
+                    child
+                    {
+                        node [treenode] {\textbf{Schema}}
+                    }
+                }
+            }
+            child
+            {
+                node [treenode] {\textbf{Method} \\ DELETE}
+                child 
+                {
+                    node [treenode] {\textbf{Response} \\ 200}
+                    child
+                    {
+                        node [treenode] {\textbf{Schema}}
+                    }
+                }
+            }
+        }
+        child
+        {
+            node [treenode] {\textbf{Method} \\ GET}
+            child 
+            {
+                node [treenode] {\textbf{Response} \\ 200}
+                child
+                {
+                    node [treenode] {\textbf{Schema}}
+                }
+            }
+        }
+        child
+        {
+            node [treenode] {\textbf{Method} \\ POST}
+            child
+            {
+                node [treenode] {\textbf{Response} \\ 200}
+                child
+                {
+                    node [treenode] {\textbf{Schema}}
+                }
+            }
+        }
+    }
+    child
+    {
+        node [treenode] {\textbf{Resource} \\ Files}  
+        child
+        {
+            node [subtree] {...}
+        }     
+    }
+;
+\end{tikzpicture}
+\caption{Extract of Example Property Tree}
+\end{figure}
+
+\section{Test Execution}
+
+For each generated test, the Framework sends a HTTP request to the web API. The received response is then run against the schema Block, to see if it can be considered a valid response. Each test may return one of three states:
+
+\begin{enumerate}
+\item The network request receives no response. Either the endpoint has not yet been implemented, or is has a major problem.
+\item A response is received, but does not match the schema. There are two possible reasons for this:
+    \begin{itemize}
+    \item The response is evaluated against a heuristic block. which is not guaranteed to be parsed correctly. As shown in the previous section, this has proven unlikely through experimentation but can not be removed altogether.
+    \item There is a bug in the API implementation. Either a value of the wrong type was returned, a required value is missing, or there are additional, undocumented values.
+    \end{itemize}
+\item A response is received and matches the schema. This guarantees that the endpoint has both been implemented, and matches the schema at least superficially.
+\end{enumerate}
+
+\section{Test Results}
+
+The results produced through the execution must be reported in a human readable manner. This is done by storing the results in the Test Execution module in a custom Object which records:
+
+\begin{itemize}
+\item The endpoint.
+\item The HTTP verb accessed.
+\item Whether the test passed or failed. 
+\item If the test failed, what caused it to fail.
+\end{itemize}
+
+These results can then be run through a pretty printer, and both stored in a log file and shown on the screen to the user.
+
+\section{User Interface}
+
+As the user of the Test Framework can be assumed to be technically proficient, a graphical user interface and in-depth help is not required. Hence the Test Framework will be distributed as a command-line application. Running the application without any input parameters will produce a short help message explaining usage. Specifying a RATML file as input will cause the Test Framework to run and report results using the pretty printer. An optional flag can be used to output results to a log file.
+
+\begin{lstlisting}{bash}
+$ ./testframework.rb
+Usage: ./testframework.rb specification.ratml [-l results.log]
+\end{lstlisting}
+
+Keeping the interface simple will allow the Framework to be easily integrated into existing test suites that corporations may have. As the aim of this project is to automate as much as possible, no additional options will be provided. As the Test Framework calls the Facade in the RATML parser automatically, a user facing interface is not required for it. Similarly the API entry point and endpoints are inferred from the specification and do not need to be manually entered.

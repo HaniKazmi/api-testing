@@ -1,0 +1,37 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{l+lScalar+lScalarPlain}{\PYGdefaultZbs{}\PYGdefaultZob{}userId\PYGdefaultZcb{}}\PYGdefault{p+pIndicator}{:}
+    \PYGdefault{l+lScalar+lScalarPlain}{get}\PYGdefault{p+pIndicator}{:}
+      \PYGdefault{l+lScalar+lScalarPlain}{testcases}\PYGdefault{p+pIndicator}{:}
+        \PYGdefault{l+lScalar+lScalarPlain}{exampleuser}\PYGdefault{p+pIndicator}{:}
+          \PYGdefault{l+lScalar+lScalarPlain}{resource}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{1}
+          \PYGdefault{l+lScalar+lScalarPlain}{response}\PYGdefault{p+pIndicator}{:}
+            \PYGdefault{l+lScalar+lScalarPlain}{status}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{200}
+            \PYGdefault{l+lScalar+lScalarPlain}{body}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+              \PYGdefault{n+no}{\PYGdefaultZob{} \PYGdefaultZdq{}name\PYGdefaultZdq{}: \PYGdefaultZdq{}Hani Kazmi\PYGdefaultZdq{},}
+                \PYGdefault{n+no}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}: \PYGdefaultZdq{}/users/1\PYGdefaultZdq{},}
+                \PYGdefault{n+no}{\PYGdefaultZdq{}photo\PYGdefaultZdq{}: \PYGdefaultZdq{}/photos/121\PYGdefaultZdq{},}
+                \PYGdefault{n+no}{\PYGdefaultZdq{}files\PYGdefaultZdq{}: [}
+                  \PYGdefault{n+no}{\PYGdefaultZob{}}
+                  \PYGdefault{n+no}{	\PYGdefaultZdq{}filename\PYGdefaultZdq{}: \PYGdefaultZdq{}flower.jpg\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{	\PYGdefaultZdq{}uri\PYGdefaultZdq{}: \PYGdefaultZdq{}/files/210312\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{	...}
+                  \PYGdefault{n+no}{\PYGdefaultZcb{},}
+                  \PYGdefault{n+no}{\PYGdefaultZob{}}
+                  \PYGdefault{n+no}{	\PYGdefaultZdq{}filename\PYGdefaultZdq{}: \PYGdefaultZdq{}report.pdf\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{	\PYGdefaultZdq{}uri\PYGdefaultZdq{}: \PYGdefaultZdq{}/files/203840237\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{	...}
+                  \PYGdefault{n+no}{\PYGdefaultZcb{},}
+                  \PYGdefault{n+no}{...}
+                \PYGdefault{n+no}{],}
+                \PYGdefault{n+no}{...}
+              \PYGdefault{n+no}{\PYGdefaultZcb{}}
+        \PYGdefault{l+lScalar+lScalarPlain}{missinguser}\PYGdefault{p+pIndicator}{:}
+          \PYGdefault{l+lScalar+lScalarPlain}{description}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{Invalid users return a 404}
+          \PYGdefault{l+lScalar+lScalarPlain}{resource}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{201}
+          \PYGdefault{l+lScalar+lScalarPlain}{response}\PYGdefault{p+pIndicator}{:}
+            \PYGdefault{l+lScalar+lScalarPlain}{status}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{404}
+            \PYGdefault{l+lScalar+lScalarPlain}{body}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+              \PYGdefault{n+no}{\PYGdefaultZob{}}
+              \PYGdefault{n+no}{	\PYGdefaultZdq{}message\PYGdefaultZdq{} : \PYGdefaultZdq{}Invalid user\PYGdefaultZdq{}}
+              \PYGdefault{n+no}{\PYGdefaultZcb{}}
+\end{Verbatim}

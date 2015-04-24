@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c+c1}{\PYGdefaultZsh{}\PYGdefaultZpc{}RATML}
+\PYGdefault{l+lScalar+lScalarPlain}{title}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{ZEncoder API}
+\PYGdefault{l+lScalar+lScalarPlain}{version}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{v2}
+\PYGdefault{l+lScalar+lScalarPlain}{baseUri}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{https://app.zencoder.com/API/\PYGdefaultZob{}version\PYGdefaultZcb{}}
+\PYGdefault{l+lScalar+lScalarPlain}{/jobs}\PYGdefault{p+pIndicator}{:}
+  \PYGdefault{l+lScalar+lScalarPlain}{post}\PYGdefault{p+pIndicator}{:}
+    \PYGdefault{l+lScalar+lScalarPlain}{description}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{Create a Job}
+  \PYGdefault{l+lScalar+lScalarPlain}{get}\PYGdefault{p+pIndicator}{:}
+    \PYGdefault{l+lScalar+lScalarPlain}{description}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{List Jobs}
+\end{Verbatim}

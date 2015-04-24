@@ -2,7 +2,7 @@
 \PYGdefault{c+c1}{\PYGdefaultZsh{}\PYGdefaultZpc{}RAML 0.8}
 
 \PYGdefault{l+lScalar+lScalarPlain}{title}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{World Music API}
-\PYGdefault{l+lScalar+lScalarPlain}{baseUri}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{http://example.api.com/\PYGdefaultZob{}version\PYGdefaultZcb{}}
+\PYGdefault{l+lScalar+lScalarPlain}{baseUri}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{http://example.API.com/\PYGdefaultZob{}version\PYGdefaultZcb{}}
 \PYGdefault{l+lScalar+lScalarPlain}{version}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{v1}
 \PYGdefault{l+lScalar+lScalarPlain}{traits}\PYGdefault{p+pIndicator}{:}
   \PYGdefault{p+pIndicator}{\PYGdefaultZhy{}} \PYGdefault{l+lScalar+lScalarPlain}{paged}\PYGdefault{p+pIndicator}{:}

@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{p}{[}
+  \PYGdefault{p}{\PYGdefaultZob{}}
+  	\PYGdefault{l+s+s2}{\PYGdefaultZdq{}name\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}Hani Kazmi\PYGdefaultZdq{}}\PYGdefault{p}{,}
+  	\PYGdefault{l+s+s2}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}/users/1\PYGdefaultZdq{}}\PYGdefault{p}{,}
+  	\PYGdefault{l+s+s2}{\PYGdefaultZdq{}role\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}admin\PYGdefaultZdq{}}\PYGdefault{p}{,}
+  	\PYGdefault{p}{...}
+  \PYGdefault{p}{\PYGdefaultZcb{},}
+  \PYGdefault{p}{\PYGdefaultZob{}}
+  	\PYGdefault{l+s+s2}{\PYGdefaultZdq{}name\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}John Doe\PYGdefaultZdq{}}\PYGdefault{p}{,}
+  	\PYGdefault{l+s+s2}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}/users/1\PYGdefaultZdq{}}\PYGdefault{p}{,}
+  	\PYGdefault{l+s+s2}{\PYGdefaultZdq{}role\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}user\PYGdefaultZdq{}}\PYGdefault{p}{,}
+  	\PYGdefault{p}{...}
+  \PYGdefault{p}{\PYGdefaultZcb{},}
+  \PYGdefault{p}{...}
+\PYGdefault{p}{]}
+\end{Verbatim}

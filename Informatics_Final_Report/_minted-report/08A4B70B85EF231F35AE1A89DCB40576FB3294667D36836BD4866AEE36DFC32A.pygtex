@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c+c1}{\PYGdefaultZsh{}\PYGdefaultZpc{}RATML}
+\PYGdefault{l+lScalar+lScalarPlain}{title}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{GitHub API}
+\PYGdefault{l+lScalar+lScalarPlain}{version}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{v3}
+\PYGdefault{l+lScalar+lScalarPlain}{baseUri}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{https://API.github.com}
+\PYGdefault{l+lScalar+lScalarPlain}{/user}\PYGdefault{p+pIndicator}{:}
+\PYGdefault{l+lScalar+lScalarPlain}{/users}\PYGdefault{p+pIndicator}{:}
+  \PYGdefault{l+lScalar+lScalarPlain}{/\PYGdefaultZob{}userId\PYGdefaultZcb{}}\PYGdefault{p+pIndicator}{:}
+    \PYGdefault{l+lScalar+lScalarPlain}{uriParameters}\PYGdefault{p+pIndicator}{:}
+      \PYGdefault{l+lScalar+lScalarPlain}{userId}\PYGdefault{p+pIndicator}{:}
+        \PYGdefault{l+lScalar+lScalarPlain}{type}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{integer}
+    \PYGdefault{l+lScalar+lScalarPlain}{/followers}\PYGdefault{p+pIndicator}{:}
+    \PYGdefault{l+lScalar+lScalarPlain}{/following}\PYGdefault{p+pIndicator}{:}
+    \PYGdefault{l+lScalar+lScalarPlain}{/keys}\PYGdefault{p+pIndicator}{:}
+      \PYGdefault{l+lScalar+lScalarPlain}{/\PYGdefaultZob{}keyId\PYGdefaultZcb{}}\PYGdefault{p+pIndicator}{:}
+        \PYGdefault{l+lScalar+lScalarPlain}{uriParameters}\PYGdefault{p+pIndicator}{:}
+          \PYGdefault{l+lScalar+lScalarPlain}{keyId}\PYGdefault{p+pIndicator}{:}
+            \PYGdefault{l+lScalar+lScalarPlain}{type}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{integer}
+\end{Verbatim}

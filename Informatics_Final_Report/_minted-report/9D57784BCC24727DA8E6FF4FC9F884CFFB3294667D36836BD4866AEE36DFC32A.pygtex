@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c+c1}{\PYGdefaultZsh{}\PYGdefaultZpc{}RATML}
+\PYGdefault{l+lScalar+lScalarPlain}{title}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{GitHub API}
+\PYGdefault{l+lScalar+lScalarPlain}{version}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{v3}
+\PYGdefault{l+lScalar+lScalarPlain}{baseUri}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{https://API.github.com}
+\PYGdefault{l+lScalar+lScalarPlain}{mediaType}\PYGdefault{p+pIndicator}{:}  \PYGdefault{l+lScalar+lScalarPlain}{application/json}
+\PYGdefault{l+lScalar+lScalarPlain}{schemas}\PYGdefault{p+pIndicator}{:}
+  \PYGdefault{p+pIndicator}{\PYGdefaultZhy{}} \PYGdefault{l+lScalar+lScalarPlain}{User}\PYGdefault{p+pIndicator}{:}  \PYGdefault{l+lScalar+lScalarPlain}{schema/user.json}
+    \PYGdefault{l+lScalar+lScalarPlain}{Users}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{schema/users.json}
+    \PYGdefault{l+lScalar+lScalarPlain}{Org}\PYGdefault{p+pIndicator}{:}   \PYGdefault{l+lScalar+lScalarPlain}{schema/org.json}
+    \PYGdefault{l+lScalar+lScalarPlain}{Orgs}\PYGdefault{p+pIndicator}{:}  \PYGdefault{l+lScalar+lScalarPlain}{schema/orgs.json}
+\end{Verbatim}

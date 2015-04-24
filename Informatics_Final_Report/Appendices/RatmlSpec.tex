@@ -1,0 +1,413 @@
+\chapter{RATML Specification}
+
+
+\section{Abstract}
+
+RATML is a YAML-based language that describes RESTful APIs. Together with the YAML specification \footnote{\url{http://yaml.org/spec/1.2/spec.html}}, this specification provides all the information necessary to describe RESTful APIs. This specification is largely based upon the RAML 0.8 specification\footnote{\url{http://raml.org/spec.html}}.
+
+
+\section{Introduction}
+
+This specification describes RATML. RATML is a human-readable and machine process-able description of a RESTful API interface. API documentation generators, API client-code generators, and API servers consume a RATML document to create user documentation, client code, and server code stubs, respectively.
+
+\section{Conventions}
+
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119 [RFC2119].
+
+\section{Overview}
+
+RATML defines the media type "application/ratml+yaml" for describing and documenting a RESTful API's resources, such as the resources' methods and schema. RATML is YAML-based, and RATML documents support all YAML 1.2 features. The recommended filename extension for RATML files is ".ratml"
+
+RATML also provides facilities for extensively documenting a RESTful API, enabling documentation generator tools to extract the user documentation and translate it to visual formats such as PDF, HTML, and so on.
+
+\subsection{Terminology}
+
+For this specification, \textbf{API definition} will be used to denote the description of an API using this specification. 
+
+\textbf{REST} is used in the context of an API implemented using the principles of REST. The REST acronym stands for Representational State Transfer and was first introduced and defined in 2000 by Roy Fielding in his doctoral dissertation.
+
+A \textbf{resource} is the conceptual mapping to an entity or set of entities.
+
+\section{Markup Language}
+
+This specification uses YAML 1.2 as its core format. YAML is a human-readable data format that aligns well with the design goals of this specification.
+
+RATML API definitions are YAML-compliant documents that begin with a REQUIRED YAML-comment line that indicates the RATML version, as follows:
+
+\begin{lstlisting}[frame=lines]{yaml}
+#%RATML
+\end{lstlisting}
+
+The RATML version MUST be the first line of the RATML document. RATML parsers MUST interpret all other YAML-commented lines as comments.
+
+In RATML, the YAML data structures are enhanced to include data types that are not natively supported. All RATML document parsers MUST support these extensions.
+
+In RATML, all values MUST be interpreted in a case-sensitive manner.
+
+\section{Named Parameters}
+
+This RATML Specification describes collections of named parameters for the following properties: URI parameters, query string parameters, form parameters, request bodies (depending on the media type), and request and response headers. All the collections specify the named parameters' attributes as described in this section.
+
+Some named parameters are optional and others are required. See the description of each named parameter.
+
+Unless otherwise noted, named parameter values must be formatted as plain text. All valid YAML file characters MAY be used in named parameter values.
+
+\subsection{description}
+(Optional)
+The \textbf{description} attribute describes the intended use or meaning of the parameter.
+
+\subsection{Type}
+(Optional)
+The \textbf{type} attribute specifies the primitive type of the parameter's resolved value. API clients MUST return/throw an error if the parameter's resolved value does not match the specified type. If \textbf{type} is not specified, it defaults to string. Valid types are:
+
+\begin{tabularx}{\textwidth}{c | X}
+\textbf{Type} &  \textbf{Description} \\
+string  & Value MUST be a string. \\
+number  & Value MUST be a number. Indicate floating point numbers as defined by YAML. \\
+integer & Value MUST be an integer. Floating point numbers are not allowed. The integer type is a subset of the number type. \\
+date    & Value MUST be a string representation of a date.\\
+boolean & Value MUST be either the string "true" or "false" (without the quotes). \\
+\end{tabularx}
+
+\subsubsection{Date Representations}
+All date/time stamps are represented in Greenwich Mean Time (GMT), which for the purposes of HTTP is equal to UTC (Coordinated Universal Time). This is indicated by including "GMT" as the three-letter abbreviation for the timezone. Example: Sun, 06 Nov 1994 08:49:37 GMT.
+
+
+\subsection{enum}
+(Optional, applicable only for parameters of type string)
+The \textbf{enum} attribute provides an enumeration of the parameter's valid values. This MUST be an array. If the \textbf{enum} attribute is defined, API clients and servers MUST verify that a parameter's value matches a value in the \textbf{enum} array. If there is no matching value, the clients and servers MUST treat this as an error.
+
+\subsection{pattern}
+(Optional, applicable only for parameters of type string)
+The \textbf{pattern} attribute is a regular expression that a parameter of type string MUST match. Regular expressions MUST follow the regular expression specification from ECMA 262/Perl 5. The pattern MAY be enclosed in double quotes for readability and clarity.
+
+\subsection{minLength}
+(Optional, applicable only for parameters of type string)
+The \textbf{minLength} attribute specifies the parameter value's minimum number of characters.
+
+\subsection{maxLength}
+(Optional, applicable only for parameters of type string)
+The \textbf{maxLength} attribute specifies the parameter value's maximum number of characters.
+
+\subsection{minimum}
+(Optional, applicable only for parameters of type number or integer)
+The \textbf{minimum} attribute specifies the parameter's minimum value.
+
+\subsection{maximum}
+(Optional, applicable only for parameters of type number or integer)
+The \textbf{maximum} attribute specifies the parameter's maximum value.
+
+
+\subsection{required}
+(Optional except as otherwise noted)
+The \textbf{required} attribute specifies whether the parameter and its value MUST be present in the API definition. It must be either 'true' if the value MUST be present or 'false' otherwise.
+
+In general, parameters are optional unless the \textbf{required} attribute is included and its value set to 'true'.
+
+For a URI parameter, the \textbf{required} attribute MAY be omitted, but its default value is 'true'.
+
+\subsection{default}
+(Optional)
+The \textbf{default} attribute specifies the default value to use for the property if the property is omitted or its value is not specified. This SHOULD NOT be interpreted as a requirement for the client to send the \textbf{default} attribute's value if there is no other value to send. Instead, the \textbf{default} attribute's value is the value the server uses if the client does not send a value.
+
+
+\section{Basic Information}
+
+
+This section describes the components of a RATML API definition.
+
+\subsection{Root Section}
+
+The root section of the format describes the basic information of an API, such as its title and base URI, and describes how to define common schema references.
+
+RATML-documented API definition properties MAY appear in any order.
+
+This example shows a snippet of the RATML API definition for the GitHub v3 public API.
+
+\begin{lstlisting}{yaml}
+#%RATML
+title: GitHub API
+version: v3
+baseUri: https://API.github.com
+mediaType:  application/json
+schemas:
+  - User:  schema/user.json
+    Users: schema/users.json
+    Org:   schema/org.json
+    Orgs:  schema/orgs.json
+\end{lstlisting}
+
+\subsection{API Title}
+(Required)
+The \textbf{title} property is a short plain text description of the RESTful API. The \textbf{title} property's value SHOULD be suitable for use as a title for the contained user documentation.
+
+\subsection{API Version}
+(Optional)
+If the RATML API definition is targeted to a specific API version, the API definition MUST contain a \textbf{version} property.
+
+The API architect MAY use any versioning scheme so long as version numbers retain the same format. For example, "v3", "v3.0", and "V3" are all allowed, but are not considered to be equal.
+
+\subsection{Base URI}
+(Optional during development; Required after implementation)
+A RESTful API's resources are defined relative to the API's base URI. The use of the \textbf{baseUri} field is OPTIONAL to allow describing APIs that have not yet been implemented. After the API is implemented (even a mock implementation) and can be accessed at a service endpoint, the API definition MUST contain a \textbf{baseUri} property. The \textbf{baseUri} property's value MUST conform to the URI specification [RFC2396] or a Level 1 Template URI as defined in RFC 6570 [RFC6570].
+
+The \textbf{baseUri} property SHOULD only be used as a reference value. API client generators MAY make the \textbf{baseUri} configurable by the API client's users.
+
+\subsection{Protocols}
+(Optional)
+A RESTful API can be reached via HTTP, HTTPS, or both. The \textbf{protocols} property MAY be used to specify the protocols that an API supports. If the \textbf{protocols} property is not specified, the protocol specified at the \textbf{baseUri} property is used. The \textbf{protocols} property MUST be an array of strings, of values "HTTP" and/or "HTTPS".
+
+\begin{lstlisting}{yaml}
+#%RATML
+title: Salesforce Chatter REST API
+version: v28.0
+protocols: [ HTTP, HTTPS ]
+baseUri: https://na1.salesforce.com/services/data/{version}/chatter
+\end{lstlisting}
+
+
+\subsection{Resources and Nested Resources}
+
+Resources are identified by their relative URI, which MUST begin with a slash (/).
+
+A resource defined as a root-level property is called a \textbf{top-level resource}. Its property's key is the resource's URI relative to the baseUri. A resource defined as a child property of another resource is called a \textbf{nested resource}, and its property's key is its URI relative to its parent resource's URI.
+
+This example shows an API definition with one top-level resource, /gists, and one nested resource, /public.
+
+\begin{lstlisting}{yaml}
+#%RATML
+title: GitHub API
+version: v3
+baseUri: https://API.github.com
+/gists:
+  /public:
+    displayName: Public Gists
+\end{lstlisting}
+
+Every property whose key begins with a slash (/), and is either at the root of the API definition or is the child property of a resource property, is a resource property. The key of a resource, i.e. its relative URI, MAY consist of multiple URI path fragments separated by slashes; e.g. "/bom/items" may indicate the collection of items in a bill of materials as a single resource. However, if the individual URI path fragments are themselves resources, the API definition SHOULD use nested resources to describe this structure; e.g. if "/bom" is itself a resource then "/items" should be a nested resource of "/bom", while "/bom/items" should not be used.
+
+\subsubsection{Display Name}
+
+The \textbf{displayName} attribute provides a friendly name to the resource and can be used by documentation generation tools. The \textbf{displayName} key is OPTIONAL.
+
+
+\subsubsection{Description}
+
+Each resource, whether top-level or nested, MAY contain a \textbf{description} property that briefly describes the resource. It is RECOMMENDED that all the API definition's resources includes the \textbf{description} property.
+
+\subsubsection{Template URIs}
+
+Template URIs containing URI parameters can be used to define a resource's relative URI when it contains variable elements.
+The following example shows a top-level resource with a key \textbf{/jobs} and a nested resource with a key \textbf{/{jobId}}:
+
+\begin{lstlisting}{yaml}
+#%RATML
+title: ZEncoder API
+version: v2
+baseUri: https://app.zencoder.com/API/{version}
+/jobs: # its fully-resolved URI is https://app.zencoder.com/API/{version}/jobs
+  displayName: Jobs
+  description: A collection of jobs
+  /{jobId}: # its fully-resolved URI is https://app.zencoder.com/API/{version}/jobs/{jobId}
+    description: A specific job, a member of the jobs collection
+\end{lstlisting}
+
+The values matched by URI parameters cannot contain slash (/) characters, in order to avoid ambiguous matching. In the example above, a URI (relative to the baseUri) of "/jobs/123" matches the "/{jobId}" resource nested within the "/jobs" resource, but a URI of "/jobs/123/x" does not match any of those resources.
+
+
+\subsubsection{Absolute URI}
+
+Absolute URIs are not explicitly specified. They are computed by starting with the baseUri and appending the relative URI of the top-level resource, and then successively appending the relative URI values for each nested resource until the target resource is reached.
+
+Taking the previous example, the absolute URI of the public gists resource is formed as follows:
+
+\begin{lstlisting}{yaml}
+   "https://API.github.com"               <--- baseUri
+               +
+             "/gists"                     <--- gists resource relative URI
+               +
+             "/public"                    <--- public gists resource relative URI
+               =
+"https://API.github.com/gists/public"     <--- public gists absolute URI
+\end{lstlisting}
+
+A nested resource can itself have a child (nested) resource, creating a multiply-nested resource.
+
+In this example, /user is a top-level resource that has no children; /users is a top-level resource that has a nested resource, /{userId}; and the nested resource, /{userId}, has three nested resources, /followers, /following, and /keys.
+
+\begin{lstlisting}{yaml}
+#%RATML
+title: GitHub API
+version: v3
+baseUri: https://API.github.com
+/user:
+/users:
+  /{userId}:
+    uriParameters:
+      userId:
+        type: integer
+    /followers:
+    /following:
+    /keys:
+      /{keyId}:
+        uriParameters:
+          keyId:
+            type: integer
+\end{lstlisting}
+
+The computed absolute URIs for the resources, in the same order as their resource declarations, are:
+
+\begin{lstlisting}{yaml}
+https://API.github.com/user
+https://API.github.com/users
+https://API.github.com/users/{userId}
+https://API.github.com/users/{userId}/followers
+https://API.github.com/users/{userId}/following
+https://API.github.com/users/{userId}/keys
+https://API.github.com/users/{userId}/keys/{keyId}
+\end{lstlisting}
+
+\subsubsection{Methods}
+
+In a RESTful API, \textbf{methods} are operations that are performed on a resource. A method MUST be one of the HTTP methods defined in the HTTP version 1.1 specification and its extension, RFC5789.
+
+\textbf{Description}
+
+Each declared method MAY contain a \textbf{description} attribute that briefly describes what the method does to the resource. It is RECOMMENDED that all API definition methods include the \textbf{description} property.
+
+This example shows a resource, /jobs, with POST and GET methods (verbs) declared:
+
+\begin{lstlisting}{yaml}
+#%RATML
+title: ZEncoder API
+version: v2
+baseUri: https://app.zencoder.com/API/{version}
+/jobs:
+  post:
+    description: Create a Job
+  get:
+    description: List Jobs
+\end{lstlisting}
+
+\textbf{Query Strings}
+
+An API's resources MAY be filtered (to return a subset of results) or altered (such as transforming a response body from JSON to XML format) by the use of query strings. If the resource or its method supports a query string, the query string MUST be defined by the \textbf{queryParameters} property.
+
+The \textbf{queryParameters} property is a map in which the key is the query parameter's name.
+
+\begin{lstlisting}{yaml}
+#%RATML
+title: GitHub API
+version: v3
+baseUri: https://API.github.com
+/users:
+  get:
+    description: Get a list of users
+    queryParameters:
+      page:
+        type: integer
+      per_page:
+        type: integer
+\end{lstlisting}
+
+\textbf{Body}
+
+Some method verbs expect the resource to be sent as a request body. For example, to create a resource, the request must include the details of the resource to create.
+
+
+A method's body is defined in the \textbf{body} property as a hashmap, in which the key MUST be a valid media type.
+
+This example shows a snippet of the Zencoder API's Jobs resource, which accepts JSON as input:
+
+\begin{lstlisting}{yaml}
+/jobs:
+  post:
+    description: Create a Job
+    body:
+      application/json: !!null
+\end{lstlisting}
+
+\textbf{Schema}
+
+The structure of a request or response body MAY be further specified by the \textbf{schema} property under the appropriate media type.
+
+The \textbf{schema} key CANNOT be specified if a body's media type is \textbf{application/x-www-form-urlencoded} or \textbf{multipart/form-data}.
+
+All parsers of RATML MUST be able to interpret JSON Schema.
+
+Schema MAY be declared inline or in an external file. However, if the schema is sufficiently large so as to make it difficult for a person to read the API definition, or the schema is reused across multiple APIs or across multiple miles in the same API, the !include user-defined data type SHOULD be used instead of including the content inline.
+
+This example shows an inline schema declaration.
+
+\begin{lstlisting}{yaml}
+/jobs:
+  displayName: Jobs
+  post:
+    description: Create a Job
+    body:
+      application/json:
+        schema: |
+          {
+            "$schema": "http://json-schema.org/draft-03/schema",
+            "properties": {
+                "input": {
+                    "required": false,
+                    "type": "string"
+                }
+            },
+            "required": false,
+            "type": "object"
+          }
+\end{lstlisting}
+
+\textbf{Responses}
+
+Resource methods MAY have one or more responses. Responses MAY be described using the \textbf{description} property, and MAY include \textbf{example} attributes or \textbf{schema} properties.
+
+This example shows a definition for a GET response of 200.
+
+\begin{lstlisting}{yaml}
+/media/popular:
+  displayName: Most Popular Media
+  get:
+    description: |
+      Get a list of what media is most popular at the moment.
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/instagram-v1-media-popular-example.json
+\end{lstlisting}
+
+Responses MUST be a map of one or more HTTP status codes, where each status code itself is a map that describes that status code.
+
+Each response MAY contain a \textbf{body} property, which conforms to the same structure as request \textbf{body} properties. Responses that can return more than one response code MAY therefore have multiple bodies defined.
+
+\section{Test Cases}
+
+A Test Case is a mapping of input data to a specific output. Methods MAY contain one or more Test Cases. Test Cases MUST have a short name and MAY have a longer description. They MAY specify query parameters. POST, PUT and PATCH Test Cases MAY specify a JSON query. Element Test Cases MUST specify a resource number. Responses MUST describe the returned status code and MAY describe a JSON body.
+
+This example shows a definition for a Test Case creating a user.
+
+\begin{lstlisting}{yaml}
+\users:
+    post:
+      testcases:
+        createuser:
+          query: |
+            {
+              "name" : "Alan Turing",
+              "photo": "/photos/2131"
+            }
+          response: 
+            status: 200
+            body: |
+              {
+                "name": "Alan Turing",
+                "uri": "/users/21",
+                "photo": "/photos/2131"
+              }
+\end{lstlisting}
+
+A Test Case MAY be dependent on another test case. If a Test Case is dependent, the \textbf{dependent} property will reference the parent Test Case.

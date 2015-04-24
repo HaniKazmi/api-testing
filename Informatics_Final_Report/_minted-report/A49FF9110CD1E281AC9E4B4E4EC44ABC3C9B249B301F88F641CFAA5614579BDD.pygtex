@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{p}{\PYGdefaultZob{}} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}\PYGdefaultZdl{}schema\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}http://json\PYGdefaultZhy{}schema.org/schema\PYGdefaultZdq{}}\PYGdefault{p}{,}
+  \PYGdefault{l+s+s2}{\PYGdefaultZdq{}type\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}object\PYGdefaultZdq{}}\PYGdefault{p}{,}
+  \PYGdefault{l+s+s2}{\PYGdefaultZdq{}description\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}A canonical user\PYGdefaultZdq{}}\PYGdefault{p}{,}
+  \PYGdefault{l+s+s2}{\PYGdefaultZdq{}properties\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{l+s+s2}{\PYGdefaultZdq{}name\PYGdefaultZdq{}}\PYGdefault{o}{:}  \PYGdefault{p}{\PYGdefaultZob{}} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}type\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}string\PYGdefaultZdq{}} \PYGdefault{p}{\PYGdefaultZcb{},}
+    \PYGdefault{l+s+s2}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{p}{\PYGdefaultZob{}} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}type\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}} \PYGdefault{p}{\PYGdefaultZcb{},}
+    \PYGdefault{l+s+s2}{\PYGdefaultZdq{}photo\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{p}{\PYGdefaultZob{}} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}type\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}} \PYGdefault{p}{\PYGdefaultZcb{},}
+    \PYGdefault{l+s+s2}{\PYGdefaultZdq{}files\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{p}{[\PYGdefaultZob{}}
+      \PYGdefault{l+s+s2}{\PYGdefaultZdq{}filename\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{p}{\PYGdefaultZob{}} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}type\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}string\PYGdefaultZdq{}}\PYGdefault{p}{\PYGdefaultZcb{},}
+      \PYGdefault{l+s+s2}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{p}{\PYGdefaultZob{}} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}}\PYGdefault{p}{\PYGdefaultZcb{},}
+      \PYGdefault{p}{\PYGdefaultZcb{}]}
+  \PYGdefault{p}{\PYGdefaultZcb{},}
+  \PYGdefault{l+s+s2}{\PYGdefaultZdq{}required\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{p}{[} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}name\PYGdefaultZdq{}}\PYGdefault{p}{,} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}} \PYGdefault{p}{]}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\end{Verbatim}

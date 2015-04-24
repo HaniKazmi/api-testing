@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+   \PYGdefault{l+s}{\PYGdefaultZdq{}https://API.github.com\PYGdefaultZdq{}}               \PYGdefault{l+lScalar+lScalarPlain}{\PYGdefaultZlt{}\PYGdefaultZhy{}\PYGdefaultZhy{}\PYGdefaultZhy{} baseUri}
+               \PYGdefault{l+lScalar+lScalarPlain}{+}
+             \PYGdefault{l+lScalar+lScalarPlain}{\PYGdefaultZdq{}/gists\PYGdefaultZdq{}                     \PYGdefaultZlt{}\PYGdefaultZhy{}\PYGdefaultZhy{}\PYGdefaultZhy{} gists resource relative URI}
+               \PYGdefault{l+lScalar+lScalarPlain}{+}
+             \PYGdefault{l+lScalar+lScalarPlain}{\PYGdefaultZdq{}/public\PYGdefaultZdq{}                    \PYGdefaultZlt{}\PYGdefaultZhy{}\PYGdefaultZhy{}\PYGdefaultZhy{} public gists resource relative URI}
+               \PYGdefault{l+lScalar+lScalarPlain}{=}
+\PYGdefault{l+lScalar+lScalarPlain}{\PYGdefaultZdq{}https://API.github.com/gists/public\PYGdefaultZdq{}     \PYGdefaultZlt{}\PYGdefaultZhy{}\PYGdefaultZhy{}\PYGdefaultZhy{} public gists absolute URI}
+\end{Verbatim}

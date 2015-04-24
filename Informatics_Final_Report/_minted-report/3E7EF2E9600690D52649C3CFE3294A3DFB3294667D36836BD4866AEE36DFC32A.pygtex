@@ -1,0 +1,133 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c+c1}{\PYGdefaultZsh{}\PYGdefaultZpc{}RATML}
+
+\PYGdefault{l+lScalar+lScalarPlain}{title}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{Onyx API}
+\PYGdefault{l+lScalar+lScalarPlain}{baseUri}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{http://example.API.com/\PYGdefaultZob{}version\PYGdefaultZcb{}}
+\PYGdefault{l+lScalar+lScalarPlain}{version}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{v1}
+\PYGdefault{l+lScalar+lScalarPlain}{/users}\PYGdefault{p+pIndicator}{:}
+  \PYGdefault{l+lScalar+lScalarPlain}{get}\PYGdefault{p+pIndicator}{:}
+    \PYGdefault{l+lScalar+lScalarPlain}{responses}\PYGdefault{p+pIndicator}{:}
+        \PYGdefault{l+lScalar+lScalarPlain}{200}\PYGdefault{p+pIndicator}{:}
+          \PYGdefault{l+lScalar+lScalarPlain}{body}\PYGdefault{p+pIndicator}{:}
+            \PYGdefault{l+lScalar+lScalarPlain}{application/json}\PYGdefault{p+pIndicator}{:}
+              \PYGdefault{l+lScalar+lScalarPlain}{schema}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+                \PYGdefault{n+no}{\PYGdefaultZob{} \PYGdefaultZdq{}\PYGdefaultZdl{}schema\PYGdefaultZdq{}: \PYGdefaultZdq{}http://json\PYGdefaultZhy{}schema.org/schema\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}object\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}description\PYGdefaultZdq{}: \PYGdefaultZdq{}A list of users\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}properties\PYGdefaultZdq{}: [\PYGdefaultZob{}}
+                  \PYGdefault{n+no}{	\PYGdefaultZdq{}name\PYGdefaultZdq{}: \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}string\PYGdefaultZdq{}\PYGdefaultZcb{},}
+                  \PYGdefault{n+no}{	\PYGdefaultZdq{}uri\PYGdefaultZdq{}: \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}uri\PYGdefaultZdq{}\PYGdefaultZcb{},}
+                  \PYGdefault{n+no}{	\PYGdefaultZdq{}role\PYGdefaultZdq{}: \PYGdefaultZob{} \PYGdefaultZdq{}type:\PYGdefaultZdq{} \PYGdefaultZdq{}string\PYGdefaultZdq{} \PYGdefaultZcb{}}
+                  \PYGdefault{n+no}{\PYGdefaultZcb{}],}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}required\PYGdefaultZdq{}: [ \PYGdefaultZdq{}name\PYGdefaultZdq{}, \PYGdefaultZdq{}uri\PYGdefaultZdq{}, \PYGdefaultZdq{}role\PYGdefaultZdq{} ]}
+                \PYGdefault{n+no}{\PYGdefaultZcb{}}
+  \PYGdefault{l+lScalar+lScalarPlain}{/\PYGdefaultZob{}userId\PYGdefaultZcb{}}\PYGdefault{p+pIndicator}{:}
+    \PYGdefault{l+lScalar+lScalarPlain}{get}\PYGdefault{p+pIndicator}{:}
+      \PYGdefault{l+lScalar+lScalarPlain}{responses}\PYGdefault{p+pIndicator}{:}
+        \PYGdefault{l+lScalar+lScalarPlain}{200}\PYGdefault{p+pIndicator}{:}
+          \PYGdefault{l+lScalar+lScalarPlain}{body}\PYGdefault{p+pIndicator}{:}
+            \PYGdefault{l+lScalar+lScalarPlain}{application/json}\PYGdefault{p+pIndicator}{:}
+              \PYGdefault{l+lScalar+lScalarPlain}{schema}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+                \PYGdefault{n+no}{\PYGdefaultZob{} \PYGdefaultZdq{}\PYGdefaultZdl{}schema\PYGdefaultZdq{}: \PYGdefaultZdq{}http://json\PYGdefaultZhy{}schema.org/schema\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}object\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}description\PYGdefaultZdq{}: \PYGdefaultZdq{}A canonical user\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}properties\PYGdefaultZdq{}: \PYGdefaultZob{}}
+                    \PYGdefault{n+no}{\PYGdefaultZdq{}name\PYGdefaultZdq{}:  \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}string\PYGdefaultZdq{} \PYGdefaultZcb{},}
+                    \PYGdefault{n+no}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}: \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}uri\PYGdefaultZdq{} \PYGdefaultZcb{},}
+                    \PYGdefault{n+no}{\PYGdefaultZdq{}photo\PYGdefaultZdq{}: \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}uri\PYGdefaultZdq{} \PYGdefaultZcb{},}
+                    \PYGdefault{n+no}{\PYGdefaultZdq{}files\PYGdefaultZdq{}: [\PYGdefaultZob{}}
+                    \PYGdefault{n+no}{	\PYGdefaultZdq{}filename\PYGdefaultZdq{}: \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}string\PYGdefaultZdq{}\PYGdefaultZcb{},}
+                    \PYGdefault{n+no}{	\PYGdefaultZdq{}uri\PYGdefaultZdq{}: \PYGdefaultZob{} \PYGdefaultZdq{}uri\PYGdefaultZdq{}: \PYGdefaultZdq{}uri\PYGdefaultZdq{}\PYGdefaultZcb{},}
+                    \PYGdefault{n+no}{	\PYGdefaultZcb{}]}
+                  \PYGdefault{n+no}{\PYGdefaultZcb{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}required\PYGdefaultZdq{}: [ \PYGdefaultZdq{}name\PYGdefaultZdq{}, \PYGdefaultZdq{}uri\PYGdefaultZdq{} ]}
+                \PYGdefault{n+no}{\PYGdefaultZcb{}}
+        \PYGdefault{l+lScalar+lScalarPlain}{404}\PYGdefault{p+pIndicator}{:}
+          \PYGdefault{l+lScalar+lScalarPlain}{body}\PYGdefault{p+pIndicator}{:}
+            \PYGdefault{l+lScalar+lScalarPlain}{application/json}\PYGdefault{p+pIndicator}{:}
+              \PYGdefault{l+lScalar+lScalarPlain}{schema}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+                \PYGdefault{n+no}{\PYGdefaultZob{} \PYGdefaultZdq{}\PYGdefaultZdl{}schema\PYGdefaultZdq{}: \PYGdefaultZdq{}http://json\PYGdefaultZhy{}schema.org/schema\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}object\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}description\PYGdefaultZdq{}: \PYGdefaultZdq{}A missing user\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}properties\PYGdefaultZdq{}: \PYGdefaultZob{}}
+                    \PYGdefault{n+no}{\PYGdefaultZdq{}message\PYGdefaultZdq{}:  \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}string\PYGdefaultZdq{} \PYGdefaultZcb{}}
+                  \PYGdefault{n+no}{\PYGdefaultZcb{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}required\PYGdefaultZdq{}: [ \PYGdefaultZdq{}message\PYGdefaultZdq{} ]}
+                \PYGdefault{n+no}{\PYGdefaultZcb{}}
+    \PYGdefault{l+lScalar+lScalarPlain}{delete}\PYGdefault{p+pIndicator}{:}
+      \PYGdefault{l+lScalar+lScalarPlain}{description}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+        \PYGdefault{n+no}{This method will *delete* an **individual user**}
+      \PYGdefault{l+lScalar+lScalarPlain}{responses}\PYGdefault{p+pIndicator}{:}
+        \PYGdefault{l+lScalar+lScalarPlain}{200}\PYGdefault{p+pIndicator}{:}
+          \PYGdefault{l+lScalar+lScalarPlain}{body}\PYGdefault{p+pIndicator}{:}
+            \PYGdefault{l+lScalar+lScalarPlain}{application/json}\PYGdefault{p+pIndicator}{:}
+              \PYGdefault{l+lScalar+lScalarPlain}{schema}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+                \PYGdefault{n+no}{\PYGdefaultZob{} \PYGdefaultZdq{}\PYGdefaultZdl{}schema\PYGdefaultZdq{}: \PYGdefaultZdq{}http://json\PYGdefaultZhy{}schema.org/schema\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}object\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}properties\PYGdefaultZdq{}: \PYGdefaultZob{}}
+                    \PYGdefault{n+no}{\PYGdefaultZdq{}message\PYGdefaultZdq{}:  \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}string\PYGdefaultZdq{} \PYGdefaultZcb{}}
+                  \PYGdefault{n+no}{\PYGdefaultZcb{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}required\PYGdefaultZdq{}: [ \PYGdefaultZdq{}message\PYGdefaultZdq{} ]}
+                \PYGdefault{n+no}{\PYGdefaultZcb{}}
+\PYGdefault{l+lScalar+lScalarPlain}{/files}\PYGdefault{p+pIndicator}{:}
+  \PYGdefault{l+lScalar+lScalarPlain}{get}\PYGdefault{p+pIndicator}{:}
+    \PYGdefault{l+lScalar+lScalarPlain}{responses}\PYGdefault{p+pIndicator}{:}
+      \PYGdefault{l+lScalar+lScalarPlain}{200}\PYGdefault{p+pIndicator}{:}
+        \PYGdefault{l+lScalar+lScalarPlain}{body}\PYGdefault{p+pIndicator}{:}
+          \PYGdefault{l+lScalar+lScalarPlain}{application/json}\PYGdefault{p+pIndicator}{:}
+            \PYGdefault{l+lScalar+lScalarPlain}{schema}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+               \PYGdefault{n+no}{\PYGdefaultZob{} \PYGdefaultZdq{}\PYGdefaultZdl{}schema\PYGdefaultZdq{}: \PYGdefaultZdq{}http://json\PYGdefaultZhy{}schema.org/schema\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}object\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}description\PYGdefaultZdq{}: \PYGdefaultZdq{}A list of files\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}properties\PYGdefaultZdq{}: [\PYGdefaultZob{}}
+                  \PYGdefault{n+no}{	\PYGdefaultZdq{}filename\PYGdefaultZdq{}: \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}string\PYGdefaultZdq{}\PYGdefaultZcb{},}
+                  \PYGdefault{n+no}{	\PYGdefaultZdq{}uri\PYGdefaultZdq{}: \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}uri\PYGdefaultZdq{}\PYGdefaultZcb{},}
+                  \PYGdefault{n+no}{	\PYGdefaultZdq{}size\PYGdefaultZdq{}: \PYGdefaultZob{} \PYGdefaultZdq{}type:\PYGdefaultZdq{} \PYGdefaultZdq{}long\PYGdefaultZdq{} \PYGdefaultZcb{}}
+                  \PYGdefault{n+no}{\PYGdefaultZcb{}],}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}required\PYGdefaultZdq{}: [ \PYGdefaultZdq{}filename\PYGdefaultZdq{}, \PYGdefaultZdq{}uri\PYGdefaultZdq{} ]}
+                \PYGdefault{n+no}{\PYGdefaultZcb{}}
+  \PYGdefault{l+lScalar+lScalarPlain}{/\PYGdefaultZob{}fileId\PYGdefaultZcb{}}\PYGdefault{p+pIndicator}{:}
+    \PYGdefault{l+lScalar+lScalarPlain}{get}\PYGdefault{p+pIndicator}{:}
+      \PYGdefault{l+lScalar+lScalarPlain}{responses}\PYGdefault{p+pIndicator}{:}
+        \PYGdefault{l+lScalar+lScalarPlain}{200}\PYGdefault{p+pIndicator}{:}
+          \PYGdefault{l+lScalar+lScalarPlain}{body}\PYGdefault{p+pIndicator}{:}
+            \PYGdefault{l+lScalar+lScalarPlain}{application/json}\PYGdefault{p+pIndicator}{:}
+              \PYGdefault{l+lScalar+lScalarPlain}{schema}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+                \PYGdefault{n+no}{\PYGdefaultZob{} \PYGdefaultZdq{}\PYGdefaultZdl{}schema\PYGdefaultZdq{}: \PYGdefaultZdq{}http://json\PYGdefaultZhy{}schema.org/schema\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}object\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}description\PYGdefaultZdq{}: \PYGdefaultZdq{}A canonical file\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}properties\PYGdefaultZdq{}: \PYGdefaultZob{}}
+                    \PYGdefault{n+no}{\PYGdefaultZdq{}filename\PYGdefaultZdq{}:  \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}string\PYGdefaultZdq{} \PYGdefaultZcb{},}
+                    \PYGdefault{n+no}{\PYGdefaultZdq{}location\PYGdefaultZdq{}: \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}uri\PYGdefaultZdq{} \PYGdefaultZcb{},}
+                    \PYGdefault{n+no}{\PYGdefaultZdq{}size\PYGdefaultZdq{}: \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}uri\PYGdefaultZdq{} \PYGdefaultZcb{},}
+                  \PYGdefault{n+no}{\PYGdefaultZcb{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}required\PYGdefaultZdq{}: [ \PYGdefaultZdq{}filename\PYGdefaultZdq{}, \PYGdefaultZdq{}location\PYGdefaultZdq{} ]}
+                \PYGdefault{n+no}{\PYGdefaultZcb{}}
+        \PYGdefault{l+lScalar+lScalarPlain}{404}\PYGdefault{p+pIndicator}{:}
+          \PYGdefault{l+lScalar+lScalarPlain}{body}\PYGdefault{p+pIndicator}{:}
+            \PYGdefault{l+lScalar+lScalarPlain}{application/json}\PYGdefault{p+pIndicator}{:}
+              \PYGdefault{l+lScalar+lScalarPlain}{schema}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+                \PYGdefault{n+no}{\PYGdefaultZob{} \PYGdefaultZdq{}\PYGdefaultZdl{}schema\PYGdefaultZdq{}: \PYGdefaultZdq{}http://json\PYGdefaultZhy{}schema.org/schema\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}object\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}description\PYGdefaultZdq{}: \PYGdefaultZdq{}A missing file\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}properties\PYGdefaultZdq{}: \PYGdefaultZob{}}
+                    \PYGdefault{n+no}{\PYGdefaultZdq{}message\PYGdefaultZdq{}:  \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}string\PYGdefaultZdq{} \PYGdefaultZcb{}}
+                  \PYGdefault{n+no}{\PYGdefaultZcb{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}required\PYGdefaultZdq{}: [ \PYGdefaultZdq{}message\PYGdefaultZdq{} ]}
+                \PYGdefault{n+no}{\PYGdefaultZcb{}}
+    \PYGdefault{l+lScalar+lScalarPlain}{delete}\PYGdefault{p+pIndicator}{:}
+      \PYGdefault{l+lScalar+lScalarPlain}{description}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+        \PYGdefault{n+no}{This method will *delete* an **individual file**}
+      \PYGdefault{l+lScalar+lScalarPlain}{responses}\PYGdefault{p+pIndicator}{:}
+        \PYGdefault{l+lScalar+lScalarPlain}{200}\PYGdefault{p+pIndicator}{:}
+          \PYGdefault{l+lScalar+lScalarPlain}{body}\PYGdefault{p+pIndicator}{:}
+            \PYGdefault{l+lScalar+lScalarPlain}{application/json}\PYGdefault{p+pIndicator}{:}
+              \PYGdefault{l+lScalar+lScalarPlain}{schema}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{|}
+                \PYGdefault{n+no}{\PYGdefaultZob{} \PYGdefaultZdq{}\PYGdefaultZdl{}schema\PYGdefaultZdq{}: \PYGdefaultZdq{}http://json\PYGdefaultZhy{}schema.org/schema\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}object\PYGdefaultZdq{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}properties\PYGdefaultZdq{}: \PYGdefaultZob{}}
+                    \PYGdefault{n+no}{\PYGdefaultZdq{}message\PYGdefaultZdq{}:  \PYGdefaultZob{} \PYGdefaultZdq{}type\PYGdefaultZdq{}: \PYGdefaultZdq{}string\PYGdefaultZdq{} \PYGdefaultZcb{}}
+                  \PYGdefault{n+no}{\PYGdefaultZcb{},}
+                  \PYGdefault{n+no}{\PYGdefaultZdq{}required\PYGdefaultZdq{}: [ \PYGdefaultZdq{}message\PYGdefaultZdq{} ]}
+                \PYGdefault{n+no}{\PYGdefaultZcb{}}
+\end{Verbatim}

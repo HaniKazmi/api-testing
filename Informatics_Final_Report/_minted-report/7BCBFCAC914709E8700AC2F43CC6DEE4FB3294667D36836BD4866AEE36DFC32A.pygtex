@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c+c1}{\PYGdefaultZsh{}\PYGdefaultZpc{}RATML}
+\PYGdefault{l+lScalar+lScalarPlain}{title}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{GitHub API}
+\PYGdefault{l+lScalar+lScalarPlain}{version}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{v3}
+\PYGdefault{l+lScalar+lScalarPlain}{baseUri}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{https://API.github.com}
+\PYGdefault{l+lScalar+lScalarPlain}{/users}\PYGdefault{p+pIndicator}{:}
+  \PYGdefault{l+lScalar+lScalarPlain}{get}\PYGdefault{p+pIndicator}{:}
+    \PYGdefault{l+lScalar+lScalarPlain}{description}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{Get a list of users}
+    \PYGdefault{l+lScalar+lScalarPlain}{queryParameters}\PYGdefault{p+pIndicator}{:}
+      \PYGdefault{l+lScalar+lScalarPlain}{page}\PYGdefault{p+pIndicator}{:}
+        \PYGdefault{l+lScalar+lScalarPlain}{type}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{integer}
+      \PYGdefault{l+lScalar+lScalarPlain}{per\PYGdefaultZus{}page}\PYGdefault{p+pIndicator}{:}
+        \PYGdefault{l+lScalar+lScalarPlain}{type}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{integer}
+\end{Verbatim}

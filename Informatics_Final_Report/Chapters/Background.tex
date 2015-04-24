@@ -93,7 +93,7 @@ Uniform Interface
 \end{tabular}
 \end{center}
 
-When a web api conforms to these constraints, it is known as a 'restful api'. If the api is HTTP based, as well be explored in this report, it has the following properties:
+When a web API conforms to these constraints, it is known as a 'restful API'. If the API is HTTP based, as well be explored in this report, it has the following properties:
 \begin{enumerate}
 	\setlength{\itemsep}{0pt}
 	\item Base URL, eg \url{http://example.com/resources/}
@@ -103,10 +103,10 @@ When a web api conforms to these constraints, it is known as a 'restful api'. If
 	\item Hypertext links to reference related sources.
 \end{enumerate}
 
-Restful apis consist of two types of endpoints: collections, which return links to multiple resources(which may be collections themselves), or elements, which return the representation of a single resource.
+Restful APIs consist of two types of endpoints: collections, which return links to multiple resources(which may be collections themselves), or elements, which return the representation of a single resource.
 
 \begin{tabularx}{\textwidth}{| l *{2}{|X}|}
-\multicolumn{3}{c}{Example restful api methods} \\ \hline
+\multicolumn{3}{c}{Example restful API methods} \\ \hline
 \textbf{Resource} & Collection \linebreak \url{http://example.com/resources/} & Element \linebreak \url{http://example.com/resources/item42} \\ \hline
 \vtop{\hbox{\strut \textbf{GET}}\hbox{\strut (nullipotent)}} & List the URIs with optionally other details of the collection's members. & Retrieve a representation of the element in an appropriate Internet media type. \\ \hline
 \vtop{\hbox{\strut \textbf{PUT}}\hbox{\strut (idempotent)}} & Replace the entire collection with another collection. & Replace the referenced element. Create it if it does not exist. \\ \hline
@@ -114,29 +114,29 @@ Restful apis consist of two types of endpoints: collections, which return links 
 \vtop{\hbox{\strut \textbf{DELETE}}\hbox{\strut (idempotent)}} & Delete the entire collection. &  Delete the referenced element. \\ \hline
 \end{tabularx}
 
-Restful APIs are very common in modern web apps due to being self documenting\footnote{Due to states being encoded in the hypermedia, restful apis can be navigated with no external documentation.} and easily scalable.
+Restful APIs are very common in modern web apps due to being self documenting\footnote{Due to states being encoded in the hypermedia, restful APIs can be navigated with no external documentation.} and easily scalable.
 
 \subsubsection{Summary}
 
-WHile both SOAP and restful web apis are common on the Internet, this report will limit itself to considering only those constrained by the rest architecture. This is due to SOAP apis generally being very complex structures, and difficult to automatically parse by a computer. By contrast, due to the 'hypermedia as the engine of application state' constraint, web apis can be automatically by crawled and documented from the entry point. 
+WHile both SOAP and restful web APIs are common on the Internet, this report will limit itself to considering only those constrained by the rest architecture. This is due to SOAP APIs generally being very complex structures, and difficult to automatically parse by a computer. By contrast, due to the 'hypermedia as the engine of application state' constraint, web APIs can be automatically by crawled and documented from the entry point. 
 
-The Livedrive api 'Onyx' is fully restful, thereby allowing it to serve as a case study.
+The Livedrive API 'Onyx' is fully restful, thereby allowing it to serve as a case study.
 
 
 
 \section{API Documentation}
 
-As discussed earlier, restful apis are self documenting in that each endpoint contains references to its entities. However this does not provide full detail on how the api works, and what format data will be returned in. Therefore, there are multiple standards in the industry to accomplish this, which can broadly be split into two categories.
+As discussed earlier, restful APIs are self documenting in that each endpoint contains references to its entities. However this does not provide full detail on how the API works, and what format data will be returned in. Therefore, there are multiple standards in the industry to accomplish this, which can broadly be split into two categories.
 
 \subsection{Human documentation}
 
-High level overview of how the api works, this is usually written for and intended for humans.
+High level overview of how the API works, this is usually written for and intended for humans.
 
 \begin{figure}[ht]
 
 \textbf{Arguments}
 
-This method has the URL \url{https://slack.com/api/api.test} and follows the Slack Web API calling conventions.
+This method has the URL \url{https://slack.com/API/API.test} and follows the Slack Web API calling conventions.
 
 \begin{tabularx}{\textwidth}{c|X|c|X}
 \textbf{Argument} & \textbf{Example} & \textbf{Required} & \textbf{Description} \\ \hline
@@ -184,14 +184,14 @@ More rigid and formally defined, API specifications can be read by both humans a
 
 \subsubsection{RAML}
 
-RESTful API Modeling Language (RAML)\cite{ramlwebsite} is a specification language for restful apis, based upon YAML\footnote{YAML Ain't Markup Language: a human-readable data serialization format.}\cite{yamlspec}. Due to being based upon YAML, it is both human readable, and fairly easily parsed by a machine due to mature open source YAML parsers. The RAML group provides multiple tools to make working with RAML easier for the end user, however it is still a young project and some major expected functionality such as reference parsers are still missing.
+RESTful API Modeling Language (RAML)\cite{ramlwebsite} is a specification language for restful APIs, based upon YAML\footnote{YAML Ain't Markup Language: a human-readable data serialization format.}\cite{yamlspec}. Due to being based upon YAML, it is both human readable, and fairly easily parsed by a machine due to mature open source YAML parsers. The RAML group provides multiple tools to make working with RAML easier for the end user, however it is still a young project and some major expected functionality such as reference parsers are still missing.
 
 \begin{code}
-\begin{minted}[frame=lines]{YAML}
+\begin{lstlisting}[frame=lines]{YAML}
 #%RAML 0.8
  
 title: World Music API
-baseUri: http://example.api.com/{version}
+baseUri: http://example.API.com/{version}
 version: v1
 traits:
   - paged:
@@ -227,7 +227,7 @@ traits:
     delete:
       description: |
         This method will *delete* an **individual so
-\end{minted}
+\end{lstlisting}
 \caption{Example RAML specification}
 \label{lst:my_func}
 \end{code}
@@ -236,19 +236,19 @@ RAML contains many abstraction techniques such as trait definitions to allow sim
 
 \subsubsection{API Blueprint}
 
-Created by Apiary, API Blueprint\cite{blueprintsite} is a specification language based upon Markdown. Similar to RAML, it is fairly new, however it has a large set of usable tooling. Being closed source, the specification can not be easily expanded and therefore is deeply tied into the existing tool set. It also does not include the abstraction tools of RAML, thereby resulting in many repeated definitions in a specification.
+Created by APIary, API Blueprint\cite{blueprintsite} is a specification language based upon Markdown. Similar to RAML, it is fairly new, however it has a large set of usable tooling. Being closed source, the specification can not be easily expanded and therefore is deeply tied into the existing tool set. It also does not include the abstraction tools of RAML, thereby resulting in many repeated definitions in a specification.
 
 However, the tooling contains many useful utilities for automatic testing such as automatic mock server generation, thereby making it a popular choice in the industry.
 
 \subsubsection{Swagger}
 
-Swagger\cite{swaggersite} is the last of the major api specification languages. It is based upon JSON, and while it is human readable it is more aimed at machine processing. It is the most mature of the three languages discussed so far. However, the aim of Swagger is code generation and server integrations: it is not designed to be used for unit testing. It consists of an initial specification written in JSON, which can then be transformed into a HTML site, a YAML representation, as well as processed by a variety of third party tools.
+Swagger\cite{swaggersite} is the last of the major API specification languages. It is based upon JSON, and while it is human readable it is more aimed at machine processing. It is the most mature of the three languages discussed so far. However, the aim of Swagger is code generation and server integrations: it is not designed to be used for unit testing. It consists of an initial specification written in JSON, which can then be transformed into a HTML site, a YAML representation, as well as processed by a variety of third party tools.
 
 
 
 \section{Unit Testing}
 
-Unit testing is the simplest technique used when creating web apis: it consists of writing a test based upon the api specification to test a specific feature of an endpoint, and then implementing the api until it passes. Due to the wide variety of api specifications, along with the range of requirements that need to be tested, this is generally done manually by the engineer working on the endpoint. Unit tests have the further advantage of alerting the engieer if the functionality ever breaks due to future engineering. Unit tests are organised in a suite which can be run upon the code base without affecting any deployed versions of the application.
+Unit testing is the simplest technique used when creating web APIs: it consists of writing a test based upon the API specification to test a specific feature of an endpoint, and then implementing the API until it passes. Due to the wide variety of API specifications, along with the range of requirements that need to be tested, this is generally done manually by the engineer working on the endpoint. Unit tests have the further advantage of alerting the engieer if the functionality ever breaks due to future engineering. Unit tests are organised in a suite which can be run upon the code base without affecting any deployed versions of the application.
 
 
 \begin{figure}[ht]
@@ -273,17 +273,17 @@ Unit testing is the simplest technique used when creating web apis: it consists 
 \end{figure}
 
 
-Unit Testing is generally synonymous with Test-Driven Development (TDD), where all tests are written before the api implementation begins. The tests are written based upon the api specification, thereby allowing any gaps in the specification to be discovered and filled in early. It also leads to less buggy software if done properly, as every module is sure to be unit tested. There are many tools to aid in trying to automate part of this process, some of which are discussed below.
+Unit Testing is generally synonymous with Test-Driven Development (TDD), where all tests are written before the API implementation begins. The tests are written based upon the API specification, thereby allowing any gaps in the specification to be discovered and filled in early. It also leads to less buggy software if done properly, as every module is sure to be unit tested. There are many tools to aid in trying to automate part of this process, some of which are discussed below.
 
 \subsection{FitNesse}
 
-FitNesse\footnote{\url{http://www.fitnesse.org}} is an acceptance testing framework\footnote{Unit tests written for the specific purpose of ensuring that the specification is fully implemented.}. It allows users to input formatted test cases, which it uses to automatically generates tests and execute them against the web api. While it generally works well when setup, it requires the creation of fixtures\footnote{Support classes with the api framework to allow the tests to run} which may be difficult depending on how the api is implemented. The test cases are created in a wiki using a natural language markup, which allows non-technical members of the team to also contribute to it.
+FitNesse\footnote{\url{http://www.fitnesse.org}} is an acceptance testing framework\footnote{Unit tests written for the specific purpose of ensuring that the specification is fully implemented.}. It allows users to input formatted test cases, which it uses to automatically generates tests and execute them against the web API. While it generally works well when setup, it requires the creation of fixtures\footnote{Support classes with the API framework to allow the tests to run} which may be difficult depending on how the API is implemented. The test cases are created in a wiki using a natural language markup, which allows non-technical members of the team to also contribute to it.
 
 FitNesse acts like a black-box test engine: the tester writing FitNesse inputs should not be aware how the specification is implemented. While a good idea in theory, there are usually bugs introduced due to the fixtures which can cause the acceptance tests to fail.  Furthermore, FitNesse is a completely self contained platform: it does not integrate with any other service, limiting furthermore automation.
 
 \subsection{RSpec}
 
-RSpec\footnote{\url{http://rspec.info}} is an acceptance testing framework for Ruby. It allows 'behaviours' to be defined which emulate a human using the api, and then automatically run against the code-base. It is by far the most commonly used testing framework for ruby apis, however it has seen limited use in other languages. Tests are written in a DSL based upon ruby which mimics natural language, making it easy to quickly add new tests as the need arises. Like FitNesse, RSpec is completely self contained and can not integrate with other services: the specification must be manually converted into behaviors.
+RSpec\footnote{\url{http://rspec.info}} is an acceptance testing framework for Ruby. It allows 'behaviours' to be defined which emulate a human using the API, and then automatically run against the code-base. It is by far the most commonly used testing framework for ruby APIs, however it has seen limited use in other languages. Tests are written in a DSL based upon ruby which mimics natural language, making it easy to quickly add new tests as the need arises. Like FitNesse, RSpec is completely self contained and can not integrate with other services: the specification must be manually converted into behaviors.
 
 \subsection{xUnit}
 
@@ -306,15 +306,15 @@ While powerful, xUnit frameworks again require the specification to be transform
 
 \subsection{Summary}
 
-While there are a wast array of automatic testing tools, all of them require a large amount of manual intervention. Namely, all the tools discussed above require the original specification to be transformed into propriety formats. While this would not be an issue if this were to happen one, api specifications are continuously updated and so require an inordinate effort by the software engineer to keep the two models in sync. Furthermore, this is a likelihood of introducing errors when converting the specification to test cases.
+While there are a wast array of automatic testing tools, all of them require a large amount of manual intervention. Namely, all the tools discussed above require the original specification to be transformed into propriety formats. While this would not be an issue if this were to happen one, API specifications are continuously updated and so require an inordinate effort by the software engineer to keep the two models in sync. Furthermore, this is a likelihood of introducing errors when converting the specification to test cases.
 
 An ideal solution would be able to parse a standardized specification and automatically generate all the relevant test cases, then execute the test cases against the code base. It would then be able to output which test cases failed in a human readable format.
 
 
 \section{Livedrive}
 
-Due to large possible scope of this project due to the myriad apis in production, I will limit the scope to an api provided by the organization Livedrive. Livedrive plan on using the completed project in production. They have begun created a new web api, code named 'Onyx', which can act as a good case study on how well the project will work in real world use cases.
+Due to large possible scope of this project due to the myriad APIs in production, I will limit the scope to an API provided by the organization Livedrive. Livedrive plan on using the completed project in production. They have begun created a new web API, code named 'Onyx', which can act as a good case study on how well the project will work in real world use cases.
 
-Livedrive is a cloud backup company. They provide consumer facing clients which can be used to manage files. These files are then sent to an off-site server for storage, thereby allowing access from other clients and protecting them from machine failure. Onyx will be used to communicate between the clients and backend servers, allowing actions such as 'rename' and 'delete'. Onyx' is written in C\#, and is currently tested using FitNesse. Due to the quickly evolving nature of the api, FitNesse has proved too slow to be scalabe in the long term.
+Livedrive is a cloud backup company. They provide consumer facing clients which can be used to manage files. These files are then sent to an off-site server for storage, thereby allowing access from other clients and protecting them from machine failure. Onyx will be used to communicate between the clients and backend servers, allowing actions such as 'rename' and 'delete'. Onyx' is written in C\#, and is currently tested using FitNesse. Due to the quickly evolving nature of the API, FitNesse has proved too slow to be scalabe in the long term.
 
-As Onyx is a trade secret, no code directly from the project will appear in the report. Instead, I will construct a mock api replicating the features of Onyx necessary to implement this project, as needed. This mock will aim to provide the same responses as Onyx, but will be merely imitating the responses.
+As Onyx is a trade secret, no code directly from the project will appear in the report. Instead, I will construct a mock API replicating the features of Onyx necessary to implement this project, as needed. This mock will aim to provide the same responses as Onyx, but will be merely imitating the responses.

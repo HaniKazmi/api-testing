@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c+c1}{\PYGdefaultZsh{}\PYGdefaultZpc{}RATML}
+\PYGdefault{l+lScalar+lScalarPlain}{title}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{ZEncoder API}
+\PYGdefault{l+lScalar+lScalarPlain}{version}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{v2}
+\PYGdefault{l+lScalar+lScalarPlain}{baseUri}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{https://app.zencoder.com/API/\PYGdefaultZob{}version\PYGdefaultZcb{}}
+\PYGdefault{l+lScalar+lScalarPlain}{/jobs}\PYGdefault{p+pIndicator}{:} \PYGdefault{c+c1}{\PYGdefaultZsh{} its fully\PYGdefaultZhy{}resolved URI is https://app.zencoder.com/API/\PYGdefaultZob{}version\PYGdefaultZcb{}/jobs}
+  \PYGdefault{l+lScalar+lScalarPlain}{displayName}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{Jobs}
+  \PYGdefault{l+lScalar+lScalarPlain}{description}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{A collection of jobs}
+  \PYGdefault{l+lScalar+lScalarPlain}{/\PYGdefaultZob{}jobId\PYGdefaultZcb{}}\PYGdefault{p+pIndicator}{:} \PYGdefault{c+c1}{\PYGdefaultZsh{} its fully\PYGdefaultZhy{}resolved URI is https://app.zencoder.com/API/\PYGdefaultZob{}version\PYGdefaultZcb{}/jobs/\PYGdefaultZob{}jobId\PYGdefaultZcb{}}
+    \PYGdefault{l+lScalar+lScalarPlain}{description}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{A specific job, a member of the jobs collection}
+\end{Verbatim}

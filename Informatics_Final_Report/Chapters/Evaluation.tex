@@ -1,5 +1,86 @@
-\chapter{Results/Evaluation}
+\chapter{Evaluation}
 
-\section{Software Testing}
+This section will analyze the completed system based upon the previously stated functional and non-functional requirements, as well as competing solutions on the market.
 
-\section{Section Heading}
+\section{Requirements}
+
+To ensure that the system has been developed according to the problem laid out at the start of this thesis, it will be evaluated against the requirements outlined earlier.
+
+\subsection{User Requirements}
+
+\begin{itemize}
+\item \emph{Fully specify a restful web API, so that it can be clearly understood by developers and software architects.} Restful APIs can be fully specified using RATML. Whether it can be clearly understood by developers is subjective, however it is based upon RAML which is widely used, and so it is safe to assume that the language is clear. Livedrive have begun using RATML, further pointing towards the language being useful.
+\item \emph{Be able to define what 'correct' operation of the API results in.} This was accomplished using schema definition for responses, which can be evaluated against the API implementation. While not perfect - it is possible to create a response which matches the schema but is not valid - it has a ~98\% rate when the heuristic is fed some seed data. This is an area which could use improvement in the future, but suffices for current use.
+\item \emph{Automatically run tests against an implementation of the web API based upon the specification.} This was accomplished using the Test Generation and Execution modules: Test cases are created from a RATML specification. They are sent as requests to the API implementation, and the responses evaluated for correctness. Results can then be reported to the user if a human-readable format.
+\item \emph{Be able to define sample inputs for the restful web API. / Be able to define sample outputs for a given input.} The RATML extensions to add Test Cases allow multiple inputs and outputs to be defined for each method in a restful API.
+\item \emph{Be able to check in the API returns the correct output for any given input.} The RATML parser was extended to be able to process Test Cases and transform them into the same format already being used by the Test Execution module.
+\end{itemize}
+
+\subsection{Functional Requirements}
+
+\begin{itemize}
+\item \emph{Parse the specification into a machine readable format.} A YAML parser was modified to act as a RATML parser, thereby fulfilling this requirement. The parser outputs ruby Objects which can be easily processed by a computer, as well as providing a Facade for easy manipulation by other modules.
+\item \emph{Provide the user with a method to execute tests against a web API.} The command-line interface allows the user to select a RATML file and begin test execution against its implementation.
+\item \emph{Report to the user how many tests failed.} The pretty printer can process the test result objects and output how many tests failed, along with many other useful information for the user.
+\item \emph{Be able to send sample inputs to the restful API and ensure they are valid.} Test Cases can be sent to the API implementation using the Typhoeus library, and the completion handler closures evaluate if the response is valid.
+\item \emph{Be able to detect if an API implementation does not follow the specification.} The existence and schema checks carried out by the Test Execution module ensure that endpoints are implemented, while the input/output tests can be used for more nuanced probing.
+\end{itemize}
+
+\subsection{Non-Functional Requirements}
+
+\subsubsection{Specification}
+\begin{itemize}
+\item \emph{The specification language must be easily human readable. / The language must be able to succinctly and unambiguously define a restful web API.} As discussed above, these are subjective requirements. RATML is now being used at Livedrive by several engineers and has yet to receive any complaints about it's design, so this requirement can be considered to be met.
+\item \emph{The language must be easily convertible to a format machines can process.} RATML is based upon YAML, which is a very mature markup language with many parsers available.  While RATML specific parser will have to be written, such as the ruby based one created for this thesis, the process can be drastically simplifies by using an existing YAML parser as the code base.
+\item \emph{The language most be agnostic to any implementation details. It should not matter how the API is going to work, or which programming language it will be written in.} RATML can specify APIs which are then implemented in any language: there are no language specific features within it.
+\end{itemize}
+
+\subsubsection{Automated testing}
+\begin{itemize}
+\item \emph{The system should be reliable: it should return the same result if run with the same specification on the same implementation.} Due to the added dependency features, tests are run in a non-destructive order allowing the system to be reliable.
+\item \emph{The system should be implementation agnostic: It should be able to run the tests no matter what language the API is written in.} Test cases are executed as network requests, and therefore do not need to know any implementation details of the API.
+\item \emph{The system should be able to run on as many common operating systems as feasibly possible.} The system is written in ruby, allowing the same code base to be run on OS X, Windows, most Linux distributions and many other platforms\footnote{\url{https://bugs.ruby-lang.org/projects/ruby-trunk/wiki/20SupportedPlatforms}}.
+\item \emph{The system should be performant, scaling linearly with the number of tests being run.} Thanks to the parallelized design, the system is highly performant, regularly scaling faster than linearly depending on the number of cpu cores available. 
+\item \emph{The system should be easy to maintain, following development best practices and making good use of architectural design patterns.} The system is highly modular. There are two major components: the parser and the test framework, both of which are further split into components. There is ample documentation throughout, and the Model-View Controller design pattern is followed. Individual components can be modified or replaced without breaking the overall system.
+\item \emph{The system should be fully unit tested to provide assurances that the code is as correct as possible.} Every module has unit tests, all of which pass. A sample 'Onyx' API was implemented to model real world usage, and the test framework behaves as expected when executed against it.
+\end{itemize}
+
+\subsection{Conclusion}
+
+While there are a few small areas where improvement is possible, the system generally meets all the requirements laid out at the start. Of particular note is the fact that defining a 'correct' API proved difficult: it is a concept easily understood by humans but can not be simply specified in a machine-computable format. Nevertheless, the input-output test cases can help cover this deficiency and the 98\% success rate isn't unusable.
+
+\section{Current Solutions}
+
+As covered in the Background, there are existing products also aiming at automating testing. This section compares the effectiveness of existing solutions to RATML and the Test Framework developed here.
+
+\subsection{RAML}
+
+While RATML is heavily based upon RAML, they are not the same. Both languages are built on top of YAML, thereby allowing them to be easily parsed. RATML has been simplified, allowing specialized parsers to be easier to write, as shown by the fully working RATML parser which I managed to implement, in contrast to the abandoned Ruby RAML parser. On the other hand, RAML possesses many abstraction techniques such as traits that allow more concise specifications to be written, whereas RATML requires everything to be explicitly laid out. While this gives RAML a higher difficulty curve to learn, it allows specifications to be much more easily followed by humans. RATML allows the definitions of input/output test cases. RAML partially supports this in the form of examples, however the RATML implementation is far more robust, allowing automatic test generation from the Test Case definitions.
+
+As RAML and RATML target different use cases, one can not be said to definitely be better than the other. One major advantage that RAML possesses is the already existing third-party resources and industry backing. Convincing the market to learn a new specification language and rewrite the many existing tools is a difficult task, especially as RAML has a large corporation backing it. However, as shown by the lack of automatic test tooling, RAML \emph{is} limited when it comes to test generation, and this is the use case where RATML clearly wins out.
+
+\subsection{FitNesse}
+
+FitNesse is the test suite most similar to this project. It consists of a wiki-type file used to specify inputs and outputs. The wiki file is then used to generate test cases, and ran against the api implementation. Like RAML, FitNesse has the advantage of existing tooling and industry support. FitNesse and the Test Framework both allow tests to be specified in a human readable manner, then parsed and run by the computer. FitNesse requires prior setup by a software engineer, while the Test Framework can be executed directly: it only needs a RATML file as input. Furthermore, the Test Framework can do presence and schema checks which FitNesse can not - it requires an exact output for any input.
+
+This project's major advantage over FitNesse is ease of use. The specification can be automatically converted into test cases, input does not need to be specified in a special file. Furthermore, FitNesse requires the creation of Mocks and Fixtures to operate properly. The entire api code base must be modified to be compatible with FitNesse while the Test Framework can work 'out of the box.' On the other hand, once Mocks and Fixtures are created, FitNesse allows for a far wider variety of test cases to be written. The Test Framework requires the API implementation to be set up with a test database, while FitNesse can automatically populate with API with mock data. The Test Framework tests the implementation as a whole, while FitNesse can target individual modules.
+
+All in all, the Test Framework provides simple, fully automated test cases. FitNesse can provide more control, at the cost of required manually integration. Both systems can be used as required by a project.
+
+\section{Livedrive and Onyx}
+
+The imitation Onyx API was run against the Test Framework. The results were encouraging: all the tests passed, showing that RATML \emph{can} be used to fully specify an API, and create automatic tests for it. 
+
+I also ported the entire Onyx specification definition to RATML, and ran it against the Test Framework. The complete specification has 403 endpoints and just under 5000 test cases. Of these, close to 4000 can be processed by the test Framework. Issues were caused by cases related to authorization and authentication, which were omitted from the imitation API due to trade secrets. While the Test Framework can handle most authorization techniques, it can not handle OAUTH\cite{rfc6749} due to the multiple redirects involved.
+
+\begin{tabular}{c | c | c}
+& \textbf{Imitation} & \textbf{Onyx} \\ \hline
+\textbf{Endpoints} & 10 & 403 \\ \hline
+\textbf{Input/Output Cases} & 40 & 4989 \\
+\textbf{Successful Tests} & 40 & 3890 \\ \hline
+\textbf{Schema Tests} & 21 & 10211 \\
+\textbf{Successful Schema Tests} & 20 & 10007 \\ \hline 
+\textbf{Time to run Tests} & 31ms & 5131ms \\
+\end{tabular}
+
+Discussing the Test Framework with Livedrive engineers, the general consensus is that the system is best in class for it's use case, and RATML is a very nice language to write specifications in. However, it is not fully featured enough to be a complete replacement, and thus will be used alongside FitNesse for the time being. The Test Framework is open source, and I will continue working on it as an employee of Livedrive when this thesis is finished. Livedrive is already starting to implement it as part of their test process, showing that the project meets a need in the industry.

@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+ \PYGdefault{n+nx}{POST} \PYGdefault{o}{/}\PYGdefault{n+nx}{users}
+ \PYGdefault{n+nx}{Host}\PYGdefault{o}{:} \PYGdefault{n+nx}{example}\PYGdefault{p}{.}\PYGdefault{n+nx}{com}
+ \PYGdefault{n+nx}{Authorization}\PYGdefault{o}{:} \PYGdefault{n+nx}{Basic} \PYGdefault{n+nx}{xxxxxxxxxxxxxxxxxxxxxxxx}
+ \PYGdefault{n+nx}{Accept}\PYGdefault{o}{:} \PYGdefault{n+nx}{application}\PYGdefault{o}{/}\PYGdefault{n+nx}{json}
+ \PYGdefault{n+nx}{Content}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n+nx}{Length}\PYGdefault{o}{:} \PYGdefault{n+nx}{nnn}
+ \PYGdefault{n+nx}{Content}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n+nx}{Type}\PYGdefault{o}{:} \PYGdefault{n+nx}{application}\PYGdefault{o}{/}\PYGdefault{n+nx}{json}
+ \PYGdefault{n+nx}{X}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n+nx}{Compute}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n+nx}{Client}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n+nx}{Specification}\PYGdefault{o}{:} \PYGdefault{l+m+mf}{0.1}
+
+ \PYGdefault{p}{\PYGdefaultZob{}}
+   \PYGdefault{l+s+s2}{\PYGdefaultZdq{}name\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}Richard Stallman\PYGdefaultZdq{}}\PYGdefault{p}{,}
+   \PYGdefault{l+s+s2}{\PYGdefaultZdq{}photo\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}/photos/123213\PYGdefaultZdq{}}\PYGdefault{p}{,}
+   \PYGdefault{p}{...}
+ \PYGdefault{p}{\PYGdefaultZcb{}}
+\end{Verbatim}

@@ -3,7 +3,7 @@
 \bibitem{blueprintsite}
 Api blueprint specification.
 \newblock
-  \url{https://github.com/apiaryio/api-blueprint/blob/master/API%20Blueprint%20Specification.md}.
+  \url{https://github.com/APIaryio/API-blueprint/blob/master/API%20Blueprint%20Specification.md}.
 \newblock [Onlune; accessed 12-February-2015.
 
 \bibitem{ramlwebsite}
@@ -13,8 +13,17 @@ Restful api modeling language.
 
 \bibitem{swaggersite}
 The swagger specification.
-\newblock \url{https://github.com/swagger-api/swagger-spec}.
+\newblock \url{https://github.com/swagger-API/swagger-spec}.
 \newblock [Onlune; accessed 12-February-2015.
+
+\bibitem{typhoeussite}
+Typhoeus.
+\newblock \url{https://github.com/typhoeus/typhoeus}.
+\newblock [Online; accessed 12-March-2015].
+
+\bibitem{ieeetesting}
+Ieee standard for software unit testing.
+\newblock {\em IEEE Std. 1008-1987}, 1986.
 
 \bibitem{internetmedia}
 Internet media type registration, consistency of use.
@@ -59,5 +68,29 @@ M.~Gudgin, M.~Hadley, N.~Mendelsohn, J.~Moreau, H.~Nielsen, A.~Karmarkar, and
   Y.~Lafon.
 \newblock Soap version 1.2 part 1: Messaging framework (second edition).
 \newblock W3C 20070427, 2007.
+
+\bibitem{rfc6749}
+D.~Hardt.
+\newblock {The OAuth 2.0 Authorization Framework}.
+\newblock RFC 6749 (Proposed Standard), October 2012.
+
+\bibitem{html5website}
+I.~Hickson, R.~Berjon~S. Faulkner, T.~Leithead, E.~D. Navara, E.~O'Conner, and
+  S.~Pfeifer.
+\newblock Html5: A vocabulary and associated apis for html and xhtml.
+\newblock \url{http://www.w3.org/TR/html5/}, 2014.
+\newblock [Online; accessed 4-February-2015].
+
+\bibitem{ror}
+Peter Komisar.
+\newblock Ruby on rails i.
+\newblock \url{http://www.sentex.net/~pkomisar/Ruby/9_RubyOnRails_1.html}.
+\newblock [Online; accessed 12-March-2015].
+
+\bibitem{mvsspec}
+Trygve Reenskaug and James~O. Coplien.
+\newblock The dci architecture: A new vision of object-oriented programming.
+\newblock \url{http://www.artima.com/articles/dci_vision.html}, 2009.
+\newblock [Online; accessed 1-March-2015].
 
 \end{thebibliography}

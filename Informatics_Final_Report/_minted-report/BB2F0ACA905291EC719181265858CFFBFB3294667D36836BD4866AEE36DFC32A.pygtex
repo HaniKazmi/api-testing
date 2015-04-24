@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c+c1}{\PYGdefaultZsh{}\PYGdefaultZpc{}RATML}
+\PYGdefault{l+lScalar+lScalarPlain}{title}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{Salesforce Chatter REST API}
+\PYGdefault{l+lScalar+lScalarPlain}{version}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{v28.0}
+\PYGdefault{l+lScalar+lScalarPlain}{protocols}\PYGdefault{p+pIndicator}{:} \PYGdefault{p+pIndicator}{[} \PYGdefault{n+nv}{HTTP}\PYGdefault{p+pIndicator}{,} \PYGdefault{n+nv}{HTTPS} \PYGdefault{p+pIndicator}{]}
+\PYGdefault{l+lScalar+lScalarPlain}{baseUri}\PYGdefault{p+pIndicator}{:} \PYGdefault{l+lScalar+lScalarPlain}{https://na1.salesforce.com/services/data/\PYGdefaultZob{}version\PYGdefaultZcb{}/chatter}
+\end{Verbatim}

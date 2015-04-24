@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+ \PYGdefault{p}{\PYGdefaultZob{}}
+   \PYGdefault{l+s+s2}{\PYGdefaultZdq{}name\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}Livedrive Onyx API\PYGdefaultZdq{}}
+   \PYGdefault{l+s+s2}{\PYGdefaultZdq{}implementation\PYGdefaultZus{}version\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}1\PYGdefaultZdq{}}\PYGdefault{p}{,}
+   \PYGdefault{l+s+s2}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}http://example.com/\PYGdefaultZdq{}}\PYGdefault{p}{,}
+   \PYGdefault{l+s+s2}{\PYGdefaultZdq{}users\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{p}{[}
+     \PYGdefault{p}{\PYGdefaultZob{}}
+       \PYGdefault{l+s+s2}{\PYGdefaultZdq{}name\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}User Profiles\PYGdefaultZdq{}}\PYGdefault{p}{,}
+       \PYGdefault{l+s+s2}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}/users\PYGdefaultZdq{}}
+     \PYGdefault{p}{\PYGdefaultZcb{}}
+    \PYGdefault{p}{],}
+   \PYGdefault{l+s+s2}{\PYGdefaultZdq{}files\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{p}{[}
+     \PYGdefault{p}{\PYGdefaultZob{}}
+       \PYGdefault{l+s+s2}{\PYGdefaultZdq{}name\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}File storage\PYGdefaultZdq{}}\PYGdefault{p}{,}
+       \PYGdefault{l+s+s2}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}/files\PYGdefaultZdq{}}
+     \PYGdefault{p}{\PYGdefaultZcb{}}
+    \PYGdefault{p}{].}
+   \PYGdefault{l+s+s2}{\PYGdefaultZdq{}authenticate\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{p}{[}
+     \PYGdefault{p}{\PYGdefaultZob{}}
+       \PYGdefault{l+s+s2}{\PYGdefaultZdq{}name\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}Authentication\PYGdefaultZdq{}}\PYGdefault{p}{,}
+       \PYGdefault{l+s+s2}{\PYGdefaultZdq{}uri\PYGdefaultZdq{}}\PYGdefault{o}{:} \PYGdefault{l+s+s2}{\PYGdefaultZdq{}/authenticate\PYGdefaultZdq{}}
+     \PYGdefault{p}{\PYGdefaultZcb{}}
+   \PYGdefault{p}{],}
+ \PYGdefault{p}{\PYGdefaultZcb{}}
+\end{Verbatim}
