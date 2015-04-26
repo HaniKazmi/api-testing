@@ -15,7 +15,10 @@ module Testframework
       testcases = Array.new
       resource.children.each do |child|
         if child.is_a? Ratml::Method
-          testcases << Testframework::Testcase.new(resource, child)
+          testcases << Testframework::Schematestcase.new(resource, child)
+          child.cases.each do |test|
+            testcases << Testframework::Inputtestcase.new(resource, child, test)
+          end
         elsif child.is_a? Ratml::Resource
           testcases +=self.transform_resource(child)              
         end

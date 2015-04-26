@@ -6,6 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-users = User.create( name: 'Hani', role: "admid")
-users.filles.create(filename: "Test", location: "Wirk")
-
+users = User.create( name: 'Hani', role: "admin", photo: "/photos/121")
+users.filles.create(filename: "Test", location: "Wirk", size: 2121)
+users.filles.create(filename: "Test2", location: "asa", size: 1)

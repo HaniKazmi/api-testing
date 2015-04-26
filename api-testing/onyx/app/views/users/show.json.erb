@@ -1,0 +1,11 @@
+{
+    "name": "<%= @user.name %>",
+    "uri": "/users/<%= @user.id %>",
+    "photo": "<%= @user.photo %>",
+    "files":[ <% @user.filles.each do |file| %>
+      {
+        "filename": "<%= file.filename %>",
+        "uri": "/files/<%= file.id %>"
+      }<%= "," unless file == @user.filles.last %>  <% end %>
+    ]
+}

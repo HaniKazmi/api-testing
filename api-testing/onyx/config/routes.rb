@@ -9,13 +9,25 @@ Rails.application.routes.draw do
     scope '/v1' do
       scope '/users' do
         get '/' => 'users#index'
+        post '/' => 'users#create'
+        scope '/:id' do
+          get '/' => 'users#show'
+          delete '/' => 'users#destroy'
+        end
       end
 
       scope '/files' do
         get '/' => 'files#index'
+        post '/' => 'files#create'
+        scope '/:id' do
+          get '/' => 'files#show'
+          delete '/' => 'files#destroy'
+        end
       end
     end
   end
+
+  match "*path", to: "application#missing", via: :all
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

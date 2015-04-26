@@ -72,19 +72,42 @@ module Ratml
 	end
 
 	class Method < Property
-		attr_accessor :name
+		attr_accessor :name, :cases
 
 		def initialize name, data
 			super()
 			@name = name
+			@cases = Array.new
 			data.each do |key, value|
 				case key
 				when 'responses'
 					value.each do |name, response_data|
 						@children << Response.new(name, response_data)
 					end
+				when 'testcases'
+					value.each do |name, test_case|
+						@cases << Testcase.new(name, test_case)
+					end
 				end
 			end
+		end
+	end
+
+	class Testcase
+		attr_accessor :query, :status, :response, :schema, :name, :id
+
+		def initialize name, data
+			@name = name
+			if data["query"]
+				@query = JSON.parse data["query"]
+			end
+			@status = data["response"]["status"]
+			@response = JSON.parse data["response"]["body"]
+			@id = data["resource"]
+			@schema = lambda{ |response|
+				response = JSON.parse response
+				return response == @response
+			}
 		end
 	end
 
@@ -110,26 +133,55 @@ module Ratml
 	class Body < Property
 		attr_accessor :media_type, :schema
 
+
 		def initialize media_type, body_data
 			@media_type = media_type
+		  type_hash = { "string" => lambda{ |type| type.is_a? String},
+										"uri" => lambda{ |type| type.is_a? String},
+									  "long" => lambda{ |type| type.is_a? Integer}}
+
 			body_data.each do |key, value|
 				case key
 				when "schema"
 					hash = JSON.parse value
 					required = hash["required"]
 					properties = create_proc_properties hash["properties"]
+
 					@schema = lambda{ |response|
-						hash = JSON.parse response
-						if hash.class == Array
-							hash = hash.first
-							properties = properties[:array]
-						end
-						hash.each do |key, value|
-							unless properties.keys.include? key
-								return false
+						comparator = lambda{ |response, hash|
+							if hash[:array]
+								response.each do |response|
+									unless comparator.call(response, hash[:array])
+										return false
+									end
+								end
+							else
+								response.each do |key, value|
+									if value.is_a? Array
+										value.each do |response|
+											unless comparator.call(response, hash[key][:array])
+												return false
+											end
+										end
+									else
+										unless hash.keys.include? key
+											return false
+										end
+
+										type = hash[key]
+										type_proc = type_hash[type]
+
+										unless type_proc.call(value)
+											return false
+										end
+									end
+								end
 							end
-						end
-						return true 
+							return true
+						}
+
+						hash = JSON.parse response
+						comparator.call(hash, properties)
 					}	
 				end
 			end
@@ -141,7 +193,7 @@ module Ratml
 				if property.is_a? Hash
 					properties[:array] = create_proc_properties property						
 				elsif value.is_a? Array
-					properties[:array] = create_proc_properties value
+					properties[property] = create_proc_properties value
 				elsif value["type"]
 					properties[property] = value["type"]
 				else

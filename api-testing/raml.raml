@@ -6,20 +6,49 @@ version: v1
 /users:
   get:
     responses:
-        200:
-          body:
-            application/json:
-              schema: |
-                { "$schema": "http://json-schema.org/schema",
+      200:
+        body:
+          application/json:
+            schema: |
+              { "$schema": "http://json-schema.org/schema",
+                "type": "object",
+                "description": "A list of users",
+                "properties": [{
+                  "name": { "type": "string"},
+                  "uri": { "type": "uri"},
+                  "role": { "type": "string" }
+                }],
+                "required": [ "name", "uri", "role" ]
+              }
+  post:
+    responses:
+      200:
+        body:
+          application/json:
+            schema: |
+              { "$schema": "http://json-schema.org/schema",
                   "type": "object",
                   "description": "A list of users",
-                  "properties": [{
+                  "properties": {
                     "name": { "type": "string"},
                     "uri": { "type": "uri"},
                     "role": { "type": "string" }
-                  }],
+                  },
                   "required": [ "name", "uri", "role" ]
-                }
+              }
+    testcases:
+      createuser:
+        query: |
+          { "name": "Alan Turing",
+            "photo": "/photos/2131"
+          }
+        response: 
+          status: 200
+          body: |
+            { "name": "Alan Turing",
+              "uri" : "/users/3",
+               "role": ""
+            }
   /{userId}:
     get:
       responses:
@@ -41,7 +70,7 @@ version: v1
                   },
                   "required": [ "name", "uri" ]
                 }
-        404:
+        400:
           body:
             application/json:
               schema: |
@@ -49,10 +78,35 @@ version: v1
                   "type": "object",
                   "description": "A missing user",
                   "properties": {
-                    "message":  { "type": "string" }
+                    "error":  { "type": "string" }
                   },
                   "required": [ "message" ]
                 }
+      testcases:
+        exampleuser:
+          resource: 1
+          response:
+            status: 200
+            body: |
+              { "name": "Hani",
+                "uri": "/users/1",
+                "photo": "/photos/121",
+                "files":[ 
+                  {
+                    "filename": "Test",
+                    "uri": "/files/1"
+                  },  
+                  {
+                    "filename": "Test2",
+                    "uri": "/files/2"
+                  }]
+              }
+        missinguser:
+          resource: 2121
+          response:
+            status: 200
+            body: |
+              { "error" : "not_found"}
     delete:
       description: |
         This method will *delete* an **individual user**
@@ -64,7 +118,7 @@ version: v1
                 { "$schema": "http://json-schema.org/schema",
                   "type": "object",
                   "properties": {
-                    "message":  { "type": "string" }
+                    "message": { "type": "string" }
                   },
                   "required": [ "message" ]
                 }
@@ -97,8 +151,9 @@ version: v1
                   "description": "A canonical file",
                   "properties": {
                     "filename":  { "type": "string" },
+                    "uri": { "type": "uri" },
                     "location": { "type": "uri" },
-                    "size": { "type": "uri" }
+                    "size": { "type": "long" }
                   },
                   "required": [ "filename", "location" ]
                 }
@@ -110,7 +165,7 @@ version: v1
                   "type": "object",
                   "description": "A missing file",
                   "properties": {
-                    "message":  { "type": "string" }
+                    "error":  { "type": "string" }
                   },
                   "required": [ "message" ]
                 }

@@ -1,0 +1,9 @@
+[
+<% @Files.each do |file| %>
+{
+    "filename": "<%= file.filename %>",
+    "uri": "/files/<%= file.id %>",
+    "size": <%= file.size %>
+} <%= "," unless file == @Files.last %>
+<% end %>
+]
