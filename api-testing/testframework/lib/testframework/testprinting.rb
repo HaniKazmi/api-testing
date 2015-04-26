@@ -17,8 +17,8 @@ module Testframework
           output += "#{result.name}\n"
           output += "#{result.verb}   #{result.uri}\n"
           output += "\t#{result.reason}"
-          output += "\tresponse: #{result.code}\n\t\t #{result.body}" if result.body
-          output += "\n"
+          output += "\tresponse: #{result.code}\n\t\t #{result.body[0..200]}" if result.body
+          output += "\n\n"
         end
         output += "\n"
 

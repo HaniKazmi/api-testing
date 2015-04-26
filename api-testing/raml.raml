@@ -20,6 +20,22 @@ version: v1
                 }],
                 "required": [ "name", "uri", "role" ]
               }
+    testcases:
+      userindex:
+        response: 
+          status: 200
+          body: |
+            [{
+              "name": "Hani",
+              "uri": "/users/1",
+              "role": "admin"
+            } ,
+            {
+              "name": "Newton",
+              "uri": "/users/2",
+              "role": "User"
+              } 
+            ]
   post:
     responses:
       200:
@@ -38,16 +54,18 @@ version: v1
               }
     testcases:
       createuser:
+        dependent: userindex
         query: |
           { "name": "Alan Turing",
-            "photo": "/photos/2131"
+            "photo": "/photos/2131",
+            "role": "admin"
           }
         response: 
           status: 200
           body: |
             { "name": "Alan Turing",
               "uri" : "/users/3",
-               "role": ""
+               "role": "admin"
             }
   /{userId}:
     get:
@@ -70,7 +88,7 @@ version: v1
                   },
                   "required": [ "name", "uri" ]
                 }
-        400:
+        404:
           body:
             application/json:
               schema: |
@@ -83,29 +101,51 @@ version: v1
                   "required": [ "message" ]
                 }
       testcases:
-        exampleuser:
+        exampleadminuser:
           resource: 1
           response:
             status: 200
             body: |
-              { "name": "Hani",
-                "uri": "/users/1",
-                "photo": "/photos/121",
+                {
+                  "name": "Hani",
+                  "uri": "/users/1",
+                  "photo": "/photos/121",
+                  "files":[ 
+                    {
+                      "filename": "photo.jpg",
+                      "uri": "/files/1"
+                    },  
+                    {
+                      "filename": "movie.exe",
+                      "uri": "/files/2"
+                    }  
+                  ]
+                }
+        exampleuser:
+          resource: 2
+          response:
+            status: 200
+            body: |
+              {
+                "name": "Newton",
+                "uri": "/users/2",
+                "photo": "/photos/21",
                 "files":[ 
                   {
-                    "filename": "Test",
-                    "uri": "/files/1"
+                    "filename": "game.mp4",
+                    "uri": "/files/3"
                   },  
                   {
-                    "filename": "Test2",
-                    "uri": "/files/2"
-                  }]
+                    "filename": "kcl.txt",
+                    "uri": "/files/4"
+                  }  
+                ]
               }
         missinguser:
           resource: 2121
           dependent: exampleuser
           response:
-            status: 200
+            status: 404
             body: |
               { "error" : "not_found"}
     delete:
@@ -140,6 +180,32 @@ version: v1
                   }],
                   "required": [ "filename", "uri" ]
                 }
+    testcases:
+      filesindex:
+        response:
+          status: 200
+          body: |
+            [{
+                "filename": "photo.jpg",
+                "uri": "/files/1",
+                "size": 12
+            } ,
+            {
+                "filename": "movie.exe",
+                "uri": "/files/2",
+                "size": 194320
+            } ,
+            {
+                "filename": "game.mp4",
+                "uri": "/files/3",
+                "size": 1
+            } ,
+            {
+                "filename": "kcl.txt",
+                "uri": "/files/4",
+                "size": 432
+            } 
+            ]
   /{fileId}:
     get:
       responses:
@@ -170,6 +236,25 @@ version: v1
                   },
                   "required": [ "message" ]
                 }
+      testcases:
+        basicfile:
+          resource: 1
+          response:
+            status: 200
+            body: |
+              {
+                  "filename": "photo.jpg",
+                  "uri": "/files/1",
+                  "location": "/resource/12123",
+                  "size": "12"
+              }
+        deletedfile:
+          resource: 1
+          dependent: deletefile
+          response:
+            status: 404
+            body: |
+              { "error" : "not_found"}
     delete:
       description: |
         This method will *delete* an **individual file**
@@ -185,3 +270,11 @@ version: v1
                   },
                   "required": [ "message" ]
                 }
+      testcases:
+        deletefile:
+          resource: 1
+          dependent: basicfile
+          response:
+            status: 200
+            body: |
+              { "message": "File deleted"}

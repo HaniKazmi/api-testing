@@ -10,6 +10,7 @@ module Testframework
       testcases, dependecies = create_dependencies_hash testcases
       @hydra = Typhoeus::Hydra.hydra
 
+      #Create and run parallized requests
       testcases.each do |testcase|
         @hydra.queue(self.create_request(testcase, dependecies))
         @hydra.run
@@ -19,6 +20,8 @@ module Testframework
       @results
     end
 
+    # Recursively parse dependecy lists and add requests to the
+    # completion handlers
     def self.create_request testcase, dependecies
       request = Typhoeus::Request.new(
         testcase.url,
@@ -38,6 +41,7 @@ module Testframework
       request
     end
 
+    # Massage the response into a usable fromat
     def self.handle_response request, testcase
       result = Testframework::Testresult.new()
         result.uri = testcase.url
@@ -63,7 +67,7 @@ module Testframework
           end
 
         elsif testcase.is_a? Testframework::Inputtestcase
-          result.success = testcase.status == request.code and testcase.schema.call request.body
+          result.success = testcase.schema.call(request.body) and ( testcase.status == request.code)
           unless result.success
             result.reason = "Response does not match testcase"
             if testcase.status != request.code

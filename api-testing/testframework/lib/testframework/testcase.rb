@@ -31,7 +31,7 @@ module Testframework
 
     def url
       if @resource.element
-        @resource.uri.sub /\{.*\}/, '4' 
+        @resource.uri.sub /\{.*\}/, '4323' 
       else
         @resource.uri
       end

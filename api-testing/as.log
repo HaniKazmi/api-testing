@@ -103,3 +103,6151 @@ get   http://localhost:3000/api/v1/users/2121
 	Wrong status code	response: 404
 		 {"error": "not_found"}
 
+
+
+
+2015-04-26 18:08:53 +0100
+Failed tests: 2/10 
+-------------
+Schema
+get   http://localhost:3000/api/v1/users/4
+	Endpoint not implemented	response: 404
+		 {"error": "not_found"}
+missinguser
+get   http://localhost:3000/api/v1/users/2121
+	Wrong status code	response: 404
+		 {"error": "not_found"}
+
+
+
+
+2015-04-26 18:12:22 +0100
+Failed tests: 2/10 
+-------------
+Schema
+get   http://localhost:3000/api/v1/users/4
+	Endpoint not implemented	response: 404
+		 {"error": "not_found"}
+missinguser
+get   http://localhost:3000/api/v1/users/2121
+	Wrong status code	response: 404
+		 {"error": "not_found"}
+
+
+
+
+2015-04-26 18:13:41 +0100
+Failed tests: 2/10 
+-------------
+Schema
+get   http://localhost:3000/api/v1/users/4
+	Endpoint not implemented	response: 404
+		 {"error": "not_found"}
+missinguser
+get   http://localhost:3000/api/v1/users/2121
+	Wrong status code	response: 404
+		 {"error": "not_found"}
+
+
+
+
+2015-04-26 18:13:49 +0100
+Failed tests: 1/10 
+-------------
+missinguser
+get   http://localhost:3000/api/v1/users/2121
+	Wrong status code	response: 404
+		 {"error": "not_found"}
+
+
+
+
+2015-04-26 18:14:16 +0100
+Failed tests: 1/11 
+-------------
+missinguser
+get   http://localhost:3000/api/v1/users/2121
+	Wrong status code	response: 404
+		 {"error": "not_found"}
+
+
+
+
+2015-04-26 18:15:35 +0100
+Failed tests: 1/11 
+-------------
+missinguser
+get   http://localhost:3000/api/v1/users/2121
+	Wrong status code	response: 404
+		 {"error": "not_found"}
+
+
+
+
+2015-04-26 18:15:54 +0100
+Failed tests: 1/11 
+-------------
+missinguser
+get   http://localhost:3000/api/v1/users/2121
+	Wrong status code	response: 404
+		 {"error": "not_found"}
+
+
+
+
+2015-04-26 18:16:34 +0100
+All tests passed
+
+
+
+2015-04-26 18:18:15 +0100
+All tests passed
+
+
+
+2015-04-26 18:19:59 +0100
+All tests passed
+
+
+
+2015-04-26 18:20:12 +0100
+All tests passed
+
+
+
+2015-04-26 18:21:05 +0100
+All tests passed
+
+
+
+2015-04-26 18:21:28 +0100
+All tests passed
+
+
+
+2015-04-26 18:22:14 +0100
+All tests passed
+
+
+
+2015-04-26 18:22:45 +0100
+All tests passed
+
+
+
+2015-04-26 18:23:07 +0100
+All tests passed
+
+
+
+2015-04-26 18:23:26 +0100
+All tests passed
+
+
+
+2015-04-26 18:23:57 +0100
+All tests passed
+
+
+
+2015-04-26 18:24:29 +0100
+All tests passed
+
+
+
+2015-04-26 18:26:06 +0100
+All tests passed
+
+
+
+2015-04-26 18:26:32 +0100
+All tests passed
+
+
+
+2015-04-26 18:27:09 +0100
+All tests passed
+
+
+
+2015-04-26 18:27:44 +0100
+All tests passed
+
+
+
+2015-04-26 18:27:58 +0100
+Failed tests: 1/8 
+-------------
+userindex
+get   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 [
+{
+    "name": "Hani",
+    "uri": "/users/1",
+    "role": "admin"
+} ,
+{
+    "name": "",
+    "uri": "/users/2",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/3",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/5",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/6",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/7",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/8",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/9",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/10",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/11",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/12",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/13",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/14",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/15",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/16",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/17",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/18",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/19",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/20",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/21",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/22",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/23",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/24",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/25",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/26",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/27",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/28",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/29",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/30",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/31",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/32",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/33",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/34",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/35",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/36",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/37",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/38",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/39",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/40",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/41",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/42",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/43",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/44",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/45",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/46",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/47",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/48",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/49",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/50",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/51",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/52",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/53",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/54",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/55",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/56",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/57",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/58",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/59",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/60",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/61",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/62",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/63",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/64",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/65",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/66",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/67",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/68",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/69",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/70",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/71",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/72",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/73",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/74",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/75",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/76",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/77",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/78",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/79",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/80",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/81",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/82",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/83",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/84",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/85",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/86",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/87",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/88",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/89",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/90",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/91",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/92",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/93",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/94",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/95",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/96",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/97",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/98",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/99",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/100",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/101",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/102",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/103",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/104",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/105",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/106",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/107",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/108",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/109",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/110",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/111",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/112",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/113",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/114",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/115",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/116",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/117",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/118",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/119",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/120",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/121",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/122",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/123",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/124",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/125",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/126",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/127",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/128",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/129",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/130",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/131",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/132",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/133",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/134",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/135",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/136",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/137",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/138",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/139",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/140",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/141",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/142",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/143",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/144",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/145",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/146",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/147",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/148",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/149",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/150",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/151",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/152",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/153",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/154",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/155",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/156",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/157",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/158",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/159",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/160",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/161",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/162",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/163",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/164",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/165",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/166",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/167",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/168",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/169",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/170",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/171",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/172",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/173",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/174",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/175",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/176",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/177",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/178",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/179",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/180",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/181",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/182",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/183",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/184",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/185",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/186",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/187",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/188",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/189",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/190",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/191",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/192",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/193",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/194",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/195",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/196",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/197",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/198",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/199",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/200",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/201",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/202",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/203",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/204",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/205",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/206",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/207",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/208",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/209",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/210",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/211",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/212",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/213",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/214",
+    "role": ""
+} 
+]
+
+
+
+
+
+2015-04-26 18:28:07 +0100
+Failed tests: 1/8 
+-------------
+userindex
+get   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 [
+{
+    "name": "Hani",
+    "uri": "/users/1",
+    "role": "admin"
+} ,
+{
+    "name": "",
+    "uri": "/users/2",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/3",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/5",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/6",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/7",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/8",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/9",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/10",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/11",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/12",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/13",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/14",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/15",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/16",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/17",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/18",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/19",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/20",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/21",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/22",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/23",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/24",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/25",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/26",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/27",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/28",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/29",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/30",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/31",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/32",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/33",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/34",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/35",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/36",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/37",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/38",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/39",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/40",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/41",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/42",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/43",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/44",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/45",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/46",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/47",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/48",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/49",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/50",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/51",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/52",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/53",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/54",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/55",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/56",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/57",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/58",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/59",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/60",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/61",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/62",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/63",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/64",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/65",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/66",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/67",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/68",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/69",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/70",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/71",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/72",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/73",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/74",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/75",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/76",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/77",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/78",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/79",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/80",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/81",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/82",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/83",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/84",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/85",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/86",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/87",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/88",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/89",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/90",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/91",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/92",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/93",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/94",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/95",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/96",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/97",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/98",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/99",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/100",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/101",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/102",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/103",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/104",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/105",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/106",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/107",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/108",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/109",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/110",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/111",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/112",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/113",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/114",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/115",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/116",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/117",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/118",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/119",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/120",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/121",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/122",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/123",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/124",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/125",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/126",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/127",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/128",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/129",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/130",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/131",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/132",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/133",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/134",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/135",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/136",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/137",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/138",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/139",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/140",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/141",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/142",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/143",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/144",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/145",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/146",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/147",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/148",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/149",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/150",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/151",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/152",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/153",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/154",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/155",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/156",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/157",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/158",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/159",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/160",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/161",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/162",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/163",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/164",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/165",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/166",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/167",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/168",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/169",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/170",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/171",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/172",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/173",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/174",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/175",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/176",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/177",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/178",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/179",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/180",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/181",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/182",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/183",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/184",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/185",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/186",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/187",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/188",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/189",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/190",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/191",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/192",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/193",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/194",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/195",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/196",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/197",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/198",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/199",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/200",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/201",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/202",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/203",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/204",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/205",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/206",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/207",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/208",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/209",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/210",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/211",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/212",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/213",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/214",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/215",
+    "role": ""
+} 
+]
+
+
+
+
+
+2015-04-26 18:28:17 +0100
+Failed tests: 1/8 
+-------------
+userindex
+get   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 [
+{
+    "name": "Hani",
+    "uri": "/users/1",
+    "role": "admin"
+} ,
+{
+    "name": "",
+    "uri": "/users/2",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/3",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/5",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/6",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/7",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/8",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/9",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/10",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/11",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/12",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/13",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/14",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/15",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/16",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/17",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/18",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/19",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/20",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/21",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/22",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/23",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/24",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/25",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/26",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/27",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/28",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/29",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/30",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/31",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/32",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/33",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/34",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/35",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/36",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/37",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/38",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/39",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/40",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/41",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/42",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/43",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/44",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/45",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/46",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/47",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/48",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/49",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/50",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/51",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/52",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/53",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/54",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/55",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/56",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/57",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/58",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/59",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/60",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/61",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/62",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/63",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/64",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/65",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/66",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/67",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/68",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/69",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/70",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/71",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/72",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/73",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/74",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/75",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/76",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/77",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/78",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/79",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/80",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/81",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/82",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/83",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/84",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/85",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/86",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/87",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/88",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/89",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/90",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/91",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/92",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/93",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/94",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/95",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/96",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/97",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/98",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/99",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/100",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/101",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/102",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/103",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/104",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/105",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/106",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/107",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/108",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/109",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/110",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/111",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/112",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/113",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/114",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/115",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/116",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/117",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/118",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/119",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/120",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/121",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/122",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/123",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/124",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/125",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/126",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/127",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/128",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/129",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/130",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/131",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/132",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/133",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/134",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/135",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/136",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/137",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/138",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/139",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/140",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/141",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/142",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/143",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/144",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/145",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/146",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/147",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/148",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/149",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/150",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/151",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/152",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/153",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/154",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/155",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/156",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/157",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/158",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/159",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/160",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/161",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/162",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/163",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/164",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/165",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/166",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/167",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/168",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/169",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/170",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/171",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/172",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/173",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/174",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/175",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/176",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/177",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/178",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/179",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/180",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/181",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/182",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/183",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/184",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/185",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/186",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/187",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/188",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/189",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/190",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/191",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/192",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/193",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/194",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/195",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/196",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/197",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/198",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/199",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/200",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/201",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/202",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/203",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/204",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/205",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/206",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/207",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/208",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/209",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/210",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/211",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/212",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/213",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/214",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/215",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/216",
+    "role": ""
+} 
+]
+
+
+
+
+
+2015-04-26 18:29:01 +0100
+All tests passed
+
+
+
+2015-04-26 18:29:41 +0100
+Failed tests: 1/8 
+-------------
+userindex
+get   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 [
+{
+    "name": "Hani",
+    "uri": "/users/1",
+    "role": "admin"
+} ,
+{
+    "name": "",
+    "uri": "/users/2",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/3",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/5",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/6",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/7",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/8",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/9",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/10",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/11",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/12",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/13",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/14",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/15",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/16",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/17",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/18",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/19",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/20",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/21",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/22",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/23",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/24",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/25",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/26",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/27",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/28",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/29",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/30",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/31",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/32",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/33",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/34",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/35",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/36",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/37",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/38",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/39",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/40",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/41",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/42",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/43",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/44",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/45",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/46",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/47",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/48",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/49",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/50",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/51",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/52",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/53",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/54",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/55",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/56",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/57",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/58",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/59",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/60",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/61",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/62",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/63",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/64",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/65",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/66",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/67",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/68",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/69",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/70",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/71",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/72",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/73",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/74",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/75",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/76",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/77",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/78",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/79",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/80",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/81",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/82",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/83",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/84",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/85",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/86",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/87",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/88",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/89",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/90",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/91",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/92",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/93",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/94",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/95",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/96",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/97",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/98",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/99",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/100",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/101",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/102",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/103",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/104",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/105",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/106",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/107",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/108",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/109",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/110",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/111",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/112",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/113",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/114",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/115",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/116",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/117",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/118",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/119",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/120",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/121",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/122",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/123",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/124",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/125",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/126",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/127",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/128",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/129",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/130",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/131",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/132",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/133",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/134",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/135",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/136",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/137",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/138",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/139",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/140",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/141",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/142",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/143",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/144",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/145",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/146",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/147",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/148",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/149",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/150",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/151",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/152",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/153",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/154",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/155",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/156",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/157",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/158",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/159",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/160",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/161",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/162",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/163",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/164",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/165",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/166",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/167",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/168",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/169",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/170",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/171",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/172",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/173",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/174",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/175",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/176",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/177",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/178",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/179",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/180",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/181",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/182",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/183",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/184",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/185",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/186",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/187",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/188",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/189",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/190",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/191",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/192",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/193",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/194",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/195",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/196",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/197",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/198",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/199",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/200",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/201",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/202",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/203",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/204",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/205",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/206",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/207",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/208",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/209",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/210",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/211",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/212",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/213",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/214",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/215",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/216",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/217",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/218",
+    "role": ""
+} 
+]
+
+
+
+
+
+2015-04-26 18:30:07 +0100
+Failed tests: 2/11 
+-------------
+userindex
+get   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 [
+{
+    "name": "Hani",
+    "uri": "/users/1",
+    "role": "admin"
+} ,
+{
+    "name": "",
+    "uri": "/users/2",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/3",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/5",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/6",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/7",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/8",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/9",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/10",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/11",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/12",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/13",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/14",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/15",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/16",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/17",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/18",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/19",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/20",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/21",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/22",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/23",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/24",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/25",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/26",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/27",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/28",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/29",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/30",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/31",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/32",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/33",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/34",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/35",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/36",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/37",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/38",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/39",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/40",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/41",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/42",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/43",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/44",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/45",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/46",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/47",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/48",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/49",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/50",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/51",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/52",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/53",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/54",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/55",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/56",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/57",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/58",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/59",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/60",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/61",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/62",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/63",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/64",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/65",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/66",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/67",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/68",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/69",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/70",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/71",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/72",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/73",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/74",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/75",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/76",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/77",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/78",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/79",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/80",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/81",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/82",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/83",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/84",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/85",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/86",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/87",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/88",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/89",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/90",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/91",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/92",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/93",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/94",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/95",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/96",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/97",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/98",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/99",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/100",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/101",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/102",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/103",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/104",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/105",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/106",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/107",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/108",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/109",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/110",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/111",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/112",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/113",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/114",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/115",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/116",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/117",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/118",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/119",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/120",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/121",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/122",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/123",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/124",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/125",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/126",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/127",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/128",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/129",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/130",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/131",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/132",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/133",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/134",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/135",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/136",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/137",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/138",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/139",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/140",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/141",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/142",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/143",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/144",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/145",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/146",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/147",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/148",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/149",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/150",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/151",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/152",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/153",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/154",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/155",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/156",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/157",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/158",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/159",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/160",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/161",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/162",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/163",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/164",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/165",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/166",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/167",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/168",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/169",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/170",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/171",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/172",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/173",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/174",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/175",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/176",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/177",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/178",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/179",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/180",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/181",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/182",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/183",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/184",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/185",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/186",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/187",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/188",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/189",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/190",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/191",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/192",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/193",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/194",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/195",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/196",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/197",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/198",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/199",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/200",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/201",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/202",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/203",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/204",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/205",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/206",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/207",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/208",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/209",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/210",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/211",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/212",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/213",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/214",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/215",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/216",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/217",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/218",
+    "role": ""
+} ,
+{
+    "name": "",
+    "uri": "/users/219",
+    "role": ""
+} 
+]
+
+createuser
+post   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 {
+    "name": "Alan Turing",
+    "uri": "/users/221",
+    "role": ""
+}
+
+
+
+
+2015-04-26 18:31:51 +0100
+Failed tests: 2/11 
+
+
+
+2015-04-26 18:32:48 +0100
+Failed tests: 2/11 
+-------------
+userindex
+get   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 [
+{
+    "name": "Hani",
+    "uri": "/users/1",
+    "role": "admin"
+} ,
+{
+    "name": "",
+    "uri": "
+createuser
+post   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 {
+    "name": "Alan Turing",
+    "uri": "/users/225",
+    "role": ""
+}
+
+
+
+
+2015-04-26 18:33:44 +0100
+Failed tests: 2/11 
+-------------
+userindex
+get   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 [
+{
+    "name": "Hani",
+    "uri": "/users/1",
+    "role": "admin"
+} ,
+{
+    "name": "",
+    "uri": "
+
+createuser
+post   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 {
+    "name": "Alan Turing",
+    "uri": "/users/227",
+    "role": ""
+}
+
+
+
+
+
+2015-04-26 18:34:34 +0100
+Failed tests: 2/11 
+-------------
+userindex
+get   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 [
+{
+    "name": "Hani",
+    "uri": "/users/1",
+    "role": "admin"
+} ,
+{
+    "name": "",
+    "uri": "/users/2",
+    "role": ""
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/3",
+    "role": ""
+} ,
+
+createuser
+post   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 {
+    "name": "Alan Turing",
+    "uri": "/users/229",
+    "role": ""
+}
+
+
+
+
+
+2015-04-26 18:40:37 +0100
+Failed tests: 3/11 
+-------------
+createuser
+post   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 {
+    "name": "Alan Turing",
+    "uri": "/users/4",
+    "role": ""
+}
+
+exampleuser
+get   http://localhost:3000/api/v1/users/1
+	Response does not match testcase	response: 200
+		 {
+    "name": "Hani",
+    "uri": "/users/1",
+    "photo": "/photos/121",
+    "files":[ 
+      {
+        "filename": "photo.jpg",
+        "uri": "/files/1"
+      },  
+      {
+        "filename": "movie.
+
+Schema
+get   http://localhost:3000/api/v1/files/4
+	Schema does not match response.	response: 200
+		 {
+    "filename": "kcl.txt",
+    "uri": "/files/4",
+    "location": "/resource/123",
+    "size": "432"
+}
+
+
+
+
+
+
+2015-04-26 18:52:20 +0100
+Failed tests: 3/13 
+-------------
+createuser
+post   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 {
+    "name": "Alan Turing",
+    "uri": "/users/3",
+    "role": ""
+}
+
+Schema
+testcases   http://localhost:3000/api/v1/files
+	Schema does not exist for the received status code	response: 500
+		 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+  <HEAD><TITLE>Internal Server Error</TITLE></HEAD>
+  <BODY>
+    <H1>Internal Server Error</H1>
+    TESTCASES, accepted HTTP methods are OPTIONS
+
+Schema
+get   http://localhost:3000/api/v1/files/4
+	Schema does not match response.	response: 200
+		 {
+    "filename": "kcl.txt",
+    "uri": "/files/4",
+    "location": "/resource/123",
+    "size": "432"
+}
+
+
+
+
+
+
+2015-04-26 18:53:35 +0100
+Failed tests: 2/13 
+-------------
+createuser
+post   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 {
+    "name": "Alan Turing",
+    "uri": "/users/3",
+    "role": ""
+}
+
+Schema
+testcases   http://localhost:3000/api/v1/files
+	Schema does not exist for the received status code	response: 500
+		 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+  <HEAD><TITLE>Internal Server Error</TITLE></HEAD>
+  <BODY>
+    <H1>Internal Server Error</H1>
+    TESTCASES, accepted HTTP methods are OPTIONS
+
+
+
+
+
+2015-04-26 18:54:33 +0100
+Failed tests: 3/13 
+-------------
+userindex
+get   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 [
+{
+    "name": "Hani",
+    "uri": "/users/1",
+    "role": "admin"
+} ,
+{
+    "name": "Newton",
+    "uri": "/users/2",
+    "role": "User"
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/3",
+    "rol
+
+createuser
+post   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 {
+    "name": "Alan Turing",
+    "uri": "/users/5",
+    "role": "admin"
+}
+
+Schema
+testcases   http://localhost:3000/api/v1/files
+	Schema does not exist for the received status code	response: 500
+		 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+  <HEAD><TITLE>Internal Server Error</TITLE></HEAD>
+  <BODY>
+    <H1>Internal Server Error</H1>
+    TESTCASES, accepted HTTP methods are OPTIONS
+
+
+
+
+
+2015-04-26 19:04:36 +0100
+All tests passed
+
+
+
+2015-04-26 19:04:48 +0100
+Failed tests: 2/13 
+-------------
+userindex
+get   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 [
+{
+    "name": "Hani",
+    "uri": "/users/1",
+    "role": "admin"
+} ,
+{
+    "name": "Newton",
+    "uri": "/users/2",
+    "role": "User"
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/3",
+    "rol
+
+createuser
+post   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 {
+    "name": "Alan Turing",
+    "uri": "/users/5",
+    "role": "admin"
+}
+
+
+
+
+
+2015-04-26 19:05:14 +0100
+All tests passed
+
+
+
+2015-04-26 19:13:01 +0100
+Failed tests: 2/12 
+-------------
+userindex
+get   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 [
+{
+    "name": "Hani",
+    "uri": "/users/1",
+    "role": "admin"
+} ,
+{
+    "name": "Newton",
+    "uri": "/users/2",
+    "role": "User"
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/3",
+    "rol
+
+createuser
+post   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 {
+    "name": "Alan Turing",
+    "uri": "/users/5",
+    "role": "admin"
+}
+
+
+
+
+
+2015-04-26 19:14:03 +0100
+Failed tests: 2/13 
+-------------
+userindex
+get   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 [
+{
+    "name": "Hani",
+    "uri": "/users/1",
+    "role": "admin"
+} ,
+{
+    "name": "Newton",
+    "uri": "/users/2",
+    "role": "User"
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/3",
+    "rol
+
+createuser
+post   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 {
+    "name": "Alan Turing",
+    "uri": "/users/7",
+    "role": "admin"
+}
+
+
+
+
+
+2015-04-26 19:14:30 +0100
+Failed tests: 2/14 
+-------------
+userindex
+get   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 [
+{
+    "name": "Hani",
+    "uri": "/users/1",
+    "role": "admin"
+} ,
+{
+    "name": "Newton",
+    "uri": "/users/2",
+    "role": "User"
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/3",
+    "rol
+
+createuser
+post   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 {
+    "name": "Alan Turing",
+    "uri": "/users/9",
+    "role": "admin"
+}
+
+
+
+
+
+2015-04-26 19:15:11 +0100
+Failed tests: 2/16 
+-------------
+userindex
+get   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 [
+{
+    "name": "Hani",
+    "uri": "/users/1",
+    "role": "admin"
+} ,
+{
+    "name": "Newton",
+    "uri": "/users/2",
+    "role": "User"
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/3",
+    "rol
+
+createuser
+post   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 {
+    "name": "Alan Turing",
+    "uri": "/users/11",
+    "role": "admin"
+}
+
+
+
+
+
+2015-04-26 19:17:28 +0100
+All tests passed
+
+
+
+2015-04-26 19:22:09 +0100
+Failed tests: 5/16 
+-------------
+userindex
+get   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 [
+{
+    "name": "Hani",
+    "uri": "/users/1",
+    "role": "admin"
+} ,
+{
+    "name": "Newton",
+    "uri": "/users/2",
+    "role": "User"
+} ,
+{
+    "name": "Alan Turing",
+    "uri": "/users/3",
+    "rol
+
+createuser
+post   http://localhost:3000/api/v1/users
+	Response does not match testcase	response: 200
+		 {
+    "name": "Alan Turing",
+    "uri": "/users/5",
+    "role": "admin"
+}
+
+exampleadminuser
+get   http://localhost:3000/api/v1/users/1
+	Response does not match testcase	response: 200
+		 {
+    "name": "Hani",
+    "uri": "/users/1",
+    "photo": "/photos/121",
+    "files":[ 
+      {
+        "filename": "movie.exe",
+        "uri": "/files/2"
+      }  
+    ]
+}
+
+
+filesindex
+get   http://localhost:3000/api/v1/files
+	Response does not match testcase	response: 200
+		 [
+{
+    "filename": "movie.exe",
+    "uri": "/files/2",
+    "size": 194320
+} ,
+{
+    "filename": "game.mp4",
+    "uri": "/files/3",
+    "size": 1
+} ,
+{
+    "filename": "kcl.txt",
+    "uri": "/files/4",
+
+basicfile
+get   http://localhost:3000/api/v1/files/1
+	Wrong status code	response: 404
+		 {"error": "not_found"}
+
+
+
+
+
+2015-04-26 19:22:25 +0100
+All tests passed

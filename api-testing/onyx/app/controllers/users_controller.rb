@@ -5,7 +5,7 @@
     end
 
     def create
-      @user = User.new name: params[:name]
+      @user = User.new name: params[:name], role: params[:role], photo: params[:photo]
       @user.save
       render 'create.json.erb'
     end
