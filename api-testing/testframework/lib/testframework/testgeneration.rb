@@ -11,6 +11,8 @@ module Testframework
       testcases
     end
 
+
+    # Schema and input tests need to be handled slightly differently
     def self.transform_resource resource
       testcases = Array.new
       resource.children.each do |child|

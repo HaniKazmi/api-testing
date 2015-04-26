@@ -1,4 +1,5 @@
 require 'psych'
+require_relative 'psych/property'
 require 'json'
 
 module Ratml
@@ -22,34 +23,38 @@ module Ratml
 			@data = Psych.load data
 		end
 
+	  # Start recursive decent of the syntax tree
 		def parse
 			@root = Root.new @data
 		end
 	end
 
-	class Property
-		attr_accessor :children
+ #  # Base class for the RATML properties
+	# class Property
+	# 	attr_accessor :children
 
-		def initialize
-			@children = []
-		end
-	end
+	# 	def initialize
+	# 		@children = []
+	# 	end
+	# end
 
-	class Root < Property
-		attr_accessor :title, :version, :baseUri
+ #  # Contain api wide values and reference to the top level endpoints
+	# class Root < Property
+	# 	attr_accessor :title, :version, :baseUri
 
-		def initialize root_data
-			super()
-			root_data.each do |key, value|
-				if key.start_with? "/"
-					@children << Resource.new(@baseUri, key, value)
-				else
-					self.send("#{key}=", value)
-				end
-			end
-		end
-	end
+	# 	def initialize root_data
+	# 		super()
+	# 		root_data.each do |key, value|
+	# 			if key.start_with? "/"
+	# 				@children << Resource.new(@baseUri, key, value)
+	# 			else
+	# 				self.send("#{key}=", value)
+	# 			end
+	# 		end
+	# 	end
+	# end
 
+  # Endpoints
 	class Resource < Property
 		attr_accessor :element, :uri
 
@@ -57,6 +62,8 @@ module Ratml
 			super()
 			@uri = anchor + name
 
+      # Collections and elements need to be treated
+      # slightly differently
 			if name[1] == "{"
 				@element = true
 			end
@@ -71,6 +78,7 @@ module Ratml
 		end
 	end
 
+  # HTTP verbs
 	class Method < Property
 		attr_accessor :name, :cases
 
@@ -93,24 +101,7 @@ module Ratml
 		end
 	end
 
-	class Testcase
-		attr_accessor :query, :status, :response, :schema, :name, :id
-
-		def initialize name, data
-			@name = name
-			if data["query"]
-				@query = JSON.parse data["query"]
-			end
-			@status = data["response"]["status"]
-			@response = JSON.parse data["response"]["body"]
-			@id = data["resource"]
-			@schema = lambda{ |response|
-				response = JSON.parse response
-				return response == @response
-			}
-		end
-	end
-
+  # The possible response status codes
 	class Response < Property
 		attr_accessor :status, :body
 		def initialize name, data
@@ -130,15 +121,39 @@ module Ratml
 		end
 	end
 
+  # Input/Output test cases
+	class Testcase
+		attr_accessor :query, :status, :response, :schema, :name, :id, :dependent
+
+		def initialize name, data
+			@name = name			
+			@query = JSON.parse data["query"] if data["query"]
+			@dependent = data["dependent"] if data["dependent"]
+			@status = data["response"]["status"]
+			@response = JSON.parse data["response"]["body"]
+			@id = data["resource"]
+
+			# A block comparing whether response is equal to the spec
+			@schema = lambda{ |response|
+				response = JSON.parse response
+				return response == @response
+			}
+		end
+	end
+
+
+  # The main schema body
 	class Body < Property
 		attr_accessor :media_type, :schema
 
 
 		def initialize media_type, body_data
 			@media_type = media_type
+			# Converting strings to ruby types
 		  type_hash = { "string" => lambda{ |type| type.is_a? String},
 										"uri" => lambda{ |type| type.is_a? String},
-									  "long" => lambda{ |type| type.is_a? Integer}}
+									  "long" => lambda{ |type| type.is_a? Integer},
+									  "int" => lambda{ |type| type.is_a? Integer} }
 
 			body_data.each do |key, value|
 				case key
@@ -147,6 +162,9 @@ module Ratml
 					required = hash["required"]
 					properties = create_proc_properties hash["properties"]
 
+					# A heuristic algorithm to compare received responses
+					# with previous requests to determine if the response
+					# is valid
 					@schema = lambda{ |response|
 						comparator = lambda{ |response, hash|
 							if hash[:array]

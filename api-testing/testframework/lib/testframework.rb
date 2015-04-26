@@ -4,10 +4,10 @@ require_relative 'Testframework/Testexecution'
 require_relative 'Testframework/Testprinting'
 
 module Testframework
-	def self.test filename
+	def self.test filename, log
     ratml = Ratml.load_file(filename).parse
     testcases = Testframework::Testgenerator.generate ratml
     testresults = Testframework::Testexecutor.execute testcases
-    Testframework::Testprinter.print testresults
+    Testframework::Testprinter.print testresults, log
 	end
 end

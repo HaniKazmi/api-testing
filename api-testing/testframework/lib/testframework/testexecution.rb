@@ -6,14 +6,43 @@ module Testframework
   module Testexecutor
 
     def self.execute testcases
-      results = Array.new    
+      @results = Array.new    
+      testcases, dependecies = create_dependencies_hash testcases
+      @hydra = Typhoeus::Hydra.hydra
+
       testcases.each do |testcase|
-        result = Testframework::Testresult.new()
+        @hydra.queue(self.create_request(testcase, dependecies))
+        @hydra.run
+      end
+
+      puts ""
+      @results
+    end
+
+    def self.create_request testcase, dependecies
+      request = Typhoeus::Request.new(
+        testcase.url,
+        method: testcase.verb,
+        body: testcase.body
+      )
+
+      request.on_complete do |response| 
+        self.handle_response response, testcase
+        if dependecies[testcase.name].count > 0
+          dependecies[testcase.name].each do |dependent|
+            @hydra.queue(self.create_request(dependent, dependecies))
+          end
+        end
+      end
+        
+      request
+    end
+
+    def self.handle_response request, testcase
+      result = Testframework::Testresult.new()
         result.uri = testcase.url
         result.verb = testcase.verb
         result.name = testcase.name
-
-        request = Typhoeus.send testcase.verb, testcase.url, body: testcase.body
         result.code = request.code
         result.body = request.body
 
@@ -49,11 +78,18 @@ module Testframework
           print 'F'.red
         end
         $stdout.flush
-        results << result
+        @results << result
       end
 
-      puts ""
-      results
+    def self.create_dependencies_hash testcases
+      dependecies = Hash.new { |h, k| h[k] = [] }
+      testcases.each do |testcase|
+        if dependent = testcase.dependent
+          dependecies[dependent] << testcase
+          testcases.delete testcase
+        end
+      end
+      return testcases, dependecies
     end
 
   end

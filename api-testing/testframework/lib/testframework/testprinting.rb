@@ -1,19 +1,30 @@
 module Testframework
   module Testprinter
 
-    def self.print testresults
+    def self.print testresults, log
       failed = testresults.select{ |result| result.success != true }
+      File.open(log, 'a') { |file| file.puts "\n\n\n" + Time.now.to_s }
+      output = ""
       if failed.count == 0
         puts "All tests pass!".green
+        File.open(log, 'a') { |file| file.puts "All tests passed"}
       else
         puts "Failed tests: #{failed.count}/#{testresults.count} ".red
-        puts "-------------"
+        File.open(log, 'a') { |file| file.puts "Failed tests: #{failed.count}/#{testresults.count} "}
+
+        output += "-------------\n"
         failed.each do |result|
-          puts "#{result.name}"
-          puts "#{result.verb}   #{result.uri}"
-          puts "\t#{result.reason}"
-          puts "\tresponse: #{result.code}\n\t\t #{result.body}" if result.body
-          puts "\n"
+          output += "#{result.name}\n"
+          output += "#{result.verb}   #{result.uri}\n"
+          output += "\t#{result.reason}"
+          output += "\tresponse: #{result.code}\n\t\t #{result.body}" if result.body
+          output += "\n"
+        end
+        output += "\n"
+
+        puts output
+        if log
+           File.open(log, 'a') { |file| file.puts output}
         end
       end
     end

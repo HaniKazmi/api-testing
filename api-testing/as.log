@@ -1,0 +1,105 @@
+
+
+
+2015-04-26 17:48:18 +0100
+Failed tests: 2/10 
+-------------
+Schema
+get   http://localhost:3000/api/v1/users/4
+	Endpoint not implemented	response: 404
+		 {"error": "not_found"}
+missinguser
+get   http://localhost:3000/api/v1/users/2121
+	Wrong status code	response: 404
+		 {"error": "not_found"}
+
+
+
+
+2015-04-26 17:48:19 +0100
+Failed tests: 2/10 
+-------------
+Schema
+get   http://localhost:3000/api/v1/users/4
+	Endpoint not implemented	response: 404
+		 {"error": "not_found"}
+missinguser
+get   http://localhost:3000/api/v1/users/2121
+	Wrong status code	response: 404
+		 {"error": "not_found"}
+
+
+
+
+2015-04-26 17:48:19 +0100
+Failed tests: 2/10 
+-------------
+Schema
+get   http://localhost:3000/api/v1/users/4
+	Endpoint not implemented	response: 404
+		 {"error": "not_found"}
+missinguser
+get   http://localhost:3000/api/v1/users/2121
+	Wrong status code	response: 404
+		 {"error": "not_found"}
+
+
+
+
+2015-04-26 17:48:20 +0100
+Failed tests: 2/10 
+-------------
+Schema
+get   http://localhost:3000/api/v1/users/4
+	Endpoint not implemented	response: 404
+		 {"error": "not_found"}
+missinguser
+get   http://localhost:3000/api/v1/users/2121
+	Wrong status code	response: 404
+		 {"error": "not_found"}
+
+
+
+
+2015-04-26 17:53:37 +0100
+Failed tests: 2/10 
+-------------
+Schema
+get   http://localhost:3000/api/v1/users/4
+	Endpoint not implemented	response: 404
+		 {"error": "not_found"}
+missinguser
+get   http://localhost:3000/api/v1/users/2121
+	Wrong status code	response: 404
+		 {"error": "not_found"}
+
+
+
+
+2015-04-26 18:04:22 +0100
+Failed tests: 2/10 
+-------------
+Schema
+get   http://localhost:3000/api/v1/users/4
+	Endpoint not implemented	response: 404
+		 {"error": "not_found"}
+missinguser
+get   http://localhost:3000/api/v1/users/2121
+	Wrong status code	response: 404
+		 {"error": "not_found"}
+
+
+
+
+2015-04-26 18:05:10 +0100
+Failed tests: 2/10 
+-------------
+Schema
+get   http://localhost:3000/api/v1/users/4
+	Endpoint not implemented	response: 404
+		 {"error": "not_found"}
+missinguser
+get   http://localhost:3000/api/v1/users/2121
+	Wrong status code	response: 404
+		 {"error": "not_found"}
+

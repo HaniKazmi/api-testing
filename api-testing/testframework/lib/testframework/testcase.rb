@@ -1,6 +1,6 @@
 module Testframework
   class Testcase
-    attr_accessor :resource, :method, :schema, :body, :name
+    attr_accessor :resource, :method, :schema, :body, :name, :dependent
 
     def url
       @resource.uri
@@ -48,12 +48,14 @@ module Testframework
       @schema =  testcase.schema
       @body = testcase.query
       @testcase = testcase
+      @dependent = testcase.dependent
     end
 
     def status
       @testcase.status
     end
 
+    # Substitute in the element id
     def url
       if @resource.element
         @resource.uri.sub /\{.*\}/, @testcase.id.to_s
