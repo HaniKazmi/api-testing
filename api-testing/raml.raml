@@ -1,0 +1,131 @@
+#%RATML
+ 
+title: Onyx API
+baseUri: http://localhost:3000/api/v1
+version: v1
+/users:
+  get:
+    responses:
+        200:
+          body:
+            application/json:
+              schema: |
+                { "$schema": "http://json-schema.org/schema",
+                  "type": "object",
+                  "description": "A list of users",
+                  "properties": [{
+                    "name": { "type": "string"},
+                    "uri": { "type": "uri"},
+                    "role": { "type": "string" }
+                  }],
+                  "required": [ "name", "uri", "role" ]
+                }
+  /{userId}:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              schema: |
+                { "$schema": "http://json-schema.org/schema",
+                  "type": "object",
+                  "description": "A canonical user",
+                  "properties": {
+                    "name":  { "type": "string" },
+                    "uri": { "type": "uri" },
+                    "photo": { "type": "uri" },
+                    "files": [{
+                      "filename": { "type": "string"},
+                      "uri": { "type": "uri"}
+                      }]
+                  },
+                  "required": [ "name", "uri" ]
+                }
+        404:
+          body:
+            application/json:
+              schema: |
+                { "$schema": "http://json-schema.org/schema",
+                  "type": "object",
+                  "description": "A missing user",
+                  "properties": {
+                    "message":  { "type": "string" }
+                  },
+                  "required": [ "message" ]
+                }
+    delete:
+      description: |
+        This method will *delete* an **individual user**
+      responses:
+        200:
+          body:
+            application/json:
+              schema: |
+                { "$schema": "http://json-schema.org/schema",
+                  "type": "object",
+                  "properties": {
+                    "message":  { "type": "string" }
+                  },
+                  "required": [ "message" ]
+                }
+/files:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            schema: |
+               { "$schema": "http://json-schema.org/schema",
+                  "type": "object",
+                  "description": "A list of files",
+                  "properties": [{
+                    "filename": { "type": "string"},
+                    "uri": { "type": "uri"},
+                    "size": { "type": "long" }
+                  }],
+                  "required": [ "filename", "uri" ]
+                }
+  /{fileId}:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              schema: |
+                { "$schema": "http://json-schema.org/schema",
+                  "type": "object",
+                  "description": "A canonical file",
+                  "properties": {
+                    "filename":  { "type": "string" },
+                    "location": { "type": "uri" },
+                    "size": { "type": "uri" }
+                  },
+                  "required": [ "filename", "location" ]
+                }
+        404:
+          body:
+            application/json:
+              schema: |
+                { "$schema": "http://json-schema.org/schema",
+                  "type": "object",
+                  "description": "A missing file",
+                  "properties": {
+                    "message":  { "type": "string" }
+                  },
+                  "required": [ "message" ]
+                }
+    delete:
+      description: |
+        This method will *delete* an **individual file**
+      responses:
+        200:
+          body:
+            application/json:
+              schema: |
+                { "$schema": "http://json-schema.org/schema",
+                  "type": "object",
+                  "properties": {
+                    "message":  { "type": "string" }
+                  },
+                  "required": [ "message" ]
+                }

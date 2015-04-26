@@ -1,0 +1,9 @@
+[
+<% @Users.each do |user| %>
+{
+    "name": "<%= user.name %>",
+    "uri": "/users/<%= user.id %>",
+    "role": "<%= user.role %>"
+} <%= "," unless user == @Users.last %>
+<% end %>
+]
